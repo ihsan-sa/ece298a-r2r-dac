@@ -1,0 +1,60 @@
+{
+ "id": 1,
+ "created": "2026-09-25T08:55:33",
+ "gate": "sim",
+ "phase": "P4",
+ "workspace": "blocks/r2r_dac/digital",
+ "fixer": "testbench",
+ "role_prompt": "skills/vde/agents/fixer.md",
+ "allowed_scripts": [
+  "engine/scripts/gate.py",
+  "engine/scripts/state.py"
+ ],
+ "guidance": [
+  "Read the remediation reference(s) listed in `remediations` FIRST: what the finding means, known false-positive classes, the cheapest-first fix ladder, and the traps this project already hit. They are keyed to your cluster's kinds.",
+  "Edit tb/ (and the reference model it scores against) only; a mutate survivor names the mutant class the test must now kill."
+ ],
+ "remediations": [
+  "/home/ihsan/.claude/skills/chip-flow/skills/vde/reference/remediations/requirement_no_test.md"
+ ],
+ "cluster": {
+  "file": "spec/spec.yaml",
+  "module": null,
+  "kinds": [
+   "requirement_no_test"
+  ],
+  "checks": [
+   "cocotblib"
+  ],
+  "severity": "error",
+  "count": 1,
+  "violations": [
+   {
+    "check": "sim",
+    "severity": "error",
+    "file": "spec/spec.yaml",
+    "module": null,
+    "line": null,
+    "kind": "requirement_no_test",
+    "refs": [
+     "REQ-SWITCH"
+    ],
+    "msg": "requirement REQ-SWITCH has no test tagged with it (a '# req: REQ-SWITCH' comment above the @cocotb.test() that covers it)",
+    "source": "cocotblib",
+    "items": [
+     {
+      "msg": "requirement REQ-SWITCH has no test tagged with it (a '# req: REQ-SWITCH' comment above the @cocotb.test() that covers it)",
+      "file": "spec/spec.yaml",
+      "line": null
+     }
+    ]
+   }
+  ]
+ },
+ "info_context": [],
+ "artifacts": {
+  "workspace": "blocks/r2r_dac/digital",
+  "spec": "blocks/r2r_dac/digital/spec/spec.yaml"
+ },
+ "scope": "fix ONLY the findings in `cluster`; `info_context` (same gate, below its failing severity) is background only, never its own fix target; do not touch unrelated files; re-run the failed gate when done"
+}

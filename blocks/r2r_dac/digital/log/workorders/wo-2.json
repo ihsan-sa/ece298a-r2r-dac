@@ -1,0 +1,76 @@
+{
+ "id": 2,
+ "created": "2026-09-25T08:58:32",
+ "gate": "mutate",
+ "phase": "P4",
+ "workspace": "blocks/r2r_dac/digital",
+ "fixer": "testbench",
+ "role_prompt": "skills/vde/agents/fixer.md",
+ "allowed_scripts": [
+  "engine/scripts/gate.py",
+  "engine/scripts/state.py"
+ ],
+ "guidance": [
+  "Read the remediation reference(s) listed in `remediations` FIRST: what the finding means, known false-positive classes, the cheapest-first fix ladder, and the traps this project already hit. They are keyed to your cluster's kinds.",
+  "Edit tb/ (and the reference model it scores against) only; a mutate survivor names the mutant class the test must now kill."
+ ],
+ "remediations": [
+  "/home/ihsan/.claude/skills/chip-flow/skills/vde/reference/remediations/survivor_condition_inverted.md"
+ ],
+ "cluster": {
+  "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+  "module": null,
+  "kinds": [
+   "survivor_condition_inverted"
+  ],
+  "checks": [
+   "mcy"
+  ],
+  "severity": "error",
+  "count": 2,
+  "violations": [
+   {
+    "check": "mutate",
+    "severity": "error",
+    "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+    "module": null,
+    "line": null,
+    "kind": "survivor_condition_inverted",
+    "refs": [],
+    "msg": "mutant 14 (condition_inverted) survived: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 5 -wire presc -wirebit 5 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+    "source": "mcy",
+    "items": [
+     {
+      "msg": "mutant 14 (condition_inverted) survived: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 5 -wire presc -wirebit 5 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+      "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+      "line": null
+     }
+    ]
+   },
+   {
+    "check": "mutate",
+    "severity": "error",
+    "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+    "module": null,
+    "line": null,
+    "kind": "survivor_condition_inverted",
+    "refs": [],
+    "msg": "mutant 21 (condition_inverted) survived: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 3 -wire presc -wirebit 3 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+    "source": "mcy",
+    "items": [
+     {
+      "msg": "mutant 21 (condition_inverted) survived: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 3 -wire presc -wirebit 3 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+      "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+      "line": null
+     }
+    ]
+   }
+  ]
+ },
+ "info_context": [],
+ "artifacts": {
+  "workspace": "blocks/r2r_dac/digital",
+  "spec": "blocks/r2r_dac/digital/spec/spec.yaml"
+ },
+ "scope": "fix ONLY the findings in `cluster`; `info_context` (same gate, below its failing severity) is background only, never its own fix target; do not touch unrelated files; re-run the failed gate when done"
+}

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-25T09:00:49" hostname="iiks1" package="cov" id="0" name="default" tests="5" errors="0" failures="0" time="0" skipped="3">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="build execution" time="0">
+</testcase>
+<testcase classname="default" name="Property COVER in r2r_dac_digital_formal at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.5-39.42" time="0" type="COVER" location="/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.5-39.42" id="COVER_FULL" tracefile="engine_0/trace0.vcd">
+</testcase>
+<testcase classname="default" name="Property COVER in r2r_dac_digital_formal at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.5-40.123" time="0" type="COVER" location="/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.5-40.123" id="COVER_HOLD" tracefile="engine_0/trace1.vcd">
+</testcase>
+<testcase classname="default" name="Property ASSERT in r2r_dac_digital_formal at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:36.5-36.42" time="0" type="ASSERT" location="/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:36.5-36.42" id="REQ_ECHO">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in r2r_dac_digital_formal at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.7-32.86" time="0" type="ASSERT" location="/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.7-32.86" id="REQ_HOLD">
+<skipped />
+</testcase>
+<testcase classname="default" name="Property ASSERT in r2r_dac_digital_formal at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26.7-26.59" time="0" type="ASSERT" location="/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26.7-26.59" id="REQ_RESET">
+<skipped />
+</testcase>
+<system-out>SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] Removing directory '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov'.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] Copy '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv' to '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/src/r2r_dac_digital_formal.sv'.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] Copy '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v' to '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/src/r2r_dac_digital.v'.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: smtbmc yices
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] base: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] base: finished (returncode=0)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] prep: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] prep: finished (returncode=0)
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] smt2: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/model; yosys -ql design_smt2.log design_smt2.ys&quot;
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] smt2: finished (returncode=0)
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov; yosys-smtbmc -s yices --presat --unroll -c --noprogress -t 12  --append 0 --dump-vcd engine_0/trace%.vcd --dump-yw engine_0/trace%.yw --dump-vlogtb engine_0/trace%_tb.v --dump-smtc engine_0/trace%.smtc model/design_smt2.smt2&quot;
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Solver: yices
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Checking cover reachability in step 0..
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Reached cover statement in step 1 at r2r_dac_digital_formal: COVER_FULL
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace0.vcd
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace0_tb.v
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace0.smtc
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace0.yw
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Checking cover reachability in step 1..
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Checking cover reachability in step 2..
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Checking cover reachability in step 3..
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Reached cover statement in step 3 at r2r_dac_digital_formal: COVER_HOLD
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to VCD file: engine_0/trace1.vcd
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to Verilog testbench: engine_0/trace1_tb.v
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to constraints file: engine_0/trace1.smtc
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Writing trace to Yosys witness file: engine_0/trace1.yw
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: ##   0:00:00  Status: passed
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: finished (returncode=0)
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] engine_0: Status returned by engine: pass
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary: engine_0 (smtbmc yices) returned pass
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary: cover trace: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/engine_0/trace0.vcd
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary:   reached cover statement r2r_dac_digital_formal.COVER_FULL at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.5-39.42 step 1
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary: cover trace: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/engine_0/trace1.vcd
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] summary:   reached cover statement r2r_dac_digital_formal.COVER_HOLD at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.5-40.123 step 3
+SBY  9:00:49 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

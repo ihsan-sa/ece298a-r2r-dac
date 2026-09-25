@@ -1,0 +1,9 @@
+Elapsed clock time [H:MM:SS (secs)]: 0:00:00 (0)
+Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+engine_0 (smtbmc yices) returned pass
+cover trace: engine_0/trace0.vcd
+cover trace: engine_0/trace0.yw
+  reached cover statement r2r_dac_digital_formal.COVER_FULL at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.5-39.42 step 1
+cover trace: engine_0/trace1.vcd
+cover trace: engine_0/trace1.yw
+  reached cover statement r2r_dac_digital_formal.COVER_HOLD at /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.5-40.123 step 3

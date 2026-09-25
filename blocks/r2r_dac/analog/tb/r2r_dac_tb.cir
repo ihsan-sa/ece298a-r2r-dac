@@ -1,6 +1,8 @@
 * r2r_dac_tb.cir - static (DC) bench for r2r_dac_analog (P3 spec bench,
 * written from spec/spec.md, spec/spec.yaml and spec/topology.md only).
 *
+* sim_timeout_s: 600  (256-code sweep plus 66 one-unit +-1 % re-sweeps: timed out at 60 s at ff/125 C on a loaded host)
+*
 * Measures (spec.yaml names): dnl_max_abs, inl_max_abs, monotonic,
 * v_zero_offset, fs_gain_err_lsb, inl_sens_1pct_max, i_vdd_avg.
 * Siblings: r2r_dac_step_tb.cir (settling, 10-90, i_vdd_peak) and

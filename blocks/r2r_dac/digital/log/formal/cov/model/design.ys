@@ -1,0 +1,9 @@
+# running in /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/cov/src/
+read -formal -D FORMAL /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv
+read -formal -D FORMAL /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v
+prep -top r2r_dac_digital_formal
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

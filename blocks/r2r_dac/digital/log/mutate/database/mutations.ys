@@ -1,0 +1,2 @@
+read_rtlil database/design.il
+mutate -list 24 -seed 1 -none -o database/mutations.txt -s database/sources.txt

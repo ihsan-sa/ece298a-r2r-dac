@@ -1,0 +1,405 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing Verilog-2005 frontend: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv
+Parsing formal SystemVerilog input from `/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv' to AST representation.
+Storing AST representation for module `$abstract\r2r_dac_digital_formal'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v
+Parsing formal SystemVerilog input from `/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v' to AST representation.
+Storing AST representation for module `$abstract\r2r_dac_digital'.
+Successfully finished Verilog frontend.
+
+3. Executing PREP pass.
+
+3.1. Executing HIERARCHY pass (managing design hierarchy).
+
+3.2. Executing AST frontend in derive mode using pre-parsed AST for module `\r2r_dac_digital_formal'.
+Generating RTLIL representation for module `\r2r_dac_digital_formal'.
+
+3.2.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+
+3.2.2. Executing AST frontend in derive mode using pre-parsed AST for module `\r2r_dac_digital'.
+Generating RTLIL representation for module `\r2r_dac_digital'.
+
+3.2.3. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+Used module:     \r2r_dac_digital
+
+3.2.4. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+Used module:     \r2r_dac_digital
+Removing unused module `$abstract\r2r_dac_digital'.
+Removing unused module `$abstract\r2r_dac_digital_formal'.
+Removed 2 unused modules.
+Module r2r_dac_digital_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3.3. Executing PROC pass (convert processes to netlists).
+
+3.3.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+3.3.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 2 switch rules as full_case in process $proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52 in module r2r_dac_digital.
+Removed 1 dead cases from process $proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:21$48 in module r2r_dac_digital.
+Marked 1 switch rules as full_case in process $proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:21$48 in module r2r_dac_digital.
+Removed a total of 1 dead cases.
+
+3.3.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 5 redundant assignments.
+Promoted 20 assignments to connections.
+
+3.3.4. Executing PROC_INIT pass (extract init attributes).
+Found init rule in `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:17$47'.
+  Set init value: \past_valid2 = 1'0
+Found init rule in `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:16$46'.
+  Set init value: \past_valid = 1'0
+
+3.3.5. Executing PROC_ARST pass (detect async resets in processes).
+
+3.3.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 1 switch.
+<suppressed ~6 debug messages>
+
+3.3.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+     1/4: $0\dac_code[7:0]
+     2/4: $0\presc[7:0]
+     3/4: $0\cnt[7:0]
+     4/4: $0\code_reg[7:0]
+Creating decoders for process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:21$48'.
+     1/1: $1\sine_val[7:0]
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:17$47'.
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:16$46'.
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38$33'.
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:35$31'.
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+     1/1: \REQ_HOLD_EN
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:24$11'.
+     1/1: \REQ_RESET_EN
+Creating decoders for process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:18$10'.
+
+3.3.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\r2r_dac_digital.\sine_val' from process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:21$48'.
+
+3.3.9. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\r2r_dac_digital.\dac_code' using process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+  created $dff cell `$procdff$87' with positive edge clock.
+Creating register for signal `\r2r_dac_digital.\code_reg' using process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+  created $dff cell `$procdff$88' with positive edge clock.
+Creating register for signal `\r2r_dac_digital.\cnt' using process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+  created $dff cell `$procdff$89' with positive edge clock.
+Creating register for signal `\r2r_dac_digital.\presc' using process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+  created $dff cell `$procdff$90' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$7$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38$33'.
+  created $dff cell `$procdff$91' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$8$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38$33'.
+  created $dff cell `$procdff$92' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$8$1' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38$33'.
+  created $dff cell `$procdff$93' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$9$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38$33'.
+  created $dff cell `$procdff$94' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$2$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$95' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$3$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$96' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$3$1' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$97' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$4$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$98' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32$5$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$99' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32$5$1' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$100' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32$6$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+  created $dff cell `$procdff$101' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.$past$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26$1$0' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:24$11'.
+  created $dff cell `$procdff$102' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.\past_valid' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:18$10'.
+  created $dff cell `$procdff$103' with positive edge clock.
+Creating register for signal `\r2r_dac_digital_formal.\past_valid2' using process `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:18$10'.
+  created $dff cell `$procdff$104' with positive edge clock.
+
+3.3.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+3.3.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Found and cleaned up 4 empty switches in `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+Removing empty process `r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285$52'.
+Found and cleaned up 1 empty switch in `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:21$48'.
+Removing empty process `r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:21$48'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:17$47'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:16$46'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38$33'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:35$31'.
+Found and cleaned up 1 empty switch in `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15'.
+Found and cleaned up 1 empty switch in `\r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:24$11'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:24$11'.
+Removing empty process `r2r_dac_digital_formal.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:18$10'.
+Cleaned up 7 empty switches.
+
+3.3.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital.
+<suppressed ~6 debug messages>
+Optimizing module r2r_dac_digital_formal.
+<suppressed ~2 debug messages>
+
+3.4. Executing FUTURE pass.
+
+3.5. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital.
+Optimizing module r2r_dac_digital_formal.
+
+3.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital..
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+Removed 1 unused cells and 35 unused wires.
+<suppressed ~3 debug messages>
+
+3.7. Executing CHECK pass (checking for obvious problems).
+Checking module r2r_dac_digital...
+Checking module r2r_dac_digital_formal...
+Found and reported 0 problems.
+
+3.8. Executing OPT pass (performing simple optimizations).
+
+3.8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital.
+Optimizing module r2r_dac_digital_formal.
+
+3.8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital'.
+Computing hashes of 22 cells of `\r2r_dac_digital'.
+Finding duplicate cells in `\r2r_dac_digital'.
+Computing hashes of 21 cells of `\r2r_dac_digital'.
+Finding duplicate cells in `\r2r_dac_digital'.
+<suppressed ~3 debug messages>
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 41 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 1 cells.
+
+3.8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \r2r_dac_digital..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \r2r_dac_digital_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+3.8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \r2r_dac_digital.
+  Optimizing cells in module \r2r_dac_digital_formal.
+Performed a total of 0 changes.
+
+3.8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital'.
+Computing hashes of 21 cells of `\r2r_dac_digital'.
+Finding duplicate cells in `\r2r_dac_digital'.
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 41 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 0 cells.
+
+3.8.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital..
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+3.8.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital.
+Optimizing module r2r_dac_digital_formal.
+
+3.8.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+3.8.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \r2r_dac_digital..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Running muxtree optimizer on module \r2r_dac_digital_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~15 debug messages>
+
+3.8.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \r2r_dac_digital.
+  Optimizing cells in module \r2r_dac_digital_formal.
+Performed a total of 0 changes.
+
+3.8.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital'.
+Computing hashes of 21 cells of `\r2r_dac_digital'.
+Finding duplicate cells in `\r2r_dac_digital'.
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 41 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 0 cells.
+
+3.8.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital..
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+
+3.8.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital.
+Optimizing module r2r_dac_digital_formal.
+
+3.8.14. Finished fast OPT passes. (There is nothing left to do.)
+
+3.9. Executing WREDUCE pass (reducing word size of cells).
+Removed top 24 address bits (of 32) from memory init port r2r_dac_digital.$auto$mem.cc:351:emit$60 ($auto$proc_rom.cc:155:do_switch$58).
+Removed top 7 bits (of 8) from port B of cell r2r_dac_digital.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:300$55 ($add).
+Removed top 7 bits (of 8) from port B of cell r2r_dac_digital.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302$56 ($add).
+Removed top 1 bits (of 2) from port B of cell r2r_dac_digital.$procmux$64_CMP0 ($eq).
+
+3.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital..
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+
+3.11. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+3.12. Executing OPT pass (performing simple optimizations).
+
+3.12.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital.
+Optimizing module r2r_dac_digital_formal.
+
+3.12.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital'.
+Computing hashes of 20 cells of `\r2r_dac_digital'.
+Finding duplicate cells in `\r2r_dac_digital'.
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 41 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 0 cells.
+
+3.12.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital..
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+
+3.12.4. Finished fast OPT passes.
+
+3.13. Executing SORT pass.
+
+3.14. Printing statistics.
+
+=== r2r_dac_digital ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       28 wires
+      141 wire bits
+       14 public wires
+       64 public wire bits
+        8 ports
+       30 port bits
+       20 cells
+        2   $add
+        4   $dff
+        3   $eq
+        1   $logic_not
+        1   $mem_v2
+        6   $mux
+        1   $not
+        1   $or
+        1   $pmux
+
+=== r2r_dac_digital_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+       46 wires
+       81 wire bits
+       15 public wires
+       37 public wire bits
+        8 ports
+       30 port bits
+       40 cells
+        5   $check
+       14   $dff
+        7   $eq
+        7   $logic_and
+        2   $logic_not
+        2   $logic_or
+        2   $mux
+        1   $reduce_bool
+        1 submodules
+        1   r2r_dac_digital
+
+=== design hierarchy ===
+
+        +----------Count including submodules.
+        | 
+       60 r2r_dac_digital_formal
+       20 r2r_dac_digital
+
+        +----------Count including submodules.
+        | 
+       74 wires
+      222 wire bits
+       29 public wires
+      101 public wire bits
+       16 ports
+       60 port bits
+        - memories
+        - memory bits
+        - processes
+       60 cells
+        2   $add
+        5   $check
+       18   $dff
+       10   $eq
+        7   $logic_and
+        3   $logic_not
+        2   $logic_or
+        1   $mem_v2
+        8   $mux
+        1   $not
+        1   $or
+        1   $pmux
+        1   $reduce_bool
+        1 submodules
+        1   r2r_dac_digital
+
+3.15. Executing CHECK pass (checking for obvious problems).
+Checking module r2r_dac_digital...
+Checking module r2r_dac_digital_formal...
+Found and reported 0 problems.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `r2r_dac_digital_formal'. Setting top module to r2r_dac_digital_formal.
+
+4.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+Used module:     \r2r_dac_digital
+
+4.2. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+Used module:     \r2r_dac_digital
+Removed 0 unused modules.
+Module r2r_dac_digital_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing jny backend.
+
+6. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 46d6b5feff, time: 0.16s, user: 0.04s, system: 0.02s, MEM: 32.51 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+Time spent: 26% 2x hierarchy (0 sec), 17% 5x opt_clean (0 sec), ...

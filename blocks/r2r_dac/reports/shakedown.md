@@ -69,3 +69,52 @@ cocotb in the eda image is 2.1.0, not the pinned 2.0.1.
 
 About $12 across 3 rounds: splitter $1.5, spec-writer $3, topology $0.4,
 bench-writer $3.6, netlist designer $1.1, orchestration about $2.3.
+
+## Round 2 (2026-09-25, chip-flow at #20), in progress
+
+### Analog, re-recorded on the #20 engine (pre-layout)
+
+The owner kept the 27 kΩ unit R and accepted ~1.2 µs settling as a known
+trade-off, so the settling bound is now 1.5 µs (9 ln2 τ, τ = 27k × 7 pF).
+Corners are the brief's nine: tt/ff/ss × −40/25/125 °C at a fixed 3.3 V.
+spec_lint, netlist_lint, sim_tt and sim_pvt all pass.
+
+| measure | worst | corner | bound |
+|---|---|---|---|
+| DNL | 0.141 LSB | tt/−40 | 0.5 |
+| INL | 0.355 LSB | ss/125 | 0.5 |
+| monotonic | yes | all nine | |
+| FS gain error | −0.014 LSB | ss/125 | ±0.5 |
+| settling, 0.5 LSB | 1.441 µs rise, 1.436 µs fall | ss/−40 | 1.5 µs |
+| 10–90 % | 0.506 µs | ss/−40 | 0.5 µs (warning) |
+| INL with one unit ±1 % | 0.65 LSB | ss/125 | 0.5 (warning) |
+| supply current peak | 22.8 mA | ff/−40 | 30 mA |
+
+Glitch energy reads below 32 fV·s at every corner, but I don't trust it:
+the glitch windows are 60 ns against a 190 ns time constant, so the
+band method probably under-reads. That bench wasn't revised this round.
+
+### Breakages found in round 2
+
+9. top_harden treated every interface signal as one pin, so an 8-bit
+   bus into the analog macro was refused. Fixed in chip-flow PR #21.
+10. check_mutate puts every `-mode inv` mutant in the must-kill class,
+    including flips of an internal prescaler bit that no port can see,
+    so mutate is red at a 0.913 kill rate (0.9 needed).
+11. Two stacked `# req:` lines above a cocotb test keep only the last
+    one, with no warning.
+12. Edits to `holdout/` have no edit class, and resume re-hashes them
+    silently.
+13. `state.py set-phase` passes a recorded FAIL with a warning and never
+    checks H1 (read in the code, not demonstrated).
+14. The router names the nested digital block `digital` (the directory),
+    not the tile.
+15. The cocotb 2.0.1 pin can't be honoured: the image has 2.1.0 and
+    nothing checks a pin.
+16. A 256-code DC sweep hit sim_run's 60 s limit at one corner on a
+    loaded host. The bench's `sim_timeout_s` knob fixed it, which is the
+    documented route, so this is a note rather than a bug.
+17. bench_strength refused to run because the tt baseline had a
+    warning-level miss (INL sensitivity 0.526 LSB), although sim_tt passes
+    with it. A baseline warning would also have counted as a kill for
+    every mutant. Fixed in chip-flow PR #22.

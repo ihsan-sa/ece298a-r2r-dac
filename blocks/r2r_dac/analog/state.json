@@ -4,21 +4,21 @@
  "block": "analog",
  "workspace": "blocks/r2r_dac/analog",
  "created": "2026-09-25T05:47:00",
- "updated": "2026-09-25T06:53:46",
+ "updated": "2026-09-25T09:07:22",
  "phase": "P4",
  "toolchain": null,
  "gates": {
   "spec_lint": {
    "phase": "P1",
    "status": "pass",
-   "attempts": 5,
+   "attempts": 7,
    "last": {
-    "ts": "2026-09-25T06:37:27",
+    "ts": "2026-09-25T08:49:14",
     "status": "pass",
     "failing_count": 0,
     "total": 0,
     "inputs": {
-     "spec_yaml": "json_canonical:9b23fe28befdbe25582f6cc91b24c67674b1206d03d38a9c602dde7fa1060b62"
+     "spec_yaml": "json_canonical:c6f6e6bcf3e6d9fffb2951380c65cc793148846035c780b010517d57c608793d"
     },
     "job": null
    },
@@ -72,18 +72,38 @@
       "spec_yaml": "json_canonical:9b23fe28befdbe25582f6cc91b24c67674b1206d03d38a9c602dde7fa1060b62"
      },
      "job": null
+    },
+    {
+     "ts": "2026-09-25T08:44:59",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "spec_yaml": "json_canonical:c6f6e6bcf3e6d9fffb2951380c65cc793148846035c780b010517d57c608793d"
+     },
+     "job": null
+    },
+    {
+     "ts": "2026-09-25T08:49:14",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "spec_yaml": "json_canonical:c6f6e6bcf3e6d9fffb2951380c65cc793148846035c780b010517d57c608793d"
+     },
+     "job": null
     }
    ]
   },
   "netlist_lint": {
    "phase": "P4",
-   "status": "fail",
-   "attempts": 3,
+   "status": "pass",
+   "attempts": 5,
    "last": {
-    "ts": "2026-09-25T06:50:29",
-    "status": "fail",
-    "failing_count": 8,
-    "total": 8,
+    "ts": "2026-09-25T08:49:52",
+    "status": "pass",
+    "failing_count": 0,
+    "total": 0,
     "inputs": {
      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
     },
@@ -119,21 +139,41 @@
       "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
      },
      "job": null
+    },
+    {
+     "ts": "2026-09-25T08:44:09",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+     },
+     "job": null
+    },
+    {
+     "ts": "2026-09-25T08:49:52",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+     },
+     "job": null
     }
    ]
   },
   "sim_tt": {
    "phase": "P4",
-   "status": "fail",
-   "attempts": 2,
+   "status": "pass",
+   "attempts": 4,
    "last": {
-    "ts": "2026-09-25T06:51:10",
-    "status": "fail",
-    "failing_count": 2,
-    "total": 5,
+    "ts": "2026-09-25T09:02:34",
+    "status": "pass",
+    "failing_count": 0,
+    "total": 1,
     "inputs": {
      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
-     "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+     "tb": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea"
     },
     "job": null,
     "facts": {
@@ -174,30 +214,66 @@
        "tt"
       ]
      }
+    },
+    {
+     "ts": "2026-09-25T08:50:32",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 1,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:65eef3b26c799b35cdb80a9928bf77d99c5a64657fe97b63ff7620f99c659b77"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt"
+      ]
+     }
+    },
+    {
+     "ts": "2026-09-25T09:02:34",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 1,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt"
+      ]
+     }
     }
    ]
   },
   "sim_pvt": {
    "phase": "P4",
-   "status": "fail",
-   "attempts": 1,
+   "status": "pass",
+   "attempts": 3,
    "last": {
-    "ts": "2026-09-25T06:53:46",
-    "status": "fail",
-    "failing_count": 10,
-    "total": 25,
+    "ts": "2026-09-25T09:07:22",
+    "status": "pass",
+    "failing_count": 0,
+    "total": 14,
     "inputs": {
      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
-     "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+     "tb": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea"
     },
     "job": null,
     "facts": {
      "corners": [
-      "tt",
-      "ss",
-      "ff",
-      "sf",
-      "fs"
+      "tt_m40c",
+      "tt_25c",
+      "tt_125c",
+      "ff_m40c",
+      "ff_25c",
+      "ff_125c",
+      "ss_m40c",
+      "ss_25c",
+      "ss_125c"
      ]
     }
    },
@@ -221,6 +297,54 @@
        "fs"
       ]
      }
+    },
+    {
+     "ts": "2026-09-25T09:01:27",
+     "status": "fail",
+     "failing_count": 4,
+     "total": 21,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:65eef3b26c799b35cdb80a9928bf77d99c5a64657fe97b63ff7620f99c659b77"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt_m40c",
+       "tt_25c",
+       "tt_125c",
+       "ff_m40c",
+       "ff_25c",
+       "ff_125c",
+       "ss_m40c",
+       "ss_25c",
+       "ss_125c"
+      ]
+     }
+    },
+    {
+     "ts": "2026-09-25T09:07:22",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 14,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt_m40c",
+       "tt_25c",
+       "tt_125c",
+       "ff_m40c",
+       "ff_25c",
+       "ff_125c",
+       "ss_m40c",
+       "ss_25c",
+       "ss_125c"
+      ]
+     }
     }
    ]
   }
@@ -233,20 +357,20 @@
   "spec_yaml": {
    "path": "spec/spec.yaml",
    "kind": "spec_yaml",
-   "sha256": "json_canonical:9b23fe28befdbe25582f6cc91b24c67674b1206d03d38a9c602dde7fa1060b62",
-   "hashed": "2026-09-25T06:37:27"
+   "sha256": "json_canonical:c6f6e6bcf3e6d9fffb2951380c65cc793148846035c780b010517d57c608793d",
+   "hashed": "2026-09-25T08:49:14"
   },
   "netlist": {
    "path": "netlist",
    "kind": "netlist",
    "sha256": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
-   "hashed": "2026-09-25T06:53:46"
+   "hashed": "2026-09-25T09:07:22"
   },
   "tb": {
    "path": "tb",
    "kind": "tb",
-   "sha256": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131",
-   "hashed": "2026-09-25T06:53:46"
+   "sha256": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea",
+   "hashed": "2026-09-25T09:07:22"
   }
  },
  "open_issues": [],
@@ -263,7 +387,60 @@
    "ts": "2026-09-25T05:55:51"
   }
  ],
- "edits": [],
+ "edits": [
+  {
+   "ts": "2026-09-25T08:44:58",
+   "class": "spec_edit",
+   "refs": [],
+   "note": "round 2: owner settling trade-off (1.5us bound), fixed-VDD 9-corner grid",
+   "human_hold": 2,
+   "gates": [
+    "spec_lint",
+    "netlist_lint",
+    "sim_tt",
+    "sim_pvt",
+    "bench_strength",
+    "mc",
+    "drc",
+    "lvs",
+    "pex_sim",
+    "release"
+   ],
+   "gates_marked": [
+    "spec_lint",
+    "netlist_lint",
+    "sim_tt",
+    "sim_pvt"
+   ],
+   "stale_artifacts": []
+  },
+  {
+   "ts": "2026-09-25T08:49:13",
+   "class": "spec_edit",
+   "refs": [],
+   "note": "msde interface_edit cascade",
+   "human_hold": 2,
+   "gates": [
+    "spec_lint",
+    "netlist_lint",
+    "sim_tt",
+    "sim_pvt",
+    "bench_strength",
+    "mc",
+    "drc",
+    "lvs",
+    "pex_sim",
+    "release"
+   ],
+   "gates_marked": [
+    "spec_lint",
+    "netlist_lint",
+    "sim_tt",
+    "sim_pvt"
+   ],
+   "stale_artifacts": []
+  }
+ ],
  "spawns": [
   {
    "ts": "2026-09-25T05:47:01",
@@ -290,6 +467,12 @@
    "role": "analog-designer",
    "model": "opus",
    "effort": "high",
+   "phase": "P4"
+  },
+  {
+   "ts": "2026-09-25T08:49:13",
+   "role": "bench-writer",
+   "model": "opus",
    "phase": "P4"
   }
  ],
@@ -441,6 +624,90 @@
    "status": "fail",
    "attempt": 1,
    "failing_count": 10
+  },
+  {
+   "ts": "2026-09-25T08:44:09",
+   "event": "gate",
+   "gate": "netlist_lint",
+   "status": "pass",
+   "attempt": 4,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T08:44:58",
+   "event": "edit",
+   "edit_class": "spec_edit",
+   "refs": [],
+   "human_hold": 2
+  },
+  {
+   "ts": "2026-09-25T08:44:59",
+   "event": "gate",
+   "gate": "spec_lint",
+   "status": "pass",
+   "attempt": 6,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T08:49:13",
+   "event": "edit",
+   "edit_class": "spec_edit",
+   "refs": [],
+   "human_hold": 2
+  },
+  {
+   "ts": "2026-09-25T08:49:13",
+   "event": "spawn",
+   "role": "bench-writer",
+   "model": "opus"
+  },
+  {
+   "ts": "2026-09-25T08:49:14",
+   "event": "gate",
+   "gate": "spec_lint",
+   "status": "pass",
+   "attempt": 7,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T08:49:52",
+   "event": "gate",
+   "gate": "netlist_lint",
+   "status": "pass",
+   "attempt": 5,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T08:50:32",
+   "event": "gate",
+   "gate": "sim_tt",
+   "status": "pass",
+   "attempt": 3,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T09:01:27",
+   "event": "gate",
+   "gate": "sim_pvt",
+   "status": "fail",
+   "attempt": 2,
+   "failing_count": 4
+  },
+  {
+   "ts": "2026-09-25T09:02:34",
+   "event": "gate",
+   "gate": "sim_tt",
+   "status": "pass",
+   "attempt": 4,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T09:07:22",
+   "event": "gate",
+   "gate": "sim_pvt",
+   "status": "pass",
+   "attempt": 3,
+   "failing_count": 0
   }
  ]
 }

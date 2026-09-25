@@ -4,21 +4,21 @@
  "block": "r2r_dac",
  "workspace": "blocks/r2r_dac",
  "created": "2026-09-25T05:42:01",
- "updated": "2026-09-25T05:46:41",
+ "updated": "2026-09-25T08:49:02",
  "phase": "P2",
  "toolchain": null,
  "gates": {
   "split": {
    "phase": "P1",
    "status": "pass",
-   "attempts": 1,
+   "attempts": 2,
    "last": {
-    "ts": "2026-09-25T05:45:57",
+    "ts": "2026-09-25T08:49:02",
     "status": "pass",
     "failing_count": 0,
     "total": 0,
     "inputs": {
-     "interface": "json_canonical:0264be9adb7ef8a932e05c9a834a698949080311628757850f1688217c914be0"
+     "interface": "json_canonical:88bbbf805a8b01cc0e2a81dbfb1a07ce5e57ff99655e04f0ba248d9241d24440"
     },
     "job": null
    },
@@ -30,6 +30,16 @@
      "total": 0,
      "inputs": {
       "interface": "json_canonical:0264be9adb7ef8a932e05c9a834a698949080311628757850f1688217c914be0"
+     },
+     "job": null
+    },
+    {
+     "ts": "2026-09-25T08:49:02",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "interface": "json_canonical:88bbbf805a8b01cc0e2a81dbfb1a07ce5e57ff99655e04f0ba248d9241d24440"
      },
      "job": null
     }
@@ -44,8 +54,8 @@
   "interface": {
    "path": "interface.yaml",
    "kind": "interface",
-   "sha256": "json_canonical:0264be9adb7ef8a932e05c9a834a698949080311628757850f1688217c914be0",
-   "hashed": "2026-09-25T05:45:57"
+   "sha256": "json_canonical:88bbbf805a8b01cc0e2a81dbfb1a07ce5e57ff99655e04f0ba248d9241d24440",
+   "hashed": "2026-09-25T08:49:02"
   }
  },
  "open_issues": [],
@@ -55,7 +65,28 @@
   "fix_loops": {}
  },
  "decisions": [],
- "edits": [],
+ "edits": [
+  {
+   "ts": "2026-09-25T08:49:01",
+   "class": "interface_edit",
+   "refs": [],
+   "note": "round 2: ua_pins vout->ua[0]",
+   "human_hold": 2,
+   "gates": [
+    "split",
+    "cosim",
+    "top_harden",
+    "top_drc",
+    "top_lvs",
+    "precheck",
+    "release"
+   ],
+   "gates_marked": [
+    "split"
+   ],
+   "stale_artifacts": []
+  }
+ ],
  "spawns": [
   {
    "ts": "2026-09-25T05:42:22",
@@ -97,6 +128,21 @@
    "event": "phase",
    "phase": "P2",
    "prev": "P1"
+  },
+  {
+   "ts": "2026-09-25T08:49:01",
+   "event": "edit",
+   "edit_class": "interface_edit",
+   "refs": [],
+   "human_hold": 2
+  },
+  {
+   "ts": "2026-09-25T08:49:02",
+   "event": "gate",
+   "gate": "split",
+   "status": "pass",
+   "attempt": 2,
+   "failing_count": 0
   }
  ]
 }
