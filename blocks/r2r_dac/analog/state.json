@@ -1,0 +1,96 @@
+{
+ "version": 3,
+ "skill": "ade",
+ "block": "analog",
+ "workspace": "blocks/r2r_dac/analog",
+ "created": "2026-09-25T05:47:00",
+ "updated": "2026-09-25T05:53:25",
+ "phase": "P1",
+ "toolchain": null,
+ "gates": {
+  "spec_lint": {
+   "phase": "P1",
+   "status": "pass",
+   "attempts": 1,
+   "last": {
+    "ts": "2026-09-25T05:53:25",
+    "status": "pass",
+    "failing_count": 0,
+    "total": 0,
+    "inputs": {
+     "spec_yaml": "json_canonical:81b818f72a717007e48d3bfa522cf52678dae5ce1d13cbd0b90f250170f027d9"
+    },
+    "job": null
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T05:53:25",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "spec_yaml": "json_canonical:81b818f72a717007e48d3bfa522cf52678dae5ce1d13cbd0b90f250170f027d9"
+     },
+     "job": null
+    }
+   ]
+  }
+ },
+ "jobs": {},
+ "holdout": null,
+ "optimise": null,
+ "human": {},
+ "artifacts": {
+  "spec_yaml": {
+   "path": "spec/spec.yaml",
+   "kind": "spec_yaml",
+   "sha256": "json_canonical:81b818f72a717007e48d3bfa522cf52678dae5ce1d13cbd0b90f250170f027d9",
+   "hashed": "2026-09-25T05:53:25"
+  }
+ },
+ "open_issues": [],
+ "next_issue_id": 1,
+ "next_job_id": 1,
+ "budgets": {
+  "fix_loops": {}
+ },
+ "decisions": [],
+ "edits": [],
+ "spawns": [
+  {
+   "ts": "2026-09-25T05:47:01",
+   "role": "spec-writer",
+   "model": "claude-fable-5-1",
+   "phase": "P1"
+  }
+ ],
+ "history": [
+  {
+   "ts": "2026-09-25T05:47:00",
+   "event": "init",
+   "skill": "ade",
+   "block": "analog",
+   "phase": "P0"
+  },
+  {
+   "ts": "2026-09-25T05:47:01",
+   "event": "phase",
+   "phase": "P1",
+   "prev": "P0"
+  },
+  {
+   "ts": "2026-09-25T05:47:01",
+   "event": "spawn",
+   "role": "spec-writer",
+   "model": "claude-fable-5-1"
+  },
+  {
+   "ts": "2026-09-25T05:53:25",
+   "event": "gate",
+   "gate": "spec_lint",
+   "status": "pass",
+   "attempt": 1,
+   "failing_count": 0
+  }
+ ]
+}

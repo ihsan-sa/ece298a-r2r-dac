@@ -1,0 +1,102 @@
+{
+ "version": 3,
+ "skill": "msde",
+ "block": "r2r_dac",
+ "workspace": "blocks/r2r_dac",
+ "created": "2026-09-25T05:42:01",
+ "updated": "2026-09-25T05:46:41",
+ "phase": "P2",
+ "toolchain": null,
+ "gates": {
+  "split": {
+   "phase": "P1",
+   "status": "pass",
+   "attempts": 1,
+   "last": {
+    "ts": "2026-09-25T05:45:57",
+    "status": "pass",
+    "failing_count": 0,
+    "total": 0,
+    "inputs": {
+     "interface": "json_canonical:0264be9adb7ef8a932e05c9a834a698949080311628757850f1688217c914be0"
+    },
+    "job": null
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T05:45:57",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "interface": "json_canonical:0264be9adb7ef8a932e05c9a834a698949080311628757850f1688217c914be0"
+     },
+     "job": null
+    }
+   ]
+  }
+ },
+ "jobs": {},
+ "holdout": null,
+ "optimise": null,
+ "human": {},
+ "artifacts": {
+  "interface": {
+   "path": "interface.yaml",
+   "kind": "interface",
+   "sha256": "json_canonical:0264be9adb7ef8a932e05c9a834a698949080311628757850f1688217c914be0",
+   "hashed": "2026-09-25T05:45:57"
+  }
+ },
+ "open_issues": [],
+ "next_issue_id": 1,
+ "next_job_id": 1,
+ "budgets": {
+  "fix_loops": {}
+ },
+ "decisions": [],
+ "edits": [],
+ "spawns": [
+  {
+   "ts": "2026-09-25T05:42:22",
+   "role": "splitter",
+   "model": "claude-fable-5-1",
+   "phase": "P1"
+  }
+ ],
+ "history": [
+  {
+   "ts": "2026-09-25T05:42:01",
+   "event": "init",
+   "skill": "msde",
+   "block": "r2r_dac",
+   "phase": "P0"
+  },
+  {
+   "ts": "2026-09-25T05:42:16",
+   "event": "phase",
+   "phase": "P1",
+   "prev": "P0"
+  },
+  {
+   "ts": "2026-09-25T05:42:22",
+   "event": "spawn",
+   "role": "splitter",
+   "model": "claude-fable-5-1"
+  },
+  {
+   "ts": "2026-09-25T05:45:57",
+   "event": "gate",
+   "gate": "split",
+   "status": "pass",
+   "attempt": 1,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T05:46:41",
+   "event": "phase",
+   "phase": "P2",
+   "prev": "P1"
+  }
+ ]
+}
