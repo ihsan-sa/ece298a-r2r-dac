@@ -70,7 +70,7 @@ cocotb in the eda image is 2.1.0, not the pinned 2.0.1.
 About $12 across 3 rounds: splitter $1.5, spec-writer $3, topology $0.4,
 bench-writer $3.6, netlist designer $1.1, orchestration about $2.3.
 
-## Round 2 (2026-09-25, chip-flow at #20), in progress
+## Round 2 (2026-09-25, chip-flow at #20)
 
 ### Analog, re-recorded on the #20 engine (pre-layout)
 
@@ -118,3 +118,50 @@ band method probably under-reads. That bench wasn't revised this round.
     warning-level miss (INL sensitivity 0.526 LSB), although sim_tt passes
     with it. A baseline warning would also have counted as a kill for
     every mutant. Fixed in chip-flow PR #22.
+18. The layout step's `finalize()` rebuilds each polygon from its outline
+    and drops holes. The PDK filltie's NPLUS is a keyhole around its P+
+    tap, so after `finalize()` NPLUS covers the tap: 96 of the analog
+    DRC's 98 findings (DF.16_MV, DF.3b, NP.3d/e, PP.3d/e on 16 fillties).
+    The raw PDK filltie passes the same deck with none.
+19. Block-level analog DRC runs the dummy-fill decks (2 × DCF.1a) although
+    it drops density for the same reason, that a lone block has no fill.
+20. The nested analog workspace was named `analog`, the directory, the
+    same root as 14. layout_gen, analog LVS, pex_sim and top_harden all
+    name files after it, so LVS looked for `netlist/analog.cir`. I
+    renamed the block to `r2r_dac` in state.json to get past it (recorded
+    as a decision); chip-flow should make the router use the msde naming.
+21. Analog LVS can't match standard cells: `finalize()` flattens the eight
+    buffers into 480 transistors, and the reference keeps them as black
+    boxes. netgen also black-boxes `ppolyf_u`, so resistor sizes are never
+    compared. The LVS gate is recorded FAIL for this.
+22. gate.py ignores `--out` on its error path, and gates that build layout
+    need the toolchain's Python (`bin/eda python`), not the host's, but the
+    recipe prints host `python3`.
+23. top_harden's power grid fails on the analog tile. PR #21's bus binding
+    worked and the macro was placed (207.8 × 139.6 µm at 69.4, 94.1 in the
+    346.6 × 325.4 µm 1x2 tile). LibreLane then stopped at
+    `openroad-generatepdn`: [PDN-0179] Unable to repair all channels, with
+    Metal1 channels left of the macro at x 3.4–59.4 µm. It's the engine's
+    PDN setup for a macro in the tile (`macro_pdn.tcl`,
+    `FP_PDN_MULTILAYER 0`); I didn't try to fix it. top_drc, top_lvs and
+    the TT precheck can't run without the top GDS.
+
+### Where round 2 stopped
+
+| step | result |
+|---|---|
+| spec_lint, netlist_lint, sim_tt, sim_pvt (analog) | pass on #20 |
+| split (msde) | pass |
+| digital lint, sim, holdout, formal, cover | pass |
+| digital mutate | fail, 2 unobservable mutants (10); waiver asked, unanswered |
+| bench_strength (analog) | pass, 33 of 33 mutants killed, run on PR #22 and recorded |
+| analog layout generator | builds (208 × 140 µm, 25 ppolyf_u + 8 buf_20) |
+| analog DRC | fail, 98 (18, 19) |
+| analog LVS | fail (21) |
+| pex_sim | refused, no post-layout bench |
+| top_harden | fail at PDN (23) |
+| top_drc, top_lvs, precheck | not reached |
+| digital standalone harden | not run, held on the mutate waiver |
+
+Round 2 cost about $9: the bench-writer $0.6, the digital agent $1.5,
+the layout agent $1.4, and orchestration for the rest.

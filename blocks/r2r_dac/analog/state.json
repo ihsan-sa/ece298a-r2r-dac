@@ -1,11 +1,11 @@
 {
  "version": 3,
  "skill": "ade",
- "block": "analog",
+ "block": "r2r_dac",
  "workspace": "blocks/r2r_dac/analog",
  "created": "2026-09-25T05:47:00",
- "updated": "2026-09-25T09:07:22",
- "phase": "P4",
+ "updated": "2026-09-25T09:46:46",
+ "phase": "P5",
  "toolchain": null,
  "gates": {
   "spec_lint": {
@@ -347,12 +347,121 @@
      }
     }
    ]
+  },
+  "drc": {
+   "phase": "P5",
+   "status": "fail",
+   "attempts": 1,
+   "last": {
+    "ts": "2026-09-25T09:35:00",
+    "status": "fail",
+    "failing_count": 98,
+    "total": 98,
+    "inputs": {
+     "layout": "dir_text:bfab87baadb7f1206c1c00552b092d698c9148dfc924bb04b9b546f98d7c84f5"
+    },
+    "job": null
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T09:35:00",
+     "status": "fail",
+     "failing_count": 98,
+     "total": 98,
+     "inputs": {
+      "layout": "dir_text:bfab87baadb7f1206c1c00552b092d698c9148dfc924bb04b9b546f98d7c84f5"
+     },
+     "job": null
+    }
+   ],
+   "stale": [
+    {
+     "ts": "2026-09-25T09:40:45",
+     "edit_class": "layout_code_edit",
+     "refs": [],
+     "human_hold": 1
+    }
+   ]
+  },
+  "lvs": {
+   "phase": "P5",
+   "status": "fail",
+   "attempts": 1,
+   "last": {
+    "ts": "2026-09-25T09:42:04",
+    "status": "fail",
+    "failing_count": 1,
+    "total": 1,
+    "inputs": {
+     "layout": "dir_text:f78a94124a00ffd93d5afc43316b74aa05535a0851cbd2ce6f3985831b140e0c",
+     "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+    },
+    "job": null
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T09:42:04",
+     "status": "fail",
+     "failing_count": 1,
+     "total": 1,
+     "inputs": {
+      "layout": "dir_text:f78a94124a00ffd93d5afc43316b74aa05535a0851cbd2ce6f3985831b140e0c",
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+     },
+     "job": null
+    }
+   ]
+  },
+  "bench_strength": {
+   "phase": "P4",
+   "status": "pass",
+   "attempts": 1,
+   "last": {
+    "ts": "2026-09-25T09:46:36",
+    "status": "pass",
+    "failing_count": 0,
+    "total": 0,
+    "inputs": {
+     "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+     "tb": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea"
+    },
+    "job": null,
+    "facts": {
+     "total_mutants": 33,
+     "killed": 33,
+     "survived": 0
+    }
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T09:46:36",
+     "status": "pass",
+     "failing_count": 0,
+     "total": 0,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea"
+     },
+     "job": null,
+     "facts": {
+      "total_mutants": 33,
+      "killed": 33,
+      "survived": 0
+     }
+    }
+   ]
   }
  },
  "jobs": {},
  "holdout": null,
  "optimise": null,
- "human": {},
+ "human": {
+  "H1": {
+   "status": "approved",
+   "ts": "2026-09-25T09:28:19",
+   "note": "owner 2026-09-25 13:25Z round-2 note: keep 27k unit R, settling ~1.2us documented trade-off, take the DAC through layout/LVS"
+  }
+ },
  "artifacts": {
   "spec_yaml": {
    "path": "spec/spec.yaml",
@@ -364,13 +473,19 @@
    "path": "netlist",
    "kind": "netlist",
    "sha256": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
-   "hashed": "2026-09-25T09:07:22"
+   "hashed": "2026-09-25T09:46:36"
   },
   "tb": {
    "path": "tb",
    "kind": "tb",
    "sha256": "dir_text:b929c151416c6f615144916d3ae3ccf0a18e46bb346562f4e8966b0ba63f89ea",
-   "hashed": "2026-09-25T09:07:22"
+   "hashed": "2026-09-25T09:46:36"
+  },
+  "layout": {
+   "path": "layout",
+   "kind": "layout",
+   "sha256": "dir_text:f78a94124a00ffd93d5afc43316b74aa05535a0851cbd2ce6f3985831b140e0c",
+   "hashed": "2026-09-25T09:42:04"
   }
  },
  "open_issues": [],
@@ -385,6 +500,12 @@
    "why": "shakedown is capped at 3 rounds and ~8 USD per round; fable spawns cost 1.5-3 USD each in round 1",
    "phase": "P2",
    "ts": "2026-09-25T05:55:51"
+  },
+  {
+   "what": "state.block analog -> r2r_dac; gen_analog.py -> gen_r2r_dac.py",
+   "why": "task_router fell back to the dirname at nested init (breakage 14/21), so lvs/pex_sim/top_harden looked for netlist/analog.cir; r2r_dac matches netlist/r2r_dac.cir without touching netlist/",
+   "phase": "P5",
+   "ts": "2026-09-25T09:40:45"
   }
  ],
  "edits": [
@@ -439,6 +560,38 @@
     "sim_pvt"
    ],
    "stale_artifacts": []
+  },
+  {
+   "ts": "2026-09-25T09:34:05",
+   "class": "layout_code_edit",
+   "refs": [],
+   "note": "layout: first generator",
+   "human_hold": 1,
+   "gates": [
+    "drc",
+    "lvs",
+    "pex_sim",
+    "release"
+   ],
+   "gates_marked": [],
+   "stale_artifacts": []
+  },
+  {
+   "ts": "2026-09-25T09:40:45",
+   "class": "layout_code_edit",
+   "refs": [],
+   "note": "generator renamed to follow block name",
+   "human_hold": 1,
+   "gates": [
+    "drc",
+    "lvs",
+    "pex_sim",
+    "release"
+   ],
+   "gates_marked": [
+    "drc"
+   ],
+   "stale_artifacts": []
   }
  ],
  "spawns": [
@@ -474,6 +627,13 @@
    "role": "bench-writer",
    "model": "opus",
    "phase": "P4"
+  },
+  {
+   "ts": "2026-09-25T09:28:19",
+   "role": "layout-writer",
+   "model": "claude-opus-5-5",
+   "effort": "high",
+   "phase": "P5"
   }
  ],
  "history": [
@@ -708,6 +868,67 @@
    "status": "pass",
    "attempt": 3,
    "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T09:28:19",
+   "event": "human",
+   "checkpoint": "H1",
+   "status": "approved"
+  },
+  {
+   "ts": "2026-09-25T09:28:19",
+   "event": "spawn",
+   "role": "layout-writer",
+   "model": "claude-opus-5-5"
+  },
+  {
+   "ts": "2026-09-25T09:34:05",
+   "event": "edit",
+   "edit_class": "layout_code_edit",
+   "refs": [],
+   "human_hold": 1
+  },
+  {
+   "ts": "2026-09-25T09:35:00",
+   "event": "gate",
+   "gate": "drc",
+   "status": "fail",
+   "attempt": 1,
+   "failing_count": 98
+  },
+  {
+   "ts": "2026-09-25T09:40:45",
+   "event": "decision",
+   "what": "state.block analog -> r2r_dac; gen_analog.py -> gen_r2r_dac.py"
+  },
+  {
+   "ts": "2026-09-25T09:40:45",
+   "event": "edit",
+   "edit_class": "layout_code_edit",
+   "refs": [],
+   "human_hold": 1
+  },
+  {
+   "ts": "2026-09-25T09:42:04",
+   "event": "gate",
+   "gate": "lvs",
+   "status": "fail",
+   "attempt": 1,
+   "failing_count": 1
+  },
+  {
+   "ts": "2026-09-25T09:46:36",
+   "event": "gate",
+   "gate": "bench_strength",
+   "status": "pass",
+   "attempt": 1,
+   "failing_count": 0
+  },
+  {
+   "ts": "2026-09-25T09:46:46",
+   "event": "phase",
+   "phase": "P5",
+   "prev": "P4"
   }
  ]
 }

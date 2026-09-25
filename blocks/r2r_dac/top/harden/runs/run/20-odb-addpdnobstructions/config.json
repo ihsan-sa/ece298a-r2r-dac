@@ -1,0 +1,247 @@
+{
+    "STD_CELL_LIBRARY": "gf180mcu_fd_sc_mcu7t5v0",
+    "PAD_CELL_LIBRARY": "gf180mcu_fd_io",
+    "VDD_PIN": "VPWR",
+    "GND_PIN": "VGND",
+    "TECH_LEFS": {
+        "nom_*": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__nom.tlef",
+        "min_*": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__min.tlef",
+        "max_*": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/techlef/gf180mcu_fd_sc_mcu7t5v0__max.tlef"
+    },
+    "PRIMARY_GDSII_STREAMOUT_TOOL": "magic",
+    "DEFAULT_MAX_TRAN": null,
+    "DEFAULT_CORNER": "nom_tt_025C_3v30",
+    "STA_CORNERS": [
+        "nom_tt_025C_3v30",
+        "nom_ss_125C_3v00",
+        "nom_ff_n40C_3v60",
+        "min_tt_025C_3v30",
+        "min_ss_125C_3v00",
+        "min_ff_n40C_3v60",
+        "max_tt_025C_3v30",
+        "max_ss_125C_3v00",
+        "max_ff_n40C_3v60"
+    ],
+    "RT_MIN_LAYER": "Metal2",
+    "RT_MAX_LAYER": "Metal4",
+    "SCL_GROUND_PINS": [
+        "VSS",
+        "VPW"
+    ],
+    "SCL_POWER_PINS": [
+        "VDD",
+        "VNW"
+    ],
+    "TRISTATE_CELLS": [
+        "gf180mcu_fd_sc_mcu7t5v0__bufz*"
+    ],
+    "FILL_CELLS": [
+        "gf180mcu_fd_sc_mcu7t5v0__fill_*"
+    ],
+    "DECAP_CELLS": [
+        "gf180mcu_fd_sc_mcu7t5v0__fillcap_*"
+    ],
+    "CELL_LIBS": {
+        "*_tt_025C_3v30": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib"
+        ],
+        "*_ss_125C_3v00": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib"
+        ],
+        "*_ff_n40C_3v60": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib"
+        ]
+    },
+    "CELL_LEFS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lef/gf180mcu_fd_sc_mcu7t5v0.lef"
+    ],
+    "CELL_GDS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/gds/gf180mcu_fd_sc_mcu7t5v0.gds"
+    ],
+    "CELL_VERILOG_MODELS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/verilog/gf180mcu_fd_sc_mcu7t5v0.v"
+    ],
+    "CELL_BB_VERILOG_MODELS": null,
+    "CELL_SPICE_MODELS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice"
+    ],
+    "CELL_CDLS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/cdl/gf180mcu_fd_sc_mcu7t5v0.cdl"
+    ],
+    "SYNTH_EXCLUDED_CELL_FILE": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/librelane/gf180mcu_fd_sc_mcu7t5v0/synth_exclude.cells",
+    "PNR_EXCLUDED_CELL_FILE": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/librelane/gf180mcu_fd_sc_mcu7t5v0/pnr_exclude.cells",
+    "OUTPUT_CAP_LOAD": 72.91,
+    "MAX_FANOUT_CONSTRAINT": 10,
+    "MAX_TRANSITION_CONSTRAINT": 3,
+    "MAX_CAPACITANCE_CONSTRAINT": 0.2,
+    "CLOCK_UNCERTAINTY_CONSTRAINT": 0.25,
+    "CLOCK_TRANSITION_CONSTRAINT": 0.15,
+    "TIME_DERATING_CONSTRAINT": 5,
+    "IO_DELAY_CONSTRAINT": 20,
+    "SYNTH_DRIVING_CELL": "gf180mcu_fd_sc_mcu7t5v0__inv_1/ZN",
+    "SYNTH_CLK_DRIVING_CELL": "gf180mcu_fd_sc_mcu7t5v0__inv_4/ZN",
+    "SYNTH_TIEHI_CELL": "gf180mcu_fd_sc_mcu7t5v0__tieh/Z",
+    "SYNTH_TIELO_CELL": "gf180mcu_fd_sc_mcu7t5v0__tiel/ZN",
+    "SYNTH_BUFFER_CELL": "gf180mcu_fd_sc_mcu7t5v0__buf_1/I/Z",
+    "PLACE_SITE": "GF018hv5v_mcu_sc7",
+    "CELL_PAD_EXCLUDE": [
+        "gf180mcu_fd_sc_mcu7t5v0__filltie",
+        "gf180mcu_fd_sc_mcu7t5v0__fill_*",
+        "gf180mcu_fd_sc_mcu7t5v0__endcap"
+    ],
+    "DIODE_CELL": "gf180mcu_fd_sc_mcu7t5v0__antenna/I",
+    "WELLTAP_CELL": "gf180mcu_fd_sc_mcu7t5v0__filltie",
+    "ENDCAP_CELL": "gf180mcu_fd_sc_mcu7t5v0__endcap",
+    "DESIGN_DIR": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden",
+    "PDK_ROOT": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks",
+    "DESIGN_NAME": "tt_um_r2r_dac_digital",
+    "PDK": "gf180mcuD",
+    "CLOCK_PERIOD": 20,
+    "CLOCK_PORT": "clk",
+    "CLOCK_NET": null,
+    "VDD_NETS": null,
+    "GND_NETS": null,
+    "DIE_AREA": [
+        0,
+        0,
+        346.64,
+        325.36
+    ],
+    "EXTRA_EXCLUDED_CELLS": null,
+    "MACROS": {
+        "r2r_dac_analog": {
+            "gds": [
+                "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.gds"
+            ],
+            "lef": [
+                "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.lef"
+            ],
+            "instances": {
+                "u_analog": {
+                    "location": [
+                        69.44,
+                        94.08
+                    ],
+                    "orientation": "N",
+                    "array": null
+                }
+            },
+            "vh": [
+                "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.v"
+            ],
+            "nl": [],
+            "pnl": [],
+            "spef": {},
+            "lib": {},
+            "spice": [
+                "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.spice"
+            ],
+            "sdf": {},
+            "json_h": null
+        }
+    },
+    "EXTRA_LEFS": null,
+    "EXTRA_VERILOG_MODELS": null,
+    "EXTRA_SPICE_MODELS": [
+        "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.spice"
+    ],
+    "EXTRA_CDLS": null,
+    "EXTRA_LIBS": null,
+    "EXTRA_GDS": null,
+    "FALLBACK_SDC": "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/librelane/scripts/base.sdc",
+    "PAD_LIBS": {
+        "*_tt_025C_5v00": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_5v00.lib.gz"
+        ],
+        "*_ff_n40C_5v50": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_5v50.lib.gz"
+        ],
+        "*_ss_125C_4v50": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_4v50.lib.gz"
+        ],
+        "*_tt_025C_3v30": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz"
+        ],
+        "*_ff_n40C_3v60": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz"
+        ],
+        "*_ss_125C_3v00": [
+            "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz"
+        ]
+    },
+    "PAD_LEFS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_s.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__cor.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_c.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__brk5.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill5.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__brk2.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_t.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__asig_5p0.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_24t.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill10.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvss.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvdd.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_ef_io__bi_t.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill1.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fillnc.lef"
+    ],
+    "PAD_GDS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/gds/gf180mcu_fd_io.gds",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/gds/gf180mcu_ef_io.gds"
+    ],
+    "PAD_VERILOG_MODELS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/verilog/gf180mcu_fd_io__blackbox_pp.v",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/verilog/gf180mcu_ef_io__blackbox_pp.v"
+    ],
+    "PAD_SPICE_MODELS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_fd_io.spice",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_ef_io.spice"
+    ],
+    "PAD_CDLS": [
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/cdl/gf180mcu_fd_io.cdl"
+    ],
+    "PAD_CORNER": [
+        "gf180mcu_fd_io__cor"
+    ],
+    "PAD_FILLERS": [
+        "gf180mcu_fd_io__fill10",
+        "gf180mcu_fd_io__fill5",
+        "gf180mcu_fd_io__fill1",
+        "gf180mcu_fd_io__fillnc"
+    ],
+    "PAD_SITE_NAME": "GF_IO_Site",
+    "PAD_CORNER_SITE_NAME": "GF_COR_Site",
+    "PAD_FAKE_SITES": {
+        "GF_IO_Site": [
+            0.1,
+            355
+        ],
+        "GF_COR_Site": [
+            355,
+            355
+        ]
+    },
+    "PAD_BONDPAD_NAME": null,
+    "PAD_BONDPAD_WIDTH": null,
+    "PAD_BONDPAD_HEIGHT": null,
+    "PAD_BONDPAD_OFFSETS": null,
+    "PAD_PLACE_IO_TERMINALS": [
+        "gf180mcu_fd_io__asig_5p0/ASIG5V",
+        "gf180mcu_fd_io__bi_24t/PAD",
+        "gf180mcu_fd_io__bi_t/PAD",
+        "gf180mcu_fd_io__in_c/PAD",
+        "gf180mcu_fd_io__in_s/PAD",
+        "gf180mcu_fd_io__dvss/DVSS",
+        "gf180mcu_fd_io__dvdd/DVDD"
+    ],
+    "PAD_EDGE_SPACING": 26,
+    "PAD_ROTATION_HORIZONTAL": "R0",
+    "PAD_ROTATION_VERTICAL": "R0",
+    "PAD_ROTATION_CORNER": "R0",
+    "PDN_OBSTRUCTIONS": null,
+    "meta": {
+        "librelane_version": "3.1.0.dev3",
+        "step": "Odb.AddPDNObstructions"
+    }
+}

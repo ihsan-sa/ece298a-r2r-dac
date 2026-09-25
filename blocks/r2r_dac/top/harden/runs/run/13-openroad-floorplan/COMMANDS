@@ -1,0 +1,1 @@
+openroad -exit -threads None -no_splash -metrics /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/runs/run/13-openroad-floorplan/or_metrics_out.json /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/librelane/scripts/openroad/floorplan.tcl

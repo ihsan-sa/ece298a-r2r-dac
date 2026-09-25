@@ -1,0 +1,5 @@
+- cell: r2r_dac_analog
+  inout:
+  - vout
+  input: []
+  output: []

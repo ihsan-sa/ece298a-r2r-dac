@@ -1,0 +1,477 @@
+
+Circuit 1 cell ppolyf_u and Circuit 2 cell ppolyf_u are black boxes.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+Warning: Equate pins:  cell ppolyf_u is a placeholder, treated as a black box.
+
+Subcircuit pins:
+Circuit 1: ppolyf_u                        |Circuit 2: ppolyf_u                        
+-------------------------------------------|-------------------------------------------
+1                                          |1                                          
+2                                          |2                                          
+3                                          |3                                          
+---------------------------------------------------------------------------------------
+Cell pin lists are equivalent.
+Device classes ppolyf_u and ppolyf_u are equivalent.
+
+Class r2r_dac_analog (0):  Merged 448 parallel devices.
+Class r2r_dac_analog (0):  Merged 9 series devices.
+Class r2r_dac_analog (1):  Merged 9 series devices.
+Subcircuit summary:
+Circuit 1: r2r_dac_analog                  |Circuit 2: r2r_dac_analog                  
+-------------------------------------------|-------------------------------------------
+nfet_05v0 (240->16)                        |(no matching element)                      
+pfet_05v0 (240->16)                        |(no matching element)                      
+ppolyf_u (25->16)                          |ppolyf_u (25->16)                          
+(no matching element)                      |gf180mcu_fd_sc_mcu7t5v0__buf_20 (8)        
+Number of devices: 48 **Mismatch**         |Number of devices: 24 **Mismatch**         
+Number of nets: 34 **Mismatch**            |Number of nets: 26 **Mismatch**            
+---------------------------------------------------------------------------------------
+NET mismatches: Class fragments follow (with fanout counts):
+Circuit 1: r2r_dac_analog                  |Circuit 2: r2r_dac_analog                  
+
+---------------------------------------------------------------------------------------
+Net: a_n132_14472#                         |Net: n5                                    
+  nfet_05v0/(1|3) = 1                      |  ppolyf_u/(1|2) = 3                       
+  pfet_05v0/(1|3) = 1                      |                                           
+  ppolyf_u/(1|2) = 1                       |                                           
+                                           |                                           
+Net: a_n132_24072#                         |Net: n4                                    
+  nfet_05v0/(1|3) = 1                      |  ppolyf_u/(1|2) = 3                       
+  pfet_05v0/(1|3) = 1                      |                                           
+  ppolyf_u/(1|2) = 1                       |                                           
+                                           |                                           
+Net: a_n132_21672#                         |Net: n3                                    
+  nfet_05v0/(1|3) = 1                      |  ppolyf_u/(1|2) = 3                       
+  pfet_05v0/(1|3) = 1                      |                                           
+  ppolyf_u/(1|2) = 1                       |                                           
+                                           |                                           
+Net: a_n132_12072#                         |Net: n2                                    
+  nfet_05v0/(1|3) = 1                      |  ppolyf_u/(1|2) = 3                       
+  pfet_05v0/(1|3) = 1                      |                                           
+  ppolyf_u/(1|2) = 1                       |                                           
+                                           |                                           
+Net: a_n132_16872#                         |Net: n1                                    
+  pfet_05v0/(1|3) = 1                      |  ppolyf_u/(1|2) = 3                       
+  nfet_05v0/(1|3) = 1                      |                                           
+  ppolyf_u/(1|2) = 1                       |                                           
+                                           |                                           
+Net: a_n132_19272#                         |Net: n0                                    
+  nfet_05v0/(1|3) = 1                      |  ppolyf_u/(1|2) = 3                       
+  pfet_05v0/(1|3) = 1                      |                                           
+  ppolyf_u/(1|2) = 1                       |                                           
+                                           |                                           
+Net: a_n132_9672#                          |Net: n6                                    
+  ppolyf_u/(1|2) = 1                       |  ppolyf_u/(1|2) = 3                       
+  pfet_05v0/(1|3) = 1                      |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_n132_8072#                          |Net: dac_code[7]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: a_n132_20072#                         |Net: dac_code[6]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: a_n132_10472#                         |Net: dac_code[5]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: a_n132_15272#                         |Net: dac_code[4]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: a_n132_17672#                         |Net: dac_code[3]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: a_n132_12872#                         |Net: dac_code[2]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: a_n132_26472#                         |Net: dac_code[1]                           
+  nfet_05v0/(1|3) = 1                      |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+  ppolyf_u/(1|2) = 1                       |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_n132_22472#                         |Net: dac_code[0]                           
+  ppolyf_u/(1|2) = 3                       |  gf180mcu_fd_sc_mcu7t5v0__buf_20/1 = 1    
+                                           |                                           
+Net: vdd                                   |Net: vdd                                   
+  pfet_05v0/(1|3) = 16                     |  gf180mcu_fd_sc_mcu7t5v0__buf_20/3 = 8    
+  pfet_05v0/4 = 16                         |  gf180mcu_fd_sc_mcu7t5v0__buf_20/4 = 8    
+                                           |                                           
+Net: vss                                   |Net: vss                                   
+  nfet_05v0/(1|3) = 16                     |  gf180mcu_fd_sc_mcu7t5v0__buf_20/5 = 8    
+  nfet_05v0/4 = 16                         |  gf180mcu_fd_sc_mcu7t5v0__buf_20/6 = 8    
+  ppolyf_u/3 = 16                          |  ppolyf_u/3 = 16                          
+  ppolyf_u/(1|2) = 1                       |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: a_33552_5176#                         |(no matching net)                          
+  nfet_05v0/2 = 1                          |                                           
+  pfet_05v0/2 = 1                          |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_852#                          |(no matching net)                          
+  nfet_05v0/2 = 1                          |                                           
+  pfet_05v0/2 = 1                          |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_2420#                         |(no matching net)                          
+  pfet_05v0/2 = 1                          |                                           
+  nfet_05v0/2 = 1                          |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_472#                          |(no matching net)                          
+  nfet_05v0/(1|3) = 1                      |                                           
+  pfet_05v0/2 = 1                          |                                           
+  nfet_05v0/2 = 1                          |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_3608#                         |(no matching net)                          
+  nfet_05v0/2 = 1                          |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+  pfet_05v0/2 = 1                          |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_5556#                         |(no matching net)                          
+  nfet_05v0/2 = 1                          |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+  pfet_05v0/2 = 1                          |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_3988#                         |(no matching net)                          
+  pfet_05v0/(1|3) = 1                      |                                           
+  nfet_05v0/2 = 1                          |                                           
+  pfet_05v0/2 = 1                          |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+                                           |                                           
+Net: a_33552_2040#                         |(no matching net)                          
+  nfet_05v0/2 = 1                          |                                           
+  nfet_05v0/(1|3) = 1                      |                                           
+  pfet_05v0/2 = 1                          |                                           
+  pfet_05v0/(1|3) = 1                      |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Net: vout                                  |Net: vout                                  
+  ppolyf_u/(1|2) = 2                       |  ppolyf_u/(1|2) = 2                       
+                                           |                                           
+Net: dac_code[1]                           |Net: d0                                    
+  pfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  nfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[7]                           |Net: d1                                    
+  nfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  pfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[2]                           |Net: d2                                    
+  nfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  pfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[4]                           |Net: d3                                    
+  nfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  pfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[0]                           |Net: d4                                    
+  nfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  pfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[3]                           |Net: d5                                    
+  nfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  pfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[6]                           |Net: d6                                    
+  pfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  nfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+                                           |                                           
+Net: dac_code[5]                           |Net: d7                                    
+  pfet_05v0/2 = 1                          |  gf180mcu_fd_sc_mcu7t5v0__buf_20/2 = 1    
+  nfet_05v0/2 = 1                          |  ppolyf_u/(1|2) = 1                       
+---------------------------------------------------------------------------------------
+DEVICE mismatches: Class fragments follow (with node fanout counts):
+Circuit 1: r2r_dac_analog                  |Circuit 2: r2r_dac_analog                  
+
+---------------------------------------------------------------------------------------
+Instance: nfet_05v0:0                      |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:2                      |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:4                      |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:5                      |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:7                      |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:22                     |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:31                     |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:62                     |Instance: gf180mcu_fd_sc_mcu7t5v0__buf_20: 
+  (1,3) = (49,3)                           |  1 = 1                                    
+  2 = 4                                    |  2 = 2                                    
+  4 = 49                                   |  3 = 16                                   
+                                           |  4 = 16                                   
+                                           |  5 = 33                                   
+                                           |  6 = 33                                   
+                                           |                                           
+Instance: nfet_05v0:16                     |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:21                     |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:33                     |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:34                     |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:36                     |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:45                     |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:302                    |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: nfet_05v0:303                    |(no matching instance)                     
+  (1,3) = (49,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 49                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:1                      |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:13                     |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:83                     |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:86                     |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:87                     |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:120                    |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:134                    |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:281                    |(no matching instance)                     
+  (1,3) = (32,4)                           |                                           
+  2 = 2                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:3                      |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:6                      |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:15                     |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:20                     |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:55                     |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:76                     |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:108                    |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+                                           |                                           
+Instance: pfet_05v0:126                    |(no matching instance)                     
+  (1,3) = (32,3)                           |                                           
+  2 = 4                                    |                                           
+  4 = 32                                   |                                           
+                                           |                                           
+---------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------
+Instance: ppolyf_u:416                     |Instance: ppolyf_u:rta                     
+  (1,2) = (3,3)                            |  (1,2) = (33,3)                           
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:296                     |Instance: ppolyf_u:rs0                     
+  (1,2) = (3,3)                            |  (1,2) = (3,3)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:283                     |Instance: ppolyf_u:rs1                     
+  (1,2) = (3,3)                            |  (1,2) = (3,3)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:277                     |Instance: ppolyf_u:rs2                     
+  (1,2) = (49,3)                           |  (1,2) = (3,3)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:233                     |Instance: ppolyf_u:rs3                     
+  (1,2) = (3,3)                            |  (1,2) = (3,3)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:224                     |Instance: ppolyf_u:rs4                     
+  (1,2) = (3,3)                            |  (1,2) = (3,3)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:220                     |Instance: ppolyf_u:rs5                     
+  (1,2) = (3,3)                            |  (1,2) = (3,3)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:169                     |Instance: ppolyf_u:rs6                     
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:148                     |Instance: ppolyf_u:rb0a                    
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:135                     |Instance: ppolyf_u:rb1a                    
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:82                      |Instance: ppolyf_u:rb2a                    
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:71                      |Instance: ppolyf_u:rb3a                    
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:39                      |Instance: ppolyf_u:rb4a                    
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:30                      |Instance: ppolyf_u:rb5a                    
+  (1,2) = (3,3)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:468                     |Instance: ppolyf_u:rb6a                    
+  (1,2) = (3,2)                            |  (1,2) = (3,2)                            
+  3 = 49                                   |  3 = 33                                   
+                                           |                                           
+Instance: ppolyf_u:52                      |Instance: ppolyf_u:rb7a                    
+  (1,2) = (3,2)                            |  (1,2) = (2,2)                            
+  3 = 49                                   |  3 = 33                                   
+---------------------------------------------------------------------------------------
+Netlists do not match.
+Port matching may fail to disambiguate symmetries.
+
+Subcircuit pins:
+Circuit 1: r2r_dac_analog                  |Circuit 2: r2r_dac_analog                  
+-------------------------------------------|-------------------------------------------
+Cell pin lists are equivalent.
+Device classes r2r_dac_analog and r2r_dac_analog are equivalent.
+
+Final result: Netlists do not match.
+Port matching may fail to disambiguate symmetries.

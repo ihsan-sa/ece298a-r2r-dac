@@ -1,0 +1,9 @@
+{
+    "json_h": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/runs/run/05-yosys-jsonheader/tt_um_r2r_dac_digital.h.json",
+    "metrics": {
+        "design__lint_error__count": 0,
+        "design__lint_timing_construct__count": 0,
+        "design__lint_warning__count": 2,
+        "design__inferred_latch__count": 0
+    }
+}
