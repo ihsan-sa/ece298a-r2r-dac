@@ -1,0 +1,48 @@
+initial
+assume (= [$auto$async2sync.cc:116:execute$109] true)
+assume (= [$auto$async2sync.cc:116:execute$115] true)
+assume (= [_witness_.anyinit_procdff_91] #b00)
+assume (= [_witness_.anyinit_procdff_92] #b00)
+assume (= [_witness_.anyinit_procdff_93] #b00)
+assume (= [_witness_.anyinit_procdff_94] false)
+assume (= [dut.cnt] #b00000000)
+assume (= [dut.code_reg] #b10000000)
+assume (= [dut.dac_code] #b00000000)
+assume (= [dut.presc] #b00000000)
+assume (= [past_valid] false)
+assume (= [past_valid2] false)
+assume (= (select [dut.$auto$proc_rom.cc:155:do_switch$58] #b00000000) #b10000000)
+assume (= (select [dut.$auto$proc_rom.cc:155:do_switch$58] #b00000001) #b10000011)
+assume (= (select [dut.$auto$proc_rom.cc:155:do_switch$58] #b00000010) #b10000110)
+
+state 0
+assume (= [clk] false)
+assume (= [ena] false)
+assume (= [mode] #b11)
+assume (= [rst_n] true)
+assume (= [slow] false)
+assume (= [ui_in] #b00000000)
+
+state 1
+assume (= [clk] false)
+assume (= [ena] false)
+assume (= [mode] #b11)
+assume (= [rst_n] true)
+assume (= [slow] false)
+assume (= [ui_in] #b00000000)
+
+state 2
+assume (= [clk] false)
+assume (= [ena] false)
+assume (= [mode] #b00)
+assume (= [rst_n] false)
+assume (= [slow] false)
+assume (= [ui_in] #b00000000)
+
+state 3
+assume (= [clk] false)
+assume (= [ena] false)
+assume (= [mode] #b00)
+assume (= [rst_n] false)
+assume (= [slow] false)
+assume (= [ui_in] #b00000000)

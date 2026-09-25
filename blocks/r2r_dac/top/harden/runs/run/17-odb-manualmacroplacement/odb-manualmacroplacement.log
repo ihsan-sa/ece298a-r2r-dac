@@ -1,0 +1,6 @@
+[WARNING ORD-0039] .openroad ignored with -python
+Placing the following macros:
+{'u_analog': ['u_analog', 138880, 188160, 'N']}
+Design name: tt_um_r2r_dac_digital
+Placing u_analog
+Successfully placed 1 instances.

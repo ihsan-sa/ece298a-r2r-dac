@@ -1,0 +1,3 @@
+
+17. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\r2r_dac_digital.\sine_val' from process `\r2r_dac_digital.$proc$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/rtl/r2r_dac_digital.v:21$2'.

@@ -1,0 +1,13 @@
+// DESCRIPTION: Verilator output: Waivers generated with --waiver-output
+
+`verilator_config
+
+// Below are suggested waivers. You have three options:
+//   1. Fix the reason for the linter warning in the Verilog sources
+//   2. Keep the waiver permanently if you are sure it is okay
+//   3. Keep the waiver temporarily to suppress the output
+
+// lint_off -rule PINMISSING -file "*/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/tt_um_r2r_dac_digital.v" -match "Instance has missing pin: 'vdd'*"
+
+// lint_off -rule PINMISSING -file "*/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/tt_um_r2r_dac_digital.v" -match "Instance has missing pin: 'vss'*"
+

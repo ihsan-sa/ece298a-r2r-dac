@@ -1,0 +1,550 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+
+-- Executing script file `design_aiger.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: design_prep.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `r2r_dac_digital_formal'. Setting top module to r2r_dac_digital_formal.
+
+2.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+Used module:     \r2r_dac_digital
+
+2.2. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital_formal
+Used module:     \r2r_dac_digital
+Removed 0 unused modules.
+Module r2r_dac_digital_formal directly or indirectly contains formal properties -> setting "keep" attribute.
+
+3. Executing FORMALFF pass.
+
+4. Executing FLATTEN pass (flatten design).
+Deleting now unused module r2r_dac_digital.
+<suppressed ~1 debug messages>
+
+5. Executing SETUNDEF pass (replace undef values with defined constants).
+
+6. Executing OPT pass (performing simple optimizations).
+
+6.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital_formal.
+<suppressed ~2 debug messages>
+
+6.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 53 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Computing hashes of 51 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Computing hashes of 50 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+<suppressed ~8 debug messages>
+Removed a total of 3 cells.
+
+6.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \r2r_dac_digital_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+6.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \r2r_dac_digital_formal.
+Performed a total of 0 changes.
+
+6.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 50 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 0 cells.
+
+6.6. Executing OPT_SHARE pass.
+
+6.7. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+6.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital_formal.
+<suppressed ~1 debug messages>
+
+6.10. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.11. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \r2r_dac_digital_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+6.12. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \r2r_dac_digital_formal.
+Performed a total of 0 changes.
+
+6.13. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 49 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 0 cells.
+
+6.14. Executing OPT_SHARE pass.
+
+6.15. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+6.17. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital_formal.
+
+6.18. Rerunning OPT passes. (Maybe there is more to do..)
+
+6.19. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \r2r_dac_digital_formal..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~11 debug messages>
+
+6.20. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \r2r_dac_digital_formal.
+Performed a total of 0 changes.
+
+6.21. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 49 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Removed a total of 0 cells.
+
+6.22. Executing OPT_SHARE pass.
+
+6.23. Executing OPT_DFF pass (perform DFF optimizations).
+
+6.24. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+
+6.25. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital_formal.
+
+6.26. Finished fast OPT passes. (There is nothing left to do.)
+
+7. Executing TECHMAP pass (map to technology primitives).
+
+7.1. Executing Verilog-2005 frontend: /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/tools/yosys/bin/../share/yosys/techmap.v
+Parsing Verilog input from `/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/tools/yosys/bin/../share/yosys/techmap.v' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu_brent_kung'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `$__div_mod_u'.
+Generating RTLIL representation for module `$__div_mod_trunc'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `$__div_mod_floor'.
+Generating RTLIL representation for module `\_90_divfloor'.
+Generating RTLIL representation for module `\_90_modfloor'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_demux'.
+Generating RTLIL representation for module `\_90_lut'.
+Generating RTLIL representation for module `$connect'.
+Generating RTLIL representation for module `$input_port'.
+Successfully finished Verilog frontend.
+
+7.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $ff.
+Using extmapper simplemap for cells of type $logic_not.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $logic_or.
+Using extmapper simplemap for cells of type $logic_and.
+Using extmapper simplemap for cells of type $not.
+Running "alumacc" on wrapper $extern:wrap:$add:A_SIGNED=0:A_WIDTH=8:B_SIGNED=0:B_WIDTH=1:Y_WIDTH=8:394426c56d1a028ba8fdd5469b163e04011def47.
+Using template $extern:wrap:$add:A_SIGNED=0:A_WIDTH=8:B_SIGNED=0:B_WIDTH=1:Y_WIDTH=8:394426c56d1a028ba8fdd5469b163e04011def47 for cells of type $extern:wrap:$add:A_SIGNED=0:A_WIDTH=8:B_SIGNED=0:B_WIDTH=1:Y_WIDTH=8:394426c56d1a028ba8fdd5469b163e04011def47.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $pmux.
+Using extmapper simplemap for cells of type $mux.
+Using template $paramod$c3cd1564c35d873179656addd6052d7ea8b6d991\_90_alu for cells of type $alu.
+Using extmapper simplemap for cells of type $xor.
+Using template $paramod\_90_fa\WIDTH=32'00000000000000000000000000001000 for cells of type $fa.
+Using template $paramod\_90_lcu_brent_kung\WIDTH=32'00000000000000000000000000001000 for cells of type $lcu.
+Using extmapper simplemap for cells of type $pos.
+Using extmapper simplemap for cells of type $and.
+No more expansions possible.
+<suppressed ~323 debug messages>
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module r2r_dac_digital_formal.
+<suppressed ~158 debug messages>
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\r2r_dac_digital_formal'.
+Computing hashes of 240 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+Computing hashes of 230 cells of `\r2r_dac_digital_formal'.
+Finding duplicate cells in `\r2r_dac_digital_formal'.
+<suppressed ~30 debug messages>
+Removed a total of 10 cells.
+
+8.3. Executing OPT_DFF pass (perform DFF optimizations).
+
+8.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+Removed 13 unused cells and 134 unused wires.
+<suppressed ~14 debug messages>
+
+8.5. Finished fast OPT passes.
+
+9. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $flatten\dut.$auto$proc_rom.cc:155:do_switch$58 in module \r2r_dac_digital_formal:
+  created 256 $ff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+10. Executing FORMALFF pass.
+
+11. Executing SIMPLEMAP pass (map simple cells to gate primitives).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][126]$1512 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][125]$1509 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][124]$1506 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][123]$1503 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][122]$1500 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][121]$1497 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][120]$1494 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][119]$1491 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][118]$1488 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][117]$1485 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][116]$1482 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][115]$1479 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][114]$1476 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][113]$1473 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][112]$1470 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][111]$1467 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][110]$1464 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][109]$1461 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][108]$1458 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][107]$1455 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][106]$1452 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][105]$1449 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][104]$1446 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][103]$1443 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][102]$1440 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][101]$1437 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][100]$1434 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][99]$1431 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][98]$1428 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][97]$1425 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][96]$1422 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][95]$1419 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][94]$1416 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][93]$1413 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][92]$1410 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][91]$1407 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][90]$1404 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][89]$1401 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][88]$1398 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][87]$1395 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][86]$1392 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][85]$1389 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][84]$1386 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][83]$1383 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][82]$1380 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][81]$1377 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][80]$1374 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][79]$1371 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][78]$1368 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][77]$1365 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][76]$1362 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][75]$1359 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][74]$1356 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][73]$1353 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][72]$1350 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][71]$1347 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][70]$1344 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][69]$1341 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][68]$1338 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][67]$1335 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][66]$1332 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][65]$1329 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][64]$1326 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][63]$1323 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][62]$1320 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][61]$1317 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][60]$1314 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][59]$1311 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][58]$1308 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][57]$1305 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][56]$1302 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][55]$1299 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][54]$1296 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][53]$1293 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][52]$1290 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][51]$1287 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][50]$1284 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][49]$1281 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][48]$1278 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][47]$1275 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][46]$1272 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][45]$1269 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][44]$1266 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][43]$1263 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][42]$1260 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][41]$1257 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][40]$1254 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][39]$1251 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][38]$1248 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][37]$1245 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][36]$1242 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][35]$1239 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][34]$1236 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][33]$1233 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][32]$1230 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][31]$1227 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][30]$1224 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][29]$1221 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][28]$1218 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][27]$1215 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][26]$1212 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][25]$1209 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][24]$1206 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][23]$1203 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][22]$1200 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][21]$1197 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][20]$1194 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][19]$1191 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][18]$1188 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][17]$1185 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][16]$1182 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][15]$1179 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][14]$1176 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][13]$1173 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][12]$1170 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][11]$1167 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][10]$1164 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][9]$1161 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][8]$1158 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][7]$1155 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][6]$1152 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][5]$1149 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][4]$1146 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][3]$1143 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][2]$1140 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][1]$1137 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][0]$1134 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][63]$1131 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][62]$1128 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][61]$1125 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][60]$1122 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][59]$1119 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][58]$1116 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][57]$1113 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][56]$1110 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][55]$1107 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][54]$1104 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][53]$1101 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][52]$1098 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][51]$1095 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][50]$1092 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][49]$1089 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][48]$1086 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][47]$1083 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][46]$1080 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][45]$1077 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][44]$1074 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][43]$1071 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][42]$1068 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][41]$1065 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][40]$1062 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][39]$1059 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][38]$1056 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][37]$1053 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][36]$1050 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][35]$1047 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][34]$1044 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][33]$1041 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][32]$1038 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][31]$1035 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][30]$1032 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][29]$1029 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][28]$1026 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][27]$1023 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][26]$1020 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][25]$1017 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][24]$1014 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][23]$1011 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][22]$1008 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][21]$1005 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][20]$1002 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][19]$999 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][18]$996 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][17]$993 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][16]$990 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][15]$987 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][14]$984 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][13]$981 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][12]$978 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][11]$975 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][10]$972 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][9]$969 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][8]$966 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][7]$963 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][6]$960 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][5]$957 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][4]$954 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][3]$951 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][2]$948 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][1]$945 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][6][0]$942 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][31]$939 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][30]$936 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][29]$933 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][28]$930 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][27]$927 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][26]$924 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][25]$921 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][24]$918 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][23]$915 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][22]$912 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][21]$909 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][20]$906 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][19]$903 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][18]$900 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][17]$897 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][16]$894 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][15]$891 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][14]$888 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][13]$885 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][12]$882 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][11]$879 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][10]$876 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][9]$873 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][8]$870 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][7]$867 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][6]$864 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][5]$861 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][4]$858 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][3]$855 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][2]$852 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][1]$849 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][5][0]$846 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][15]$843 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][14]$840 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][13]$837 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][12]$834 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][11]$831 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][10]$828 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][9]$825 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][8]$822 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][7]$819 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][6]$816 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][5]$813 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][4]$810 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][3]$807 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][2]$804 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][1]$801 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][4][0]$798 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][7]$795 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][6]$792 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][5]$789 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][4]$786 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][3]$783 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][2]$780 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][1]$777 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][3][0]$774 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][2][3]$771 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][2][2]$768 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][2][1]$765 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][2][0]$762 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][1][1]$759 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][1][0]$756 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][0][0]$753 ($mux).
+Mapping r2r_dac_digital_formal.$memory$flatten\dut.$auto$proc_rom.cc:155:do_switch$58$rdmux[0][7][127]$1515 ($mux).
+
+12. Executing DFFUNMAP pass (unmap clock enable and synchronous reset from FFs).
+
+13. Executing AIGMAP pass (map logic to AIG).
+Module r2r_dac_digital_formal: replaced 2165 cells with 15014 new cells, skipped 91 cells.
+  replaced 3 cell types:
+    2096 $_MUX_
+      47 $_OR_
+      22 $_XOR_
+  not replaced 7 cell types:
+      43 $_AND_
+       5 $_FF_
+      26 $_NOT_
+      12 $anyinit
+       3 $assert
+       1 $assume
+       1 $scopeinfo
+
+14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \r2r_dac_digital_formal..
+Removed 0 unused cells and 575 unused wires.
+<suppressed ~1 debug messages>
+
+15. Printing statistics.
+
+=== r2r_dac_digital_formal ===
+
+        +----------Local Count, excluding submodules.
+        | 
+    15092 wires
+    15216 wire bits
+       37 public wires
+      119 public wire bits
+        6 ports
+       14 port bits
+    15105 cells
+     6444   $_AND_
+        5   $_FF_
+     8639   $_NOT_
+       12   $anyinit
+        3   $assert
+        1   $assume
+        1   $scopeinfo
+
+16. Executing AIGER backend.
+Warning: Treating undriven bit r2r_dac_digital_formal.\clk like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [0] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [1] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [2] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [3] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [4] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [5] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [6] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [7] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\slow like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\rst_n like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\mode [0] like $anyseq.
+Warning: Treating undriven bit r2r_dac_digital_formal.\mode [1] like $anyseq.
+Warning: Treating a total of 13 undriven bits in r2r_dac_digital_formal like $anyseq.
+
+Warnings: 14 unique messages, 14 total
+End of script. Logfile hash: 60e52df6c1, time: 0.65s, user: 0.27s, system: 0.03s, MEM: 51.62 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+Time spent: 46% 6x opt_clean (0 sec), 20% 1x aigmap (0 sec), ...

@@ -1,0 +1,26 @@
+{
+ "label": "pre-fix-sim-a1",
+ "ts": "2026-09-25T08:55:33",
+ "files": [
+  {
+   "path": "spec/spec.yaml",
+   "sha256": "c2f0596727b6d73ec3a76dd5fc4ad695faf0c5b63678858e841a622a5563fc48"
+  },
+  {
+   "path": "rtl/r2r_dac_digital.v",
+   "sha256": "e4179d6df5761831334186f08e4868579148b329a7887d61c7748cb835fb45a5"
+  },
+  {
+   "path": "tb/dac_model.py",
+   "sha256": "1d02ad81a350a31d00d2f7ee0c2edfa94b16040e2a37963254fd7f441e3b6b9a"
+  },
+  {
+   "path": "tb/test_r2r_dac_digital.py",
+   "sha256": "9fd8644b8bbd736326d2b4d80d28ad3e2ee0b2fab984308470ff35902baa23a6"
+  },
+  {
+   "path": "holdout/test_r2r_dac_digital_holdout.py",
+   "sha256": "671bdb5efe6344b9aea6fcf7b81b9a22d65894595685af01d84c7bba6051e879"
+  }
+ ]
+}

@@ -1,0 +1,110 @@
+(22, 0)
+gate top_harden: FAIL (1 failing / 1 total)
+{
+  "script": "gate",
+  "gate": "top_harden",
+  "phase": "P3",
+  "tool": "top_harden",
+  "input_digest": "dir_text:2a2b1ae7e895ad5405f5ae367ab80ae45039df70315e07a67867027fa4bbdf15",
+  "status": "fail",
+  "criteria": {
+    "fail_severities": [
+      "error"
+    ],
+    "max_count": 0
+  },
+  "counts": {
+    "total": 1,
+    "by_severity": {
+      "error": 1
+    },
+    "by_source": {
+      "librelane": 1
+    }
+  },
+  "failing_count": 1,
+  "failing": [
+    {
+      "check": "harden",
+      "severity": "error",
+      "file": null,
+      "module": "r2r_dac_digital",
+      "line": null,
+      "kind": "flow_step_failed",
+      "refs": [],
+      "msg": "librelane exited 2: [PDN-0179] Unable to repair all channels.\n",
+      "source": "librelane",
+      "items": [
+        {
+          "msg": "librelane exited 2: [PDN-0179] Unable to repair all channels.\n",
+          "file": null,
+          "line": null
+        }
+      ],
+      "resumed": false,
+      "wall_s": 47.54
+    }
+  ],
+  "violations": [
+    {
+      "check": "harden",
+      "severity": "error",
+      "file": null,
+      "module": "r2r_dac_digital",
+      "line": null,
+      "kind": "flow_step_failed",
+      "refs": [],
+      "msg": "librelane exited 2: [PDN-0179] Unable to repair all channels.\n",
+      "source": "librelane",
+      "items": [
+        {
+          "msg": "librelane exited 2: [PDN-0179] Unable to repair all channels.\n",
+          "file": null,
+          "line": null
+        }
+      ],
+      "resumed": false,
+      "wall_s": 47.54
+    }
+  ],
+  "facts": {
+    "macros": [
+      {
+        "cell": "r2r_dac_analog",
+        "instance": "u_analog",
+        "location": [
+          69.44,
+          94.08
+        ],
+        "size_um": [
+          207.82,
+          139.56
+        ],
+        "pins": {
+          "dac_code": "dac_code"
+        },
+        "ua": {
+          "vout": 0
+        }
+      }
+    ],
+    "top": "r2r_dac_digital",
+    "run_tag": "run",
+    "resumed": false,
+    "wall_s": 47.54,
+    "run_dir": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/runs/run",
+    "metrics": {}
+  },
+  "record_result": {
+    "ok": true,
+    "recorded": true,
+    "workspace": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac",
+    "gate": "top_harden",
+    "status": "fail",
+    "attempts": 1,
+    "inputs": {
+      "digital_rtl": "dir_text:2a2b1ae7e895ad5405f5ae367ab80ae45039df70315e07a67867027fa4bbdf15",
+      "analog_layout": "dir_text:f78a94124a00ffd93d5afc43316b74aa05535a0851cbd2ce6f3985831b140e0c"
+    }
+  }
+}

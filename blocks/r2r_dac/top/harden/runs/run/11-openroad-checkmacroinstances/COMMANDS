@@ -1,0 +1,1 @@
+sta -no_splash -exit /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/librelane/scripts/openroad/sta/check_macro_instances.tcl

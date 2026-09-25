@@ -1,0 +1,2 @@
+[WARNING ORD-0039] .openroad ignored with -python
+[WARNING] Cell 'r2r_dac_analog' has (1) inout pin(s) without antenna gate information not antenna diffusion information. They might be disconnected.

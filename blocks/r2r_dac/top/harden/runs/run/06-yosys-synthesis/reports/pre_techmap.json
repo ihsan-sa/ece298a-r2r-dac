@@ -1,0 +1,67 @@
+{
+   "creator": "Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)",
+   "invocation": "stat -json -liberty /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/runs/run/tmp/e944aeb99d96499982f4d901f71b8986.lib -liberty /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/runs/run/tmp/af235ebfe2fc41a89269ef2deb54bf92.lib ",
+   "modules": {
+      "\\tt_um_r2r_dac_digital": {
+         "num_wires":         374,
+         "num_wire_bits":     479,
+         "num_pub_wires":     14,
+         "num_pub_wire_bits": 84,
+         "num_ports":         9,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         420,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 30,
+            "$_AND_": 87,
+            "$_DFF_P_": 7,
+            "$_MUX_": 25,
+            "$_NAND_": 160,
+            "$_NOR_": 14,
+            "$_NOT_": 3,
+            "$_ORNOT_": 18,
+            "$_OR_": 25,
+            "$_SDFFE_PN0P_": 16,
+            "$_SDFF_PN0_": 16,
+            "$_SDFF_PN1_": 1,
+            "$_XNOR_": 3,
+            "$_XOR_": 14,
+            "r2r_dac_analog": 1
+         }
+      }
+   },
+      "design": {
+         "num_wires":         374,
+         "num_wire_bits":     479,
+         "num_pub_wires":     14,
+         "num_pub_wire_bits": 84,
+         "num_ports":         9,
+         "num_port_bits":     51,
+         "num_memories":      0,
+         "num_memory_bits":   0,
+         "num_processes":     0,
+         "num_cells":         420,
+         "num_submodules":       0,
+         "num_cells_by_type": {
+            "$_ANDNOT_": 30,
+            "$_AND_": 87,
+            "$_DFF_P_": 7,
+            "$_MUX_": 25,
+            "$_NAND_": 160,
+            "$_NOR_": 14,
+            "$_NOT_": 3,
+            "$_ORNOT_": 18,
+            "$_OR_": 25,
+            "$_SDFFE_PN0P_": 16,
+            "$_SDFF_PN0_": 16,
+            "$_SDFF_PN1_": 1,
+            "$_XNOR_": 3,
+            "$_XOR_": 14,
+            "r2r_dac_analog": 1
+         }
+      }
+}
+

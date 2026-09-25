@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+<testsuite timestamp="2026-09-25T09:00:48" hostname="iiks1" package="pdr" id="0" name="default" tests="1" errors="0" failures="0" time="0" skipped="0">
+<properties>
+<property name="os" value="Linux"/>
+<property name="expect" value="PASS"/>
+<property name="status" value="PASS"/>
+</properties>
+<testcase classname="default" name="default" time="0">
+</testcase>
+<system-out>SBY  9:00:46 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] Removing directory '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr'.
+SBY  9:00:46 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] Copy '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv' to '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr/src/r2r_dac_digital_formal.sv'.
+SBY  9:00:46 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] Copy '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v' to '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr/src/r2r_dac_digital.v'.
+SBY  9:00:46 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: abc pdr
+SBY  9:00:46 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] base: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr/src; yosys -ql ../model/design.log ../model/design.ys&quot;
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] base: finished (returncode=0)
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] prep: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr/model; yosys -ql design_prep.log design_prep.ys&quot;
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] prep: finished (returncode=0)
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr/model; yosys -ql design_aiger.log design_aiger.ys&quot;
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\clk like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [0] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [1] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [2] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [3] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [4] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [5] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [6] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\ui_in [7] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\slow like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\rst_n like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\mode [0] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating undriven bit r2r_dac_digital_formal.\mode [1] like $anyseq.
+SBY  9:00:47 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: Warning: Treating a total of 13 undriven bits in r2r_dac_digital_formal like $anyseq.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] aig: finished (returncode=0)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: starting process &quot;cd /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr; yosys-abc -c 'read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw'&quot;
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: ======== ABC command line &quot;read_aiger model/design_aiger.aig; fold; strash; pdr -v -l; write_cex -a engine_0/trace.aiw&quot;
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Warning: The last output is interpreted as a constraint.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: VarMax = 300. FrameMax = 10000. QueMax = 0. TimeMax = 159. MonoCNF = no. SkipGen = no. SolveAll = no.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Proved output 0 in frame 0 (trivial).
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Frame Clauses                                                     Max Queue Flops Time
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: 1 : 0 2                                                                 1     2      0.02 sec  T/O =  0  PRV =  1
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: 2 : 0 1 11                                                              2    14      0.03 sec  T/O =  0  PRV =  1
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Proved output 2 in frame 2.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: 3 : 0 1 1 34 ~10                                                         3    38      0.04 sec  T/O =  0  PRV =  2
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Proved output 1 in frame 3.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: 4 : 0 1 1 0 0 ~44                                                        0    38      0.05 sec  T/O =  0  PRV =  3
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Block =    4  Oblig =    88  Clause =    46  Call =   372 (sat=67.2%)  Cex =   0  Start =   0
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: SAT solving =     0.01 sec ( 13.52 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: unsat     =     0.00 sec (  0.55 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: sat       =     0.01 sec ( 12.97 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Generalize  =     0.01 sec ( 14.65 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Push clause =     0.00 sec (  0.30 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Ternary sim =     0.00 sec (  1.22 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Containment =     0.00 sec (  0.03 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: CNF compute =     0.00 sec (  1.58 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Refinement  =     0.00 sec (  0.00 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: TOTAL       =     0.07 sec (100.00 %)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Property proved.  Time =     0.08 sec
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Counter-example is not available.
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: finished (returncode=0)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] engine_0: Status returned by engine: PASS
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] summary: Elapsed clock time [H:MM:SS (secs)]: 0:00:01 (1)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] summary: Elapsed process time [H:MM:SS (secs)]: 0:00:00 (0)
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] summary: engine_0 (abc pdr) returned PASS
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] summary: engine_0 did not produce any traces
+SBY  9:00:48 [/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/formal/pdr] DONE (PASS, rc=0)
+</system-out>
+<system-err>
+</system-err>
+</testsuite>
+</testsuites>

@@ -214,3 +214,13 @@ with vdd/vss straps, `dac_code[7:0]` pins on one edge, `vout` on another,
 in the macro pin conventions the ade flow uses. netgen LVS clean against
 the netlist including the driver cells; DRC clean; the macro must fit in
 a fraction of the TT GF180 tile alongside the (tiny) digital front end.
+
+## Round 2 revision (2026-09-25, owner decision)
+
+- Settling: the owner kept the accurate 27k unit R and accepted ~1.2 us
+  full-scale settling as a known trade-off against the brief's 20 ns. The
+  bound is 1.5 us (tau = 27k x 7 pF = 189 ns; 9 ln2 tau = 1.18 us at tt,
+  1.42 us at ss). 10-90 % rise/fall bound 0.5 us. The 20 ns figures above
+  are the round-1 derivation at R = 250 ohm and no longer bind.
+- Corners: the brief's nine, tt/ff/ss x -40/25/125 C at a fixed 3.3 V,
+  now expressible as a corner grid (chip-flow #19).

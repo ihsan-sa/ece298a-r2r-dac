@@ -14,16 +14,8 @@
 #   Drivers: eight identical gf180mcu_fd_sc_mcu7t5v0 buffer cells, the
 #   only active devices; Ron_pu/Ron_pd at tt/25 C to be stated by P2.
 #
-# Corners: the engine's default five (engine/reference/corners.yaml: tt
-# 27 C/3.3 V, ss 125 C/2.97 V, ff -40 C/3.63 V, sf, fs). The brief's nine
-# (tt/ff/ss x -40/25/125 C at a FIXED 3.3 V) cannot be named here -
-# corners.py only resolves default_corners names and there is no fixed-
-# supply point; see spec.md "Corners" and the spec-writer's OPEN. Because
-# the default set moves VDD +/-10 %, every bound below is written in LSB
-# units, seconds or amperes - never absolute volts that scale with VDD
-# (SKILL.md "Known limits": r2r_dac's absolute-volt bounds fail the supply
-# corners by construction). v_zero_offset is the one volt-valued bound; it
-# is a distance from vss, not a fraction of VDD.
+# Corners: round 2 uses the brief's nine fixed-VDD corners (see the
+# `corners:` key). Every bound stays in LSB units, seconds or amperes.
 #
 # Monte Carlo: OFF, deliberately. The GF180 ngspice models carry NO
 # per-instance mismatch for ppolyf_u: sm141064.spice's `.subckt ppolyf_u`
@@ -60,7 +52,10 @@ devices: [xd7, xd6, xd5, xd4, xd3, xd2, xd1, xd0,
           xrs6, xrs5, xrs4, xrs3, xrs2, xrs1, xrs0,
           xrta, xrtb]
 
-corners: default
+# Corners (owner round 2, chip-flow #19 fixed-VDD grid): the brief's nine,
+# tt/ff/ss x -40/25/125 C, all at the nominal 3.3 V. Replaces the engine's
+# default five, whose +/-10 % VDD points the brief never asked for.
+corners: {grid: {process: [typical, ff, ss], temp_c: [-40, 25, 125]}}
 
 # Bound source: [brief] = a number the brief states as a target;
 # [derived] = the brief asks only to REPORT this quantity and gives no
@@ -72,25 +67,21 @@ measures:
   # 1. DNL, 256-code sweep, end-point LSB, max |DNL| in LSB. [brief]
   - name: dnl_max_abs
     bounds: {max: 0.5}
-    corners: default
     severity: error
   # 2. INL, same sweep, end-point fit, max |INL| in LSB. [brief]
   - name: inl_max_abs
     bounds: {max: 0.5}
-    corners: default
     severity: error
   # 3. Monotonicity: 1 when v(k) > v(k-1) for every k = 1..255, else 0.
   #    [brief] pass/fail per corner
   - name: monotonic
     bounds: {min: 1}
-    corners: default
     severity: error
   # 4a. Zero-code offset v(0) from vss, volts (all branches to vss through
   #     Ron, so this is a distance from ground, not a fraction of VDD).
   #     Bound = 0.5 LSB at nominal VDD. [derived]
   - name: v_zero_offset
     bounds: {max: 6.45e-3}
-    corners: default
     severity: warning
   # 4b. Full-scale gain error in LSB: ((v(255) - v(0)) - 255/256*VDD) /
   #     (VDD/256), with VDD the corner's own rail. The brief compares
@@ -98,27 +89,26 @@ measures:
   #     gain error; +/-0.5 LSB is the brief's accuracy target. [derived]
   - name: fs_gain_err_lsb
     bounds: {min: -0.5, max: 0.5}
-    corners: default
     severity: warning
   # 5. Full-scale settling to within 0.5 LSB (VDD/512) of the final
-  #    value, from the code edge, seconds. < 20 ns at every corner. [brief]
+  #    value, from the code edge, seconds. The brief asked < 20 ns; the
+  #    owner (2026-09-25 round 2) kept the accurate 27k unit R and accepted
+  #    ~1.2 us as a known spec trade-off. Bound from topology: tau = R_out
+  #    x C_load = 27k x 7 pF = 189 ns, 0.5 LSB of 8 bits = 9 ln2 tau =
+  #    1.18 us at tt; ss rsh (+20 %) -> 1.42 us; bound 1.5 us. [owner]
   - name: t_settle_rise
-    bounds: {max: 20e-9}
-    corners: default
+    bounds: {max: 1.5e-6}
     severity: error
   - name: t_settle_fall
-    bounds: {max: 20e-9}
-    corners: default
+    bounds: {max: 1.5e-6}
     severity: error
-  #    10-90 % rise/fall time, seconds; always shorter than the settling
-  #    time, so the brief's 20 ns settling bound is implied. [derived]
+  #    10-90 % rise/fall time, seconds: 2.2 tau = 0.42 us at tt, 0.5 us
+  #    at ss. [derived, owner trade-off above]
   - name: t_rise_10_90
-    bounds: {max: 20e-9}
-    corners: default
+    bounds: {max: 0.5e-6}
     severity: warning
   - name: t_fall_10_90
-    bounds: {max: 20e-9}
-    corners: default
+    bounds: {max: 0.5e-6}
     severity: warning
   # 6. Mid-code glitch, 127 <-> 128, all eight drivers switching at the
   #    same instant. Energy = integral of |vout - v_final| dt outside the
@@ -128,19 +118,15 @@ measures:
   #    and a 4-LSB peak (52 mV). [derived]
   - name: glitch_energy_up
     bounds: {max: 0.26e-9}
-    corners: default
     severity: warning
   - name: glitch_energy_down
     bounds: {max: 0.26e-9}
-    corners: default
     severity: warning
   - name: glitch_peak_up
     bounds: {max: 52e-3}
-    corners: default
     severity: warning
   - name: glitch_peak_down
     bounds: {max: 52e-3}
-    corners: default
     severity: warning
   #    Same transitions with the MSB driver input skewed +200 ps (late)
   #    and -200 ps (early) against the other seven. While the MSB lags the
@@ -150,23 +136,18 @@ measures:
   #    are 1.5x those: 0.5 nV.s and 0.2 V. [derived]
   - name: glitch_energy_up_skew_p200p
     bounds: {max: 0.5e-9}
-    corners: default
     severity: warning
   - name: glitch_energy_up_skew_m200p
     bounds: {max: 0.5e-9}
-    corners: default
     severity: warning
   - name: glitch_energy_down_skew_p200p
     bounds: {max: 0.5e-9}
-    corners: default
     severity: warning
   - name: glitch_energy_down_skew_m200p
     bounds: {max: 0.5e-9}
-    corners: default
     severity: warning
   - name: glitch_peak_skew_max
     bounds: {max: 0.2}
-    corners: default
     severity: warning
   # 7. Resistor-mismatch sensitivity (the brief's fallback, the PDK having
   #    no per-instance resistor mismatch - see the mc comment above): each
@@ -175,7 +156,6 @@ measures:
   #    every perturbation. Bound = the brief's INL target. [derived]
   - name: inl_sens_1pct_max
     bounds: {max: 0.5}
-    corners: default
     severity: warning
   # 8. Supply current over the full-code sweep, amperes. The brief budgets
   #    "a few to ~15 mA" average (its own R = 250 ohm estimate); the peak
@@ -183,11 +163,9 @@ measures:
   #    the 15 mA static, rounded to 30 mA. [derived]
   - name: i_vdd_avg
     bounds: {max: 15e-3}
-    corners: default
     severity: warning
   - name: i_vdd_peak
     bounds: {max: 30e-3}
-    corners: default
     severity: warning
 
 # Post-layout (convention only - SKILL.md "Known limits": nothing cross-
@@ -195,8 +173,8 @@ measures:
 # compares by hand). The brief: the PEX bench re-runs measures 5 and 6 at
 # tt/25 C at least, same bounds.
 post_layout_bounds:
-  t_settle_rise: {max: 20e-9}
-  t_settle_fall: {max: 20e-9}
+  t_settle_rise: {max: 1.5e-6}
+  t_settle_fall: {max: 1.5e-6}
   glitch_energy_up: {max: 0.26e-9}
   glitch_energy_down: {max: 0.26e-9}
   glitch_peak_up: {max: 52e-3}

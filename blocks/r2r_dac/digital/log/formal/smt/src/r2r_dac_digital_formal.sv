@@ -1,0 +1,43 @@
+// Formal wrapper for r2r_dac_digital (plain wrapper, no bind; immediate asserts).
+module r2r_dac_digital_formal (
+    input  wire       clk,
+    input  wire       rst_n,
+    input  wire       ena,
+    input  wire [7:0] ui_in,
+    input  wire [1:0] mode,
+    input  wire       slow,
+    output wire [7:0] dac_code,
+    output wire [7:0] uo_out
+);
+  r2r_dac_digital dut (.clk(clk), .rst_n(rst_n), .ena(ena), .ui_in(ui_in),
+                       .mode(mode), .slow(slow), .dac_code(dac_code), .uo_out(uo_out));
+
+`ifdef FORMAL
+  reg past_valid = 0;
+  reg past_valid2 = 0;
+  always @(posedge clk) begin
+    past_valid <= 1;
+    past_valid2 <= past_valid;
+  end
+
+  // REQ-RESET: a low rst_n forces dac_code to 0 on that edge.
+  always @(posedge clk)
+    if (past_valid)
+      REQ_RESET: assert ($past(rst_n) || dac_code == 8'd0);
+
+  // REQ-HOLD: two consecutive hold-mode edges out of reset keep dac_code.
+  always @(posedge clk)
+    if (past_valid2)
+      REQ_HOLD: assert (!($past(rst_n) && $past(rst_n, 2) && $past(mode) == 2'b11
+                          && $past(mode, 2) == 2'b11) || dac_code == $past(dac_code));
+
+  // REQ-ECHO: uo_out always equals dac_code.
+  always @(*)
+    REQ_ECHO: assert (uo_out == dac_code);
+
+  always @(posedge clk) begin
+    COVER_FULL: cover (dac_code == 8'hFF);
+    COVER_HOLD: cover (past_valid2 && $past(mode) == 2'b11 && $past(mode, 2) == 2'b11 && $past(rst_n) && dac_code != 8'd0);
+  end
+`endif
+endmodule

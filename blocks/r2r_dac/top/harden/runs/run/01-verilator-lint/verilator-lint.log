@@ -1,0 +1,17 @@
+%Warning-PINMISSING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/tt_um_r2r_dac_digital.v:41:18: Instance has missing pin: 'vdd'
+   41 |   r2r_dac_analog u_analog (
+      |                  ^~~~~~~~
+                     /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.v:7:17: ... Location of port declaration
+    7 |     inout  wire vdd,
+      |                 ^~~
+                     ... For warning description see https://verilator.org/warn/PINMISSING?v=5.052
+                     ... Use "/* verilator lint_off PINMISSING */" and lint_on around source to disable this message.
+%Warning-PINMISSING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/tt_um_r2r_dac_digital.v:41:18: Instance has missing pin: 'vss'
+   41 |   r2r_dac_analog u_analog (
+      |                  ^~~~~~~~
+                     /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.v:8:17: ... Location of port declaration
+    8 |     inout  wire vss,
+      |                 ^~~
+- V e r i l a t i o n   R e p o r t: Verilator 5.052 2026-09-05 rev v5.052
+- Verilator: Built from 0.740 MB sources in 317 modules, into 0.024 MB in 3 C++ files needing 0.000 MB
+- Verilator: Walltime 0.121 s (elab=0.028, cvt=0.007, bld=0.000); cpu 0.044 s on 1 threads; allocated 28.008 MB
