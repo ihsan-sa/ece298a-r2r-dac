@@ -1,0 +1,104 @@
+* r2r_dac_step_tb.cir - full-scale step bench for r2r_dac_analog (P3
+* spec bench, written from spec/spec.md, spec/spec.yaml, spec/topology.md
+* only). Siblings: r2r_dac_tb.cir (static: DNL/INL/offset/gain/
+* sensitivity/i_vdd_avg) and r2r_dac_glitch_tb.cir (mid-code glitches).
+*
+* Measures (spec.yaml names): t_settle_rise, t_settle_fall, t_rise_10_90,
+* t_fall_10_90, i_vdd_peak (also scored by the glitch bench: the peak
+* over the two benches is the peak over every transition the spec names -
+* the full-scale 0 -> 255 charge of the load here, the all-bits 127 <-> 128
+* switching there, and the static full-scale code in between).
+*
+* Stimulus (ns; edge time = centre of the 100 ps input edge; all eight
+* dac_code bits switch together, ideal 0/VDD sources per spec.md Interface):
+*   0..20    code 0 (operating point first, no uic)
+*   20       0 -> 255   window 20..120   (t_settle_rise, t_rise_10_90)
+*   120      255 -> 0   window 120..220  (t_settle_fall, t_fall_10_90)
+* The 100 ns window is ~37 tau at the spec's own tau = 2.7 ns, so vout at
+* the window end is the settled final value.
+*
+* Definitions (spec.md Measures):
+*   settle: from the code edge until vout last lies outside final +-
+*           VDD/512 (0.5 LSB of the corner's own rail); final = vout at the
+*           window end. Resolution <= one time step (maxstep 100 ps).
+*   10-90:  first time vout passes v0 + 10 % and + 90 % of (vfinal - v0),
+*           v0 = vout just before the edge.
+* Crossings come from masked vectors, not `.meas when`: a waveform that
+* never gets there scores ~1 s (fails its bound) instead of going missing.
+*
+* Pad load ASSUMED (spec.md): R_pad = 100 ohm in series with C_load = 7 pF,
+* one parameter each. Corners: fs FET section + res_typical
+* resistor section (sim_run.RES_LIB_SECTION).
+
+.include '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/ngspice/design.ngspice'
+.lib '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.spice' fs
+.lib '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.spice' res_typical
+.include '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice'
+.include '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/analog/netlist/r2r_dac.cir'
+.param ru_w=2e-06 ru_l=0.00015 rb_l=0.00014836
+
+.temp -40
+.param vddp=3.63
+.param r_pad=100 c_load=7p
+
+vdd vdd 0 {vddp}
+vss vss 0 0
+
+* dac_code[k] = b<k>, ideal 0/VDD PWL, 100 ps edges
+vb7 b7 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb6 b6 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb5 b5 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb4 b4 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb3 b3 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb2 b2 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb1 b1 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+vb0 b0 0 pwl(0 0 19.95n 0 20.05n {vddp} 119.95n {vddp} 120.05n 0)
+
+* DUT, pins in topology.md order: dac_code[7..0] vout vdd vss
+xdut b7 b6 b5 b4 b3 b2 b1 b0 vout vdd vss r2r_dac_analog
+
+rpad vout vpad {r_pad}
+cload vpad 0 {c_load}
+
+.control
+set noaskquit
+save v(vout) v(vdd) i(vdd)
+tran 10p 220n 0 100p
+let vo = v(vout)
+let tt = time
+let band = v(vdd)[0]/512
+let ivdd = -i(vdd)
+
+* rise: edge 20 ns, window to 120 ns
+meas tran v0r find v(vout) at=19.9n
+meas tran vfr find v(vout) at=119.9n
+let win = (tt gt 20n) * (tt lt 119.9n)
+let outb = (abs(vo - vfr) gt band) * win
+let t_settle_rise = vecmax(outb*tt) - 20n
+let c10 = (vo gt (v0r + 0.1*(vfr-v0r))) * win
+let c90 = (vo gt (v0r + 0.9*(vfr-v0r))) * win
+let t_rise_10_90 = vecmin(c90*tt + (1-c90)) - vecmin(c10*tt + (1-c10))
+
+* fall: edge 120 ns, window to 220 ns
+meas tran v0f find v(vout) at=119.9n
+meas tran vff find v(vout) at=219.9n
+let win = (tt gt 120n) * (tt lt 219.9n)
+let outb = (abs(vo - vff) gt band) * win
+let t_settle_fall = vecmax(outb*tt) - 120n
+let c10 = (vo lt (v0f - 0.1*(v0f-vff))) * win
+let c90 = (vo lt (v0f - 0.9*(v0f-vff))) * win
+let t_fall_10_90 = vecmin(c90*tt + (1-c90)) - vecmin(c10*tt + (1-c10))
+
+let i_vdd_peak = vecmax(ivdd)
+
+echo
+echo "  Measurements for Transient Analysis (r2r_dac_step_tb, computed in .control)"
+echo "t_settle_rise = $&t_settle_rise"
+echo "t_settle_fall = $&t_settle_fall"
+echo "t_rise_10_90 = $&t_rise_10_90"
+echo "t_fall_10_90 = $&t_fall_10_90"
+echo "i_vdd_peak = $&i_vdd_peak"
+echo
+.endc
+
+.end

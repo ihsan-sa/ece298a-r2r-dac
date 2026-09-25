@@ -4,7 +4,7 @@
  "block": "analog",
  "workspace": "blocks/r2r_dac/analog",
  "created": "2026-09-25T05:47:00",
- "updated": "2026-09-25T06:37:27",
+ "updated": "2026-09-25T06:53:46",
  "phase": "P4",
  "toolchain": null,
  "gates": {
@@ -74,6 +74,155 @@
      "job": null
     }
    ]
+  },
+  "netlist_lint": {
+   "phase": "P4",
+   "status": "fail",
+   "attempts": 3,
+   "last": {
+    "ts": "2026-09-25T06:50:29",
+    "status": "fail",
+    "failing_count": 8,
+    "total": 8,
+    "inputs": {
+     "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+    },
+    "job": null
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T06:44:32",
+     "status": "fail",
+     "failing_count": 12,
+     "total": 12,
+     "inputs": {
+      "netlist": "dir_text:ed6fa0da700905486f61667d543591e31762aec836702f75c4f66eb59afea0cf"
+     },
+     "job": null
+    },
+    {
+     "ts": "2026-09-25T06:45:22",
+     "status": "fail",
+     "failing_count": 8,
+     "total": 8,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+     },
+     "job": null
+    },
+    {
+     "ts": "2026-09-25T06:50:29",
+     "status": "fail",
+     "failing_count": 8,
+     "total": 8,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c"
+     },
+     "job": null
+    }
+   ]
+  },
+  "sim_tt": {
+   "phase": "P4",
+   "status": "fail",
+   "attempts": 2,
+   "last": {
+    "ts": "2026-09-25T06:51:10",
+    "status": "fail",
+    "failing_count": 2,
+    "total": 5,
+    "inputs": {
+     "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+     "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+    },
+    "job": null,
+    "facts": {
+     "corners": [
+      "tt"
+     ]
+    }
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T06:46:28",
+     "status": "fail",
+     "failing_count": 2,
+     "total": 5,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt"
+      ]
+     }
+    },
+    {
+     "ts": "2026-09-25T06:51:10",
+     "status": "fail",
+     "failing_count": 2,
+     "total": 5,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt"
+      ]
+     }
+    }
+   ]
+  },
+  "sim_pvt": {
+   "phase": "P4",
+   "status": "fail",
+   "attempts": 1,
+   "last": {
+    "ts": "2026-09-25T06:53:46",
+    "status": "fail",
+    "failing_count": 10,
+    "total": 25,
+    "inputs": {
+     "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+     "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+    },
+    "job": null,
+    "facts": {
+     "corners": [
+      "tt",
+      "ss",
+      "ff",
+      "sf",
+      "fs"
+     ]
+    }
+   },
+   "history": [
+    {
+     "ts": "2026-09-25T06:53:46",
+     "status": "fail",
+     "failing_count": 10,
+     "total": 25,
+     "inputs": {
+      "netlist": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+      "tb": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131"
+     },
+     "job": null,
+     "facts": {
+      "corners": [
+       "tt",
+       "ss",
+       "ff",
+       "sf",
+       "fs"
+      ]
+     }
+    }
+   ]
   }
  },
  "jobs": {},
@@ -86,6 +235,18 @@
    "kind": "spec_yaml",
    "sha256": "json_canonical:9b23fe28befdbe25582f6cc91b24c67674b1206d03d38a9c602dde7fa1060b62",
    "hashed": "2026-09-25T06:37:27"
+  },
+  "netlist": {
+   "path": "netlist",
+   "kind": "netlist",
+   "sha256": "dir_text:1b6ee7b2d52b33fc582a6a8380a88d7291bdb3a8d705a420d02b1029e02d3d3c",
+   "hashed": "2026-09-25T06:53:46"
+  },
+  "tb": {
+   "path": "tb",
+   "kind": "tb",
+   "sha256": "dir_text:099e1a180b816452d687f84d0929601f8b8f9a676ca5ddfb93c711835dd0a131",
+   "hashed": "2026-09-25T06:53:46"
   }
  },
  "open_issues": [],
@@ -123,6 +284,13 @@
    "model": "opus",
    "effort": "high",
    "phase": "P3"
+  },
+  {
+   "ts": "2026-09-25T06:38:41",
+   "role": "analog-designer",
+   "model": "opus",
+   "effort": "high",
+   "phase": "P4"
   }
  ],
  "history": [
@@ -219,6 +387,60 @@
    "event": "phase",
    "phase": "P4",
    "prev": "P3"
+  },
+  {
+   "ts": "2026-09-25T06:38:41",
+   "event": "spawn",
+   "role": "analog-designer",
+   "model": "opus"
+  },
+  {
+   "ts": "2026-09-25T06:44:32",
+   "event": "gate",
+   "gate": "netlist_lint",
+   "status": "fail",
+   "attempt": 1,
+   "failing_count": 12
+  },
+  {
+   "ts": "2026-09-25T06:45:22",
+   "event": "gate",
+   "gate": "netlist_lint",
+   "status": "fail",
+   "attempt": 2,
+   "failing_count": 8
+  },
+  {
+   "ts": "2026-09-25T06:46:28",
+   "event": "gate",
+   "gate": "sim_tt",
+   "status": "fail",
+   "attempt": 1,
+   "failing_count": 2
+  },
+  {
+   "ts": "2026-09-25T06:50:29",
+   "event": "gate",
+   "gate": "netlist_lint",
+   "status": "fail",
+   "attempt": 3,
+   "failing_count": 8
+  },
+  {
+   "ts": "2026-09-25T06:51:10",
+   "event": "gate",
+   "gate": "sim_tt",
+   "status": "fail",
+   "attempt": 2,
+   "failing_count": 2
+  },
+  {
+   "ts": "2026-09-25T06:53:46",
+   "event": "gate",
+   "gate": "sim_pvt",
+   "status": "fail",
+   "attempt": 1,
+   "failing_count": 10
   }
  ]
 }

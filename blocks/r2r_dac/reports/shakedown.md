@@ -1,0 +1,71 @@
+# /msde shakedown: 8-bit R-2R DAC (3 rounds, 2026-09-25)
+
+**The analog ladder is accurate but slow, and the tile never got built.**
+DNL and INL pass at every corner. Settling misses 20 ns by a wide margin,
+because no unit R meets both targets with buf_20 drivers at 3.3 V. The
+digital front end, layout, LVS and TT precheck were not reached in 3
+rounds, and /msde has no TT analog-tile path for them anyway.
+
+## Measured (ngspice, ade sim_pvt, pre-layout)
+
+Sizing: unit R = 27.0 kohm ppolyf_u (W 2 um, L 150 um), 2R from two
+units, one trimmed unit (L 148.36 um) absorbs the driver Ron. Load
+assumed at the pad: 100 ohm + 7 pF.
+
+| corner | DNL max (LSB) | INL max (LSB) | monotonic | FS gain err (LSB) | glitch up / down (V.s) | INL, one unit +-1 % (LSB) |
+|---|---|---|---|---|---|---|
+| tt 27 C 3.30 V | 0.048 | 0.233 | yes | -0.005 | 1.8e-12 / 2.2e-15 | 0.526 |
+| ss 125 C 2.97 V | **0.201** | **0.418** | yes | -0.017 | 1.6e-11 / 7.3e-13 | 0.717 |
+| ff -40 C 3.63 V | 0.162 | 0.204 | yes | 0.001 | 4.1e-16 / 9.6e-16 | 0.523 |
+| sf 125 C 2.97 V | 0.113 | 0.231 | yes | -0.010 | 1.2e-11 / 1.9e-12 | 0.539 |
+| fs -40 C 3.63 V | 0.141 | 0.252 | yes | -0.001 | 8.3e-16 / 1.5e-15 | 0.563 |
+
+- Full-scale range is v(255) - v(0) = 255/256 x VDD, about 3.287 V at tt.
+- Settling to 0.5 LSB fails at every corner. The bench reads 99 ns, but
+  that is its 100 ns window, not the real figure. The designer's estimate
+  is tau = (27.1 kohm + 100 ohm) x 7 pF, about 190 ns, so settling takes
+  about 1.2 us (about 59 periods at 50 MHz). I didn't measure that.
+- The glitch energy is small because the slow RC filters the glitch.
+- At the spec's original R = 250 ohm, the ladder settles in 19.3 ns at tt,
+  but INL is 40.9 LSB and the output isn't monotonic.
+- Measured buf_20 Ron at tt, 1 mA: pull-down 163 ohm, pull-up 444 ohm.
+- Monte Carlo: the GF180 poly resistor models have no per-instance
+  mismatch (ppolyf_u mis_r = 0, res_statistical is global only), so MC
+  can't move DNL or INL. The one-unit +-1 % column stands in for it.
+- Corners are ade's default five, not the brief's tt/ff/ss x -40/25/125 C
+  at a fixed 3.3 V (breakage 3).
+
+## Pipeline steps
+
+Worked: task router (with a forced verb), msde split gate, ade spec_lint
+(3 runs), topology, bench-writer, netlist designer, sim_tt, sim_pvt,
+gate recording in state.json.
+
+Broke:
+1. /msde has no TT analog tile path. A 1x1 digital DEF only, no ua[]
+   pins, and top_harden allows only interface pins + vdd + vss on the
+   analog cell, so vout on ua[0] has nowhere to go. That blocks
+   top_harden, top_drc, top_lvs and precheck. Left to chip-flow.
+2. The router didn't match "full design of ... DAC"; `--verb full-run`
+   was needed.
+3. ade corners can't express tt/ff/ss x -40/25/125 C at a fixed VDD.
+   Left to chip-flow.
+4. The ade designer rule "never invent a device the template lacks"
+   conflicts with msde's drivers-in-macro split, and the r2r_ladder
+   template's bounds don't fit ppolyf_u.
+5. sim_run's 60 s per-bench timeout is tight for 256-code benches on a
+   loaded host. It didn't trip this round.
+6. netlist_lint rejected the GF180 standard cells the macro needs, and
+7. ignored `+` continuation lines on a `.subckt` header. Both are fixed
+   in chip-flow PR #18. The recorded netlist_lint result still fails
+   until that lands.
+8. The step bench's fixed 100 ns window caps the settling readout, so a
+   slow ladder can't report its real settling time.
+
+Not reached: the digital front end (vde), layout, LVS, TT precheck.
+cocotb in the eda image is 2.1.0, not the pinned 2.0.1.
+
+## Cost
+
+About $12 across 3 rounds: splitter $1.5, spec-writer $3, topology $0.4,
+bench-writer $3.6, netlist designer $1.1, orchestration about $2.3.
