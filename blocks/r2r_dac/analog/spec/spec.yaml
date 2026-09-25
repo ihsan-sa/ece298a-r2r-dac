@@ -44,7 +44,10 @@ top: r2r_dac_analog
 supply:
   vdd: 3.3
 
-# Loose first pass for the analog-designer (P2) to refine - the brief names
+# P2 (spec/topology.md): every unit resistor is its own refdes. xrbKa/b =
+# the two units of bit K's 2R branch (b is the Ron trim unit), xrta/b = the
+# LSB 2R termination. Drivers are gf180mcu_fd_sc_mcu7t5v0__buf_20.
+# Original P2 brief - the brief names
 # the topology explicitly. xd7..xd0: the eight driver cells (bit 7 = MSB).
 # xrb7..xrb0: the eight 2R branches (each two units in series, trimmed by
 # Ron_nom). xrs6..xrs0: the seven series R between rung k and k+1.
@@ -52,9 +55,10 @@ supply:
 # refdes (unit elements), list every unit here - bench_strength mutates
 # each entry, and an unlisted resistor is one a broken bench never sees.
 devices: [xd7, xd6, xd5, xd4, xd3, xd2, xd1, xd0,
-          xrb7, xrb6, xrb5, xrb4, xrb3, xrb2, xrb1, xrb0,
+          xrb7a, xrb7b, xrb6a, xrb6b, xrb5a, xrb5b, xrb4a, xrb4b,
+          xrb3a, xrb3b, xrb2a, xrb2b, xrb1a, xrb1b, xrb0a, xrb0b,
           xrs6, xrs5, xrs4, xrs3, xrs2, xrs1, xrs0,
-          xrt]
+          xrta, xrtb]
 
 corners: default
 
