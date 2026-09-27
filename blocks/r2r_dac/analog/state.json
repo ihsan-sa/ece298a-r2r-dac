@@ -4,7 +4,7 @@
  "block": "r2r_dac",
  "workspace": "blocks/r2r_dac/analog",
  "created": "2026-09-25T05:47:00",
- "updated": "2026-09-25T09:46:46",
+ "updated": "2026-09-27T00:33:48",
  "phase": "P5",
  "toolchain": null,
  "gates": {
@@ -457,9 +457,11 @@
  "optimise": null,
  "human": {
   "H1": {
-   "status": "approved",
-   "ts": "2026-09-25T09:28:19",
-   "note": "owner 2026-09-25 13:25Z round-2 note: keep 27k unit R, settling ~1.2us documented trade-off, take the DAC through layout/LVS"
+   "status": "presented",
+   "challenge": "H1-fd2294",
+   "digest": "298aa10da59d6d6326b093979278129ca62bcb0400b2611e90c60cd516f90899",
+   "presented": "2026-09-27T00:33:48",
+   "phase": "P5"
   }
  },
  "artifacts": {
@@ -929,6 +931,13 @@
    "event": "phase",
    "phase": "P5",
    "prev": "P4"
+  },
+  {
+   "ts": "2026-09-27T00:33:48",
+   "event": "human_presented",
+   "checkpoint": "H1",
+   "challenge": "H1-fd2294",
+   "digest": "298aa10da59d6d6326b093979278129ca62bcb0400b2611e90c60cd516f90899"
   }
  ]
 }

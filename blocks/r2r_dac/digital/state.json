@@ -4,7 +4,7 @@
  "block": "r2r_dac",
  "workspace": "blocks/r2r_dac/digital",
  "created": "2026-09-25T08:51:49",
- "updated": "2026-09-27T00:31:09",
+ "updated": "2026-09-27T00:33:50",
  "phase": "P4",
  "toolchain": null,
  "gates": {
@@ -382,12 +382,22 @@
  },
  "jobs": {},
  "holdout": {
-  "sha": "dir_text:584ab4aad2d9c02e057abb9c85d3dfd34c275e6d7c751c4a4245048b064df91a",
+  "sha": "dir_text:323dd5f5d42ea1ed5e8a148ab193810c06ff30e60dfc38673be3c7b6debf69c9",
   "written_by": "tb-writer",
-  "ts": "2026-09-25T08:54:31"
+  "ts": "2026-09-27T00:31:49",
+  "edits_at_pin": 3,
+  "replaced_sha": "dir_text:584ab4aad2d9c02e057abb9c85d3dfd34c275e6d7c751c4a4245048b064df91a"
  },
  "optimise": null,
- "human": {},
+ "human": {
+  "H1": {
+   "status": "presented",
+   "challenge": "H1-c4eeea",
+   "digest": "5a067b0d9c8b7033d81ad979e425f19e390319a3dbabeb94a007a143262fa735",
+   "presented": "2026-09-27T00:33:50",
+   "phase": "P4"
+  }
+ },
  "artifacts": {
   "spec_yaml": {
    "path": "spec/spec.yaml",
@@ -446,11 +456,11 @@
   },
   {
    "id": 2,
-   "status": "escalated",
+   "status": "fixed",
    "agent": "tb-writer",
    "attempts": 0,
    "opened": "2026-09-25T08:58:32",
-   "closed": null,
+   "closed": "2026-09-27T00:32:15",
    "gate": "mutate",
    "phase": "P4",
    "fixer": "testbench",
@@ -460,7 +470,7 @@
    "severity": "error",
    "count": 2,
    "work_order": "blocks/r2r_dac/digital/log/workorders/wo-2.json",
-   "note": "equivalent mutants: Q-inversion of internal-only presc bit k (k=3,5) is an XOR relabelling of the prescaler state; the relabelled sequence hits read-value 0xFF at exactly clocks 256,512,... after reset, same as the original (python model of r'=(r+1)^mask confirms), so no port can ever diverge. Also: check_mutate classifies mcy -mode inv on a DFF Q as condition_inverted (must-kill) though it is a data-bit inversion."
+   "note": "mutate PASS on c489764: mutants 14/21 proven equivalent by the gate"
   }
  ],
  "next_issue_id": 3,
@@ -905,6 +915,28 @@
    "status": "pass",
    "attempt": 3,
    "failing_count": 0
+  },
+  {
+   "ts": "2026-09-27T00:31:49",
+   "event": "holdout",
+   "written_by": "tb-writer",
+   "sha": "dir_text:323dd5f5d42ea1ed5e8a148ab193810c06ff30e60dfc38673be3c7b6debf69c9",
+   "replaced_sha": "dir_text:584ab4aad2d9c02e057abb9c85d3dfd34c275e6d7c751c4a4245048b064df91a"
+  },
+  {
+   "ts": "2026-09-27T00:32:15",
+   "event": "issue",
+   "id": 2,
+   "status": "fixed",
+   "agent": "tb-writer",
+   "attempts": 0
+  },
+  {
+   "ts": "2026-09-27T00:33:50",
+   "event": "human_presented",
+   "checkpoint": "H1",
+   "challenge": "H1-c4eeea",
+   "digest": "5a067b0d9c8b7033d81ad979e425f19e390319a3dbabeb94a007a143262fa735"
   }
  ]
 }

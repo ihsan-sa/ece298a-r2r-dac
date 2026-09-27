@@ -1,8 +1,7 @@
-# P4 digest - RTL + design gates
-- lint PASS (0). sim PASS (8/8 tests; attempt 2 after stacked '# req:' tags were merged - scanner keeps only the last tag line).
-- holdout PASS (2/2). formal PASS (REQ_RESET, REQ_HOLD, REQ_ECHO; 2 covers). cover PASS.
-- mutate FAIL: kill rate 0.913 (21/23), 2 survivors class condition_inverted = Q-bit inversion of internal prescaler bits 3/5.
-  Proven equivalent (XOR relabelling keeps the 256-clock step schedule); issue 2 escalated, decision recorded.
-- Open for H1: accept a mutate waiver for the 2 equivalent mutants, or order an RTL restructure. Recommended: waiver.
-- Files: rtl/r2r_dac_digital.v, tb/test_r2r_dac_digital.py, formal/r2r_dac_digital_formal.sv, reports/gate-*.json.
-- cover facts: {'top': 'r2r_dac_digital', 'line_pct': 99.6552, 'toggle_pct': 100.0, 'line_covered': 289, 'line_total': 290, 'toggle_covered': 128, 'toggle_total': 128}
+# P4 digest - RTL + design gates (round 3, engine c489764)
+- lint PASS (0). sim PASS (8/8). holdout PASS (2/2; round-2 undeclared holdout change now declared as holdout_edit and re-pinned).
+- formal PASS (REQ_RESET, REQ_HOLD, REQ_ECHO; 2 covers). cover PASS (line 99.7 %, toggle 100 %).
+- mutate PASS: 21/21 scored mutants killed; mutants 14 and 21 (Q-inversion of internal prescaler bits) proven equivalent by the gate (pdr), so no waiver is needed.
+- Open issues: none (issue 2 fixed by the rerun).
+- Files: reports/gate-*.json, rtl/r2r_dac_digital.v, tb/, formal/.
+- H1 question: approve the RTL and tests for synthesis and hardening? Recommended: approve.
