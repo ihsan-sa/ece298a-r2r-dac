@@ -1,0 +1,439 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+
+-- Executing script file `equiv.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/mutate/database/design.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `r2r_dac_digital'. Setting top module to r2r_dac_digital.
+
+2.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+
+2.2. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+Renaming module r2r_dac_digital to ref.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \ref
+
+4.2. Analyzing design hierarchy..
+Top module:  \ref
+Removed 0 unused modules.
+
+5. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$11 in module \ref:
+  created 256 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: ref.il
+
+8. Executing ASYNC2SYNC pass.
+
+9. Executing RTLIL frontend.
+Input filename: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/mutate/database/design.il
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `r2r_dac_digital'. Setting top module to r2r_dac_digital.
+
+10.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+
+10.2. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+Removed 0 unused modules.
+
+11. Executing MUTATE pass.
+Add output inverter at r2r_dac_digital.$procdff$39.Q[3].
+
+12. Executing FLATTEN pass (flatten design).
+Renaming module r2r_dac_digital to uut.
+
+13. Executing HIERARCHY pass (managing design hierarchy).
+
+13.1. Analyzing design hierarchy..
+Top module:  \uut
+
+13.2. Analyzing design hierarchy..
+Top module:  \uut
+Removed 0 unused modules.
+
+14. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$11 in module \uut:
+  created 256 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+15. Executing JSON backend.
+
+16. Executing RTLIL backend.
+Output filename: uut.il
+
+17. Executing ASYNC2SYNC pass.
+
+18. Executing MITER pass (creating miter circuit).
+Creating miter cell "miter" with gold cell "ref" and gate cell "uut".
+
+18.1. Executing FLATTEN pass (flatten design).
+<suppressed ~2 debug messages>
+
+18.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~32 debug messages>
+Removed 2 unused cells and 575 unused wires.
+
+19. Executing HIERARCHY pass (managing design hierarchy).
+
+19.1. Analyzing design hierarchy..
+Top module:  \miter
+
+19.2. Analyzing design hierarchy..
+Top module:  \miter
+Removing unused module `\ref'.
+Removing unused module `\uut'.
+Removed 2 unused modules.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+20. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Final init constraint equation: { \gate.presc [7:4] $flatten\gate.$auto$mutate.cc:662:mutate_inv$805 \gate.presc [2:0] \gate.cnt \gate.code_reg \gate.dac_code \gold.dac_code \gold.code_reg \gold.cnt \gold.presc } = 64'0000000000000000000000000000000000000000000000000000000000000000
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+Solving problem with 180822 variables and 477517 clauses..
+SAT proof finished - no model found: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
+CHECK_MUTATE_BASE_CASE_HELD
+
+21. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+** Trying induction with length 1 **
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Final init constraint equation: { \gate.presc [7:4] $flatten\gate.$auto$mutate.cc:662:mutate_inv$805 \gate.presc [2:0] \gate.cnt \gate.code_reg \gate.dac_code \gold.dac_code \gold.code_reg \gold.cnt \gold.presc } = 64'0000000000000000000000000000000000000000000000000000000000000000
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 1] Solving problem with 22523 variables and 59446 clauses..
+Base case for induction length 1 proven.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 1] Solving problem with 45038 variables and 118809 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                1         1             1
+  init \gate.cnt                                                       0         0      00000000
+  init \gate.code_reg                                                  0         0      00000000
+  init \gate.dac_code                                                  0         0      00000000
+  init \gate.presc [2:0]                                               7         7           111
+  init \gate.presc [7:4]                                               0         0          0000
+  init \gold.cnt                                                     255        ff      11111111
+  init \gold.code_reg                                                  0         0      00000000
+  init \gold.dac_code                                                  0         0      00000000
+  init \gold.presc                                                     0         0      00000000
+
+** Trying induction with length 2 **
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 2] Solving problem with 45330 variables and 119812 clauses..
+Base case for induction length 2 proven.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 2] Solving problem with 68038 variables and 179817 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                0         0             0
+  init \gate.cnt                                                      27        1b      00011011
+  init \gate.code_reg                                                241        f1      11110001
+  init \gate.dac_code                                                246        f6      11110110
+  init \gate.presc [2:0]                                               7         7           111
+  init \gate.presc [7:4]                                               7         7          0111
+  init \gold.cnt                                                     255        ff      11111111
+  init \gold.code_reg                                                225        e1      11100001
+  init \gold.dac_code                                                246        f6      11110110
+  init \gold.presc                                                     0         0      00000000
+
+** Trying induction with length 3 **
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 3] Solving problem with 68330 variables and 180820 clauses..
+Base case for induction length 3 proven.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 3] Solving problem with 91231 variables and 241467 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                0         0             0
+  init \gate.cnt                                                      30        1e      00011110
+  init \gate.code_reg                                                251        fb      11111011
+  init \gate.dac_code                                                 34        22      00100010
+  init \gate.presc [2:0]                                               5         5           101
+  init \gate.presc [7:4]                                              15         f          1111
+  init \gold.cnt                                                      30        1e      00011110
+  init \gold.code_reg                                                243        f3      11110011
+  init \gold.dac_code                                                 34        22      00100010
+  init \gold.presc                                                   254        fe      11111110
+
+** Trying induction with length 4 **
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 4] Solving problem with 91523 variables and 242470 clauses..
+Base case for induction length 4 proven.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 4] Solving problem with 114617 variables and 303759 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                0         0             0
+  init \gate.cnt                                                      58        3a      00111010
+  init \gate.code_reg                                                210        d2      11010010
+  init \gate.dac_code                                                 41        29      00101001
+  init \gate.presc [2:0]                                               5         5           101
+  init \gate.presc [7:4]                                              15         f          1111
+  init \gold.cnt                                                      58        3a      00111010
+  init \gold.code_reg                                                 82        52      01010010
+  init \gold.dac_code                                                 41        29      00101001
+  init \gold.presc                                                   254        fe      11111110
+
+** Trying induction with length 5 **
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 5] Solving problem with 114909 variables and 304762 clauses..
+Base case for induction length 5 proven.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 5] Solving problem with 138196 variables and 366693 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                1         1             1
+  init \gate.cnt                                                      87        57      01010111
+  init \gate.code_reg                                                  0         0      00000000
+  init \gate.dac_code                                                148        94      10010100
+  init \gate.presc [2:0]                                               6         6           110
+  init \gate.presc [7:4]                                              15         f          1111
+  init \gold.cnt                                                      87        57      01010111
+  init \gold.code_reg                                                 64        40      01000000
+  init \gold.dac_code                                                148        94      10010100
+  init \gold.presc                                                   254        fe      11111110
+
+** Trying induction with length 6 **
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 6] Solving problem with 138488 variables and 367696 clauses..
+Base case for induction length 6 proven.
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 6] Solving problem with 161968 variables and 430269 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                1         1             1
+  init \gate.cnt                                                      87        57      01010111
+  init \gate.code_reg                                                  2         2      00000010
+  init \gate.dac_code                                                132        84      10000100
+  init \gate.presc [2:0]                                               6         6           110
+  init \gate.presc [7:4]                                              15         f          1111
+  init \gold.cnt                                                      87        57      01010111
+  init \gold.code_reg                                                  0         0      00000000
+  init \gold.dac_code                                                132        84      10000100
+  init \gold.presc                                                   254        fe      11111110
+
+** Trying induction with length 7 **
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 7] Solving problem with 162260 variables and 431272 clauses..
+Base case for induction length 7 proven.
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 7] Solving problem with 185933 variables and 494487 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                1         1             1
+  init \gate.cnt                                                     197        c5      11000101
+  init \gate.code_reg                                                  0         0      00000000
+  init \gate.dac_code                                                133        85      10000101
+  init \gate.presc [2:0]                                               6         6           110
+  init \gate.presc [7:4]                                              15         f          1111
+  init \gold.cnt                                                     189        bd      10111101
+  init \gold.code_reg                                                  0         0      00000000
+  init \gold.dac_code                                                133        85      10000101
+  init \gold.presc                                                   250        fa      11111010
+
+** Trying induction with length 8 **
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[base case 8] Solving problem with 186225 variables and 495490 clauses..
+Base case for induction length 8 proven.
+
+Setting up time step 9:
+Final constraint equation: { } = { }
+Imported 526 cells to SAT database.
+Import proof for assert: $auto$miter.cc:268:create_miter_equiv$1578 when 1'1.
+
+[induction step 8] Solving problem with 210091 variables and 559347 clauses..
+Induction step failed. Incrementing induction length.
+
+  Time Signal Name                                                   Dec       Hex           Bin
+  ---- ----------------------------------------------------- ----------- --------- -------------
+  init $flatten\gate.$auto$mutate.cc:662:mutate_inv$805                1         1             1
+  init \gate.cnt                                                      66        42      01000010
+  init \gate.code_reg                                                 66        42      01000010
+  init \gate.dac_code                                                127        7f      01111111
+  init \gate.presc [2:0]                                               6         6           110
+  init \gate.presc [7:4]                                              15         f          1111
+  init \gold.cnt                                                      56        38      00111000
+  init \gold.code_reg                                                 66        42      01000010
+  init \gold.dac_code                                                127        7f      01111111
+  init \gold.presc                                                   253        fd      11111101
+
+Reached maximum number of time steps -> proof failed.
+
+   ______                   ___       ___       _ _            _ _ 
+  (_____ \                 / __)     / __)     (_) |          | | |
+   _____) )___ ___   ___ _| |__    _| |__ _____ _| | _____  __| | |
+  |  ____/ ___) _ \ / _ (_   __)  (_   __|____ | | || ___ |/ _  |_|
+  | |   | |  | |_| | |_| || |       | |  / ___ | | || ____( (_| |_ 
+  |_|   |_|   \___/ \___/ |_|       |_|  \_____|_|\_)_____)\____|_|
+
+
+ERROR: Called with -verify and proof did fail!

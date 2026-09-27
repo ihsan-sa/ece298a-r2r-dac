@@ -1,0 +1,14 @@
+# running in miter/src/
+read_rtlil ref.il
+read_rtlil uut.il
+miter -equiv -flatten -make_assert ref uut miter
+hierarchy -top miter
+async2sync
+setundef -zero -init
+select -assert-min 1 miter/t:$assert
+prep -top miter
+
+hierarchy -smtcheck
+rename -witness
+write_jny -no-connections ../model/design.json
+write_rtlil ../model/design.il

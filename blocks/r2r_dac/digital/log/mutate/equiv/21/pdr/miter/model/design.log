@@ -1,0 +1,744 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+
+-- Executing script file `../model/design.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: ref.il
+
+2. Executing RTLIL frontend.
+Input filename: uut.il
+
+3. Executing MITER pass (creating miter circuit).
+Creating miter cell "miter" with gold cell "ref" and gate cell "uut".
+
+3.1. Executing FLATTEN pass (flatten design).
+<suppressed ~2 debug messages>
+
+3.2. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~32 debug messages>
+Removed 2 unused cells and 575 unused wires.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \miter
+
+4.2. Analyzing design hierarchy..
+Top module:  \miter
+Removing unused module `\uut'.
+Removing unused module `\ref'.
+Removed 2 unused modules.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+5. Executing ASYNC2SYNC pass.
+
+6. Executing SETUNDEF pass (replace undef values with defined constants).
+
+7. Executing PREP pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \miter
+
+7.1.2. Analyzing design hierarchy..
+Top module:  \miter
+Removed 0 unused modules.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Removed a total of 0 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 0 redundant assignments.
+Promoted 0 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.2.6. Executing PROC_ROM pass (convert switches to ROMs).
+Converted 0 switches.
+
+7.2.7. Executing PROC_MUX pass (convert decision trees to multiplexers).
+
+7.2.8. Executing PROC_DLATCH pass (convert process syncs to latches).
+
+7.2.9. Executing PROC_DFF pass (convert process syncs to FFs).
+
+7.2.10. Executing PROC_MEMWR pass (convert process memory writes to cells).
+
+7.2.11. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.12. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+
+7.3. Executing FUTURE pass.
+
+7.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+
+7.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+
+7.6. Executing CHECK pass (checking for obvious problems).
+Checking module miter...
+Found and reported 0 problems.
+
+7.7. Executing OPT pass (performing simple optimizations).
+
+7.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+
+7.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\miter'.
+Computing hashes of 526 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+Computing hashes of 519 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+<suppressed ~21 debug messages>
+Removed a total of 7 cells.
+
+7.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \miter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~500 debug messages>
+
+7.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \miter.
+    New input vector for $reduce_and cell $auto$miter.cc:263:create_miter_equiv$1577: $auto$miter.cc:241:create_miter_equiv$1576
+  Optimizing cells in module \miter.
+Performed a total of 1 changes.
+
+7.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\miter'.
+Computing hashes of 519 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+Removed a total of 0 cells.
+
+7.7.6. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+7.7.7. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+<suppressed ~1 debug messages>
+
+7.7.8. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.7.9. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \miter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~500 debug messages>
+
+7.7.10. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \miter.
+Performed a total of 0 changes.
+
+7.7.11. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\miter'.
+Computing hashes of 518 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+Removed a total of 0 cells.
+
+7.7.12. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.7.13. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+
+7.7.14. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.7.15. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \miter..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~500 debug messages>
+
+7.7.16. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \miter.
+Performed a total of 0 changes.
+
+7.7.17. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\miter'.
+Computing hashes of 518 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+Removed a total of 0 cells.
+
+7.7.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+
+7.7.19. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+
+7.7.20. Finished fast OPT passes. (There is nothing left to do.)
+
+7.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 7 bits (of 8) from port B of cell miter.$flatten\gold.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:300$8 ($add).
+Removed top 7 bits (of 8) from port B of cell miter.$flatten\gold.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302$9 ($add).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][14]$271 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][46]$367 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][0]$421 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][100]$721 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][101]$724 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][102]$727 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][103]$730 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][104]$733 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][105]$736 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][106]$739 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][107]$742 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][108]$745 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][109]$748 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][10]$451 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][110]$751 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][111]$754 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][112]$757 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][113]$760 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][114]$763 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][115]$766 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][116]$769 ($mux).
+Removed top 1 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][117]$772 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][118]$775 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][119]$778 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][11]$454 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][120]$781 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][121]$784 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][122]$787 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][123]$790 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][124]$793 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][125]$796 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][126]$799 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][127]$802 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][12]$457 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][13]$460 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][14]$463 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][15]$466 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][16]$469 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][17]$472 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][18]$475 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][19]$478 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][1]$424 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][20]$481 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][21]$484 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][22]$487 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][23]$490 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][24]$493 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][25]$496 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][27]$502 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][2]$427 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][30]$511 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][35]$526 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][36]$529 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][37]$532 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][38]$535 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][39]$538 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][3]$430 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][40]$541 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][41]$544 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][42]$547 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][43]$550 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][44]$553 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][45]$556 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][46]$559 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][47]$562 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][48]$565 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][49]$568 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][4]$433 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][50]$571 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][51]$574 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][52]$577 ($mux).
+Removed top 1 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][53]$580 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][54]$583 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][55]$586 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][56]$589 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][57]$592 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][58]$595 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][59]$598 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][5]$436 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][60]$601 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][61]$604 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][62]$607 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][63]$610 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][65]$616 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][66]$619 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][67]$622 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][68]$625 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][69]$628 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][6]$439 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][70]$631 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][71]$634 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][72]$637 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][73]$640 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][74]$643 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][75]$646 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][76]$649 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][77]$652 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][78]$655 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][79]$658 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][7]$442 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][80]$661 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][81]$664 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][82]$667 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][83]$670 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][84]$673 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][85]$676 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][86]$679 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][87]$682 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][88]$685 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][89]$688 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][8]$445 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][91]$694 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][94]$703 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][99]$718 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][9]$448 ($mux).
+Removed top 1 bits (of 2) from port B of cell miter.$flatten\gold.$procmux$17_CMP0 ($eq).
+Removed top 7 bits (of 8) from port B of cell miter.$flatten\gate.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:300$8 ($add).
+Removed top 7 bits (of 8) from port B of cell miter.$flatten\gate.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302$9 ($add).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][14]$1039 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][46]$1135 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][0]$1189 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][100]$1489 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][101]$1492 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][102]$1495 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][103]$1498 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][104]$1501 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][105]$1504 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][106]$1507 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][107]$1510 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][108]$1513 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][109]$1516 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][10]$1219 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][110]$1519 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][111]$1522 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][112]$1525 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][113]$1528 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][114]$1531 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][115]$1534 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][116]$1537 ($mux).
+Removed top 1 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][117]$1540 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][118]$1543 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][119]$1546 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][11]$1222 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][120]$1549 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][121]$1552 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][122]$1555 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][123]$1558 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][124]$1561 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][125]$1564 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][126]$1567 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][127]$1570 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][12]$1225 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][13]$1228 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][14]$1231 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][15]$1234 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][16]$1237 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][17]$1240 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][18]$1243 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][19]$1246 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][1]$1192 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][20]$1249 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][21]$1252 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][22]$1255 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][23]$1258 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][24]$1261 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][25]$1264 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][27]$1270 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][2]$1195 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][30]$1279 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][35]$1294 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][36]$1297 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][37]$1300 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][38]$1303 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][39]$1306 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][3]$1198 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][40]$1309 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][41]$1312 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][42]$1315 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][43]$1318 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][44]$1321 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][45]$1324 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][46]$1327 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][47]$1330 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][48]$1333 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][49]$1336 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][4]$1201 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][50]$1339 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][51]$1342 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][52]$1345 ($mux).
+Removed top 1 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][53]$1348 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][54]$1351 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][55]$1354 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][56]$1357 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][57]$1360 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][58]$1363 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][59]$1366 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][5]$1204 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][60]$1369 ($mux).
+Removed top 3 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][61]$1372 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][62]$1375 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][63]$1378 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][65]$1384 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][66]$1387 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][67]$1390 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][68]$1393 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][69]$1396 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][6]$1207 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][70]$1399 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][71]$1402 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][72]$1405 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][73]$1408 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][74]$1411 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][75]$1414 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][76]$1417 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][77]$1420 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][78]$1423 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][79]$1426 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][7]$1210 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][80]$1429 ($mux).
+Removed top 2 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][81]$1432 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][82]$1435 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][83]$1438 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][84]$1441 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][85]$1444 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][86]$1447 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][87]$1450 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][88]$1453 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][89]$1456 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][8]$1213 ($mux).
+Removed top 5 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][91]$1462 ($mux).
+Removed top 7 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][94]$1471 ($mux).
+Removed top 6 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][99]$1486 ($mux).
+Removed top 4 bits (of 8) from mux cell miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][7][9]$1216 ($mux).
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][54]$a$1160.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][54]$b$1161.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][53]$a$1157.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][55]$a$1163.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][52]$b$1155.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][52]$a$1154.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][51]$b$1152.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][51]$a$1151.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][50]$b$1149.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][50]$a$1148.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][4]$b$1011.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][4]$a$1010.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][49]$b$1146.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][59]$a$1175.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][59]$b$1176.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][5]$a$1013.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][5]$b$1014.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][47]$a$1139.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][60]$a$1178.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][60]$b$1179.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][45]$b$1134.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][61]$a$1181.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][44]$b$1131.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][44]$a$1130.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][43]$b$1128.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][43]$a$1127.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][42]$b$1125.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][42]$a$1124.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][41]$b$1122.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][41]$a$1121.
+Removed top 2 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][40]$b$1119.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][40]$a$1118.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][3]$b$1008.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][3]$a$1007.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][39]$b$1116.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][39]$a$1115.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][38]$b$1113.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][38]$a$1112.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][37]$b$1110.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][37]$a$1109.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][36]$b$1107.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][36]$a$1106.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][35]$b$1104.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][35]$a$1103.
+Removed top 2 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][34]$b$1101.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][34]$a$1100.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][33]$b$1098.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][33]$a$1097.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][32]$b$1095.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][31]$b$1092.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][31]$a$1091.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][30]$b$1089.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][30]$a$1088.
+Removed top 2 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][2]$b$1005.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][2]$a$1004.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][29]$b$1086.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][29]$a$1085.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][28]$b$1083.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][28]$a$1082.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][27]$b$1080.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][27]$a$1079.
+Removed top 1 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][26]$b$1077.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][26]$a$1076.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][25]$b$1074.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][25]$a$1073.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][24]$b$1071.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][24]$a$1070.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][23]$b$1068.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][23]$a$1067.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][22]$b$1065.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][22]$a$1064.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][21]$b$1062.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][21]$a$1061.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][20]$b$1059.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][20]$a$1058.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][1]$b$1002.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][1]$a$1001.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][19]$b$1056.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][19]$a$1055.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][18]$b$1053.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][18]$a$1052.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][17]$b$1050.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][61]$b$1182.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][62]$a$1184.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][62]$b$1185.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][63]$a$1187.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][15]$a$1043.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][63]$b$1188.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][6]$a$1016.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][13]$b$1038.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][6]$b$1017.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][12]$b$1035.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][12]$a$1034.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][11]$b$1032.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][11]$a$1031.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][10]$b$1029.
+Removed top 7 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][10]$a$1028.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][0]$b$999.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][0]$a$998.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][7]$a$1019.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][5][7]$a$923.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][7]$b$1020.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][5][23]$a$971.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][8]$a$1022.
+Removed top 2 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][8]$b$1023.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][9]$a$1025.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][9]$b$1026.
+Removed top 1 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][58]$b$1173.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][9]$b$258.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][9]$a$257.
+Removed top 2 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][8]$b$255.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][8]$a$254.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][7]$b$252.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][7]$a$251.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][6]$b$249.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][6]$a$248.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][63]$b$420.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][63]$a$419.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][62]$b$417.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][62]$a$416.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][61]$b$414.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][61]$a$413.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][60]$b$411.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][60]$a$410.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][5]$b$246.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][5]$a$245.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][59]$b$408.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][59]$a$407.
+Removed top 1 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][58]$b$405.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][58]$a$404.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][57]$b$402.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][57]$a$401.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][56]$b$399.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][56]$a$398.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][55]$b$396.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][55]$a$395.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][54]$b$393.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][54]$a$392.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][53]$b$390.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][53]$a$389.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][52]$b$387.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][52]$a$386.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][51]$b$384.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][51]$a$383.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][50]$b$381.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][50]$a$380.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][4]$b$243.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][4]$a$242.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][49]$b$378.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][58]$a$1172.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][57]$b$1170.
+Removed top 3 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][57]$a$1169.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][47]$a$371.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][56]$b$1167.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][45]$b$366.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][44]$b$363.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][44]$a$362.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][43]$b$360.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][43]$a$359.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][42]$b$357.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][42]$a$356.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][41]$b$354.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][41]$a$353.
+Removed top 2 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][40]$b$351.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][40]$a$350.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][3]$b$240.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][3]$a$239.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][39]$b$348.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][39]$a$347.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][38]$b$345.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][38]$a$344.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][37]$b$342.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][37]$a$341.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][36]$b$339.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][36]$a$338.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][35]$b$336.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][35]$a$335.
+Removed top 2 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][34]$b$333.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][34]$a$332.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][33]$b$330.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][33]$a$329.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][32]$b$327.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][31]$b$324.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][31]$a$323.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][30]$b$321.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][30]$a$320.
+Removed top 2 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][2]$b$237.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][2]$a$236.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][29]$b$318.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][29]$a$317.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][28]$b$315.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][28]$a$314.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][27]$b$312.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][27]$a$311.
+Removed top 1 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][26]$b$309.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][26]$a$308.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][25]$b$306.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][25]$a$305.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][24]$b$303.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][24]$a$302.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][23]$b$300.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][23]$a$299.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][22]$b$297.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][22]$a$296.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][21]$b$294.
+Removed top 3 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][21]$a$293.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][20]$b$291.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][20]$a$290.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][1]$b$234.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][1]$a$233.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][19]$b$288.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][19]$a$287.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][18]$b$285.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][18]$a$284.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][17]$b$282.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][15]$a$275.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][13]$b$270.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][12]$b$267.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][12]$a$266.
+Removed top 5 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][11]$b$264.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][11]$a$263.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][10]$b$261.
+Removed top 7 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][10]$a$260.
+Removed top 4 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][0]$b$231.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][0]$a$230.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][5][7]$a$155.
+Removed top 6 bits (of 8) from wire miter.$flatten\gold.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][5][23]$a$203.
+Removed top 6 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][55]$b$1164.
+Removed top 5 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][53]$b$1158.
+Removed top 4 bits (of 8) from wire miter.$flatten\gate.$memory$auto$proc_rom.cc:155:do_switch$11$rdmux[0][6][56]$a$1166.
+
+7.9. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 0 unused cells and 230 unused wires.
+<suppressed ~1 debug messages>
+
+7.10. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.11. Executing OPT pass (performing simple optimizations).
+
+7.11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module miter.
+
+7.11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\miter'.
+Computing hashes of 518 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+Computing hashes of 376 cells of `\miter'.
+Finding duplicate cells in `\miter'.
+<suppressed ~426 debug messages>
+Removed a total of 142 cells.
+
+7.11.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \miter..
+Removed 0 unused cells and 142 unused wires.
+<suppressed ~1 debug messages>
+
+7.11.4. Finished fast OPT passes.
+
+7.12. Executing SORT pass.
+
+7.13. Printing statistics.
+
+=== miter ===
+
+        +----------Local Count, excluding submodules.
+        | 
+      399 wires
+     2999 wire bits
+       39 public wires
+      175 public wire bits
+        7 ports
+       15 port bits
+      376 cells
+        4   $add
+        1   $assert
+        8   $dff
+        4   $eq
+        1   $eqx
+        1   $logic_not
+      348   $mux
+        3   $not
+        2   $or
+        2   $pmux
+        2   $scopeinfo
+
+7.14. Executing CHECK pass (checking for obvious problems).
+Checking module miter...
+Found and reported 0 problems.
+
+8. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `miter'. Setting top module to miter.
+
+8.1. Analyzing design hierarchy..
+Top module:  \miter
+
+8.2. Analyzing design hierarchy..
+Top module:  \miter
+Removed 0 unused modules.
+Module miter directly or indirectly contains formal properties -> setting "keep" attribute.
+
+9. Executing jny backend.
+
+10. Executing RTLIL backend.
+Output filename: ../model/design.il
+
+End of script. Logfile hash: 8e68ee7de6, time: 0.34s, user: 0.17s, system: 0.02s, MEM: 32.83 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+Time spent: 28% 6x opt_clean (0 sec), 16% 8x opt_expr (0 sec), ...

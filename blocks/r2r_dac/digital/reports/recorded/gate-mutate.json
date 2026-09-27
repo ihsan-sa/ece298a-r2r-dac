@@ -1,0 +1,85 @@
+{
+ "script": "gate",
+ "gate": "mutate",
+ "phase": "P4",
+ "tool": "mutate",
+ "input_digest": "dir_text:2a2b1ae7e895ad5405f5ae367ab80ae45039df70315e07a67867027fa4bbdf15",
+ "status": "pass",
+ "criteria": {
+  "fail_severities": [
+   "error"
+  ],
+  "max_count": 0
+ },
+ "counts": {
+  "total": 2,
+  "by_severity": {
+   "info": 2
+  },
+  "by_source": {
+   "yosys": 2
+  }
+ },
+ "failing_count": 0,
+ "failing": [],
+ "violations": [
+  {
+   "check": "mutate",
+   "severity": "info",
+   "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+   "module": null,
+   "line": null,
+   "kind": "equivalent_condition_inverted",
+   "refs": [],
+   "msg": "mutant 14 (condition_inverted) is proven equivalent to the design and left out of the kill rate: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 5 -wire presc -wirebit 5 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+   "source": "yosys",
+   "items": [
+    {
+     "msg": "mutant 14 (condition_inverted) is proven equivalent to the design and left out of the kill rate: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 5 -wire presc -wirebit 5 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+     "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+     "line": null
+    }
+   ]
+  },
+  {
+   "check": "mutate",
+   "severity": "info",
+   "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+   "module": null,
+   "line": null,
+   "kind": "equivalent_condition_inverted",
+   "refs": [],
+   "msg": "mutant 21 (condition_inverted) is proven equivalent to the design and left out of the kill rate: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 3 -wire presc -wirebit 3 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+   "source": "yosys",
+   "items": [
+    {
+     "msg": "mutant 21 (condition_inverted) is proven equivalent to the design and left out of the kill rate: mutate -mode inv -module r2r_dac_digital -cell $procdff$39 -port Q -portbit 3 -wire presc -wirebit 3 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18 -src /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6",
+     "file": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:16.13-16.18",
+     "line": null
+    }
+   ]
+  }
+ ],
+ "facts": {
+  "top": "r2r_dac_digital",
+  "total_mutants": 23,
+  "equivalent": 2,
+  "equivalent_ids": [
+   14,
+   21
+  ],
+  "scored_mutants": 21,
+  "killed": 21,
+  "survived": 0,
+  "kill_rate": 1.0,
+  "survivors_by_class": {},
+  "equivalent_by": {
+   "14": "pdr",
+   "21": "pdr"
+  },
+  "unproven_survivors": {},
+  "wall_s": 159.99
+ },
+ "recorded_ts": "2026-09-27T00:30:20",
+ "attempts": 3
+}

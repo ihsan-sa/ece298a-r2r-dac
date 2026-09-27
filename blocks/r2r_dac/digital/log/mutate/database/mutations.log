@@ -18,6 +18,6 @@ Covered 7/7 wires (100.00%).
 Covered 13/42 wire bits (30.95%).
 Reduced database size: 23
 
-End of script. Logfile hash: b14875e4fc, time: 0.11s, user: 0.03s, system: 0.01s, MEM: 31.08 MB peak
+End of script. Logfile hash: b14875e4fc, time: 0.09s, user: 0.03s, system: 0.01s, MEM: 30.19 MB peak
 Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
-Time spent: 96% 1x mutate (0 sec), 3% 2x read_rtlil (0 sec), ...
+Time spent: 97% 1x mutate (0 sec), 2% 2x read_rtlil (0 sec), ...

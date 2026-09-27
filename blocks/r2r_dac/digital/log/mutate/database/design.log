@@ -83,6 +83,6 @@ Optimizing module r2r_dac_digital.
 4. Executing RTLIL backend.
 Output filename: database/design.il
 
-End of script. Logfile hash: 4da37fea72, time: 0.05s, user: 0.02s, system: 0.01s, MEM: 30.88 MB peak
+End of script. Logfile hash: 4da37fea72, time: 0.10s, user: 0.03s, system: 0.02s, MEM: 28.23 MB peak
 Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
-Time spent: 81% 2x read_verilog (0 sec), 2% 2x write_rtlil (0 sec), ...
+Time spent: 75% 2x read_verilog (0 sec), 4% 1x opt_expr (0 sec), ...

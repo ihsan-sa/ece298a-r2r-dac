@@ -1,0 +1,33 @@
+{
+  "version": "Yosys Witness Aiger map",
+  "gennerator": "Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)",
+  "latch_count": 64,
+  "input_count": 14,
+  "clocks": [
+    {"edge": "posedge", "input": 13, "offset": 0, "path": ["\\in_clk"]}
+  ],
+  "inputs": [
+    {"input": 0, "offset": 0, "path": ["\\in_ui_in"]},
+    {"input": 1, "offset": 1, "path": ["\\in_ui_in"]},
+    {"input": 2, "offset": 2, "path": ["\\in_ui_in"]},
+    {"input": 3, "offset": 3, "path": ["\\in_ui_in"]},
+    {"input": 4, "offset": 4, "path": ["\\in_ui_in"]},
+    {"input": 5, "offset": 5, "path": ["\\in_ui_in"]},
+    {"input": 6, "offset": 6, "path": ["\\in_ui_in"]},
+    {"input": 7, "offset": 7, "path": ["\\in_ui_in"]},
+    {"input": 8, "offset": 0, "path": ["\\in_slow"]},
+    {"input": 9, "offset": 0, "path": ["\\in_rst_n"]},
+    {"input": 10, "offset": 0, "path": ["\\in_mode"]},
+    {"input": 11, "offset": 1, "path": ["\\in_mode"]},
+    {"input": 12, "offset": 0, "path": ["\\in_ena"]},
+    {"input": 13, "offset": 0, "path": ["\\in_clk"]}
+  ],
+  "seqs": [],
+  "inits": [],
+  "asserts": [
+    ["\\_witness_", "\\assert_auto_miter_cc_273_create_miter_equiv_1579"]
+  ],
+  "assumes": [
+    ["$auto$formalff.cc:987:execute$1817"]
+  ]
+}
