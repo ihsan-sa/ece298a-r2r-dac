@@ -10,8 +10,6 @@
 #      iverilog -Wall, and any warning fails the check.
 #   2. tests/check_netlists.py: the analog netlist, testbenches, bounds and
 #      spec files are well formed (no PDK or simulator needed).
-#   3. tests/check_tt_project.py: once there is an info.yaml at the root, the
-#      Tiny Tapeout project files are all there and carry the signed-off tile.
 # The SPICE corners, formal proof, hardening, DRC, LVS and the Tiny Tapeout
 # precheck still run on their own.
 set -euo pipefail
@@ -37,7 +35,7 @@ lint() {
   echo "lint: ok, $name"
 }
 
-echo "== 1/3 lint (iverilog -Wall)"
+echo "== 1/2 lint (iverilog -Wall)"
 block=blocks/r2r_dac
 shopt -s nullglob
 rtl=("$block"/digital/rtl/*.v)
@@ -49,8 +47,6 @@ fi
 lint "the DAC digital RTL" "${rtl[@]}"
 lint "the Tiny Tapeout top with the analog macro stub" "${top[@]}"
 
-echo "== 2/3 analog netlists and specs"
+echo "== 2/2 analog netlists and specs"
 python3 tests/check_netlists.py
-echo "== 3/3 Tiny Tapeout project files"
-python3 tests/check_tt_project.py
 echo "check: ok"

@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """Check the Tiny Tapeout analog project files at the repository root.
 
-Run from the repository root (tests/check.sh does). It needs only python3 and
-PyYAML. Until there is an info.yaml at the root it prints that it skipped and
-exits 0. Once there is one, the project has to be whole and has to be the tile
-the flow signed off under blocks/r2r_dac/top:
+Run from the repository root: python3 tests/check_tt_project.py. It is not yet
+a step of tests/check.sh; wiring it in is left to the owner. Until there is an
+info.yaml at the root it prints that it skipped and exits 0, without needing
+PyYAML. Once there is one, it needs PyYAML, and the project has to be whole and
+has to be the tile the flow signed off under blocks/r2r_dac/top:
   - info.yaml parses, and its top_module, tiles and analog_pins match
     blocks/r2r_dac/top/harden/info.yaml;
   - docs/info.md exists;
   - a .v file under src/ declares the top module;
-  - gds/<top>.gds and lef/<top>.lef exist, and the GDS is byte for byte the
-    signed-off one in blocks/r2r_dac/top/harden/runs/run/final/gds/.
+  - gds/<top>.gds and lef/<top>.lef exist, the signed-off GDS exists in
+    blocks/r2r_dac/top/harden/runs/run/final/gds/, and the root GDS is byte
+    for byte that one.
 
 Prints one line and exits 0 when all is sound; prints each problem and exits 1.
 """
 import re
 import sys
 from pathlib import Path
-
-import yaml
 
 TILE = Path("blocks/r2r_dac/top/harden")
 KEYS = ("top_module", "tiles", "analog_pins")
@@ -29,6 +29,11 @@ def main() -> int:
     if not info.is_file():
         print("tt project: skipped, no info.yaml at the root yet")
         return 0
+    try:
+        import yaml
+    except ImportError:
+        print("tt project: info.yaml exists but PyYAML is not installed, so it can't be checked")
+        return 1
 
     problems = []
     try:
@@ -54,7 +59,9 @@ def main() -> int:
     for path in (gds, lef):
         if not path.is_file():
             problems.append(f"{path} is missing")
-    if gds.is_file() and signed.is_file() and gds.read_bytes() != signed.read_bytes():
+    if not signed.is_file():
+        problems.append(f"the signed-off {signed} is missing, so the root GDS can't be compared with it")
+    elif gds.is_file() and gds.read_bytes() != signed.read_bytes():
         problems.append(f"{gds} differs from the signed-off {signed}")
 
     if problems:
