@@ -17,10 +17,11 @@ Filed by runs. Each says what done looks like as something a run can check, and 
 
 ### Release the R-2R DAC and write its design document
 
-- **Status:** open, waiting on the owner's sign-offs
+- **Status:** open, sign-offs recorded, design document next
 - **What:** Every check on the DAC passes, including hardening, DRC, LVS and the Tiny Tapeout precheck. Its release waits on three sign-offs from the owner, one each for the whole tile, its analog half and its digital half, and the design document comes only after them. They have been asked for, and his answers arrive as asks. A run records each answer as he gave it and never records a sign-off he hasn't given. Once all three are in, the run records them in this repository and writes the design document: what the DAC does, how the ladder and its drivers were sized, the DNL, INL, settling and glitch results over the corners with the worst corner named, and how the tile was verified.
+- **Sign-offs:** all three approved in one ask on 2026-10-14 (issue #8: "approve H2-1452e6 H2-4da295 H2-a7bfe1"), recorded with their digests in `docs/signoffs.md`. The flow's `state.json` files on `track/r2r-dac` still show them as `presented`.
 - **Done when:** the three sign-offs are recorded in this repository, and its design document is on main.
-- **Pull requests:** none yet
+- **Pull requests:** the one for [issue #8](https://github.com/ihsan-sa/ece298a-r2r-dac/issues/8) records the sign-offs
 
 ## Later
 
