@@ -11,17 +11,31 @@
     {"path": ["\\rst_n"], "width": 1, "offset": 0, "init_only": false},
     {"path": ["\\slow"], "width": 1, "offset": 0, "init_only": false},
     {"path": ["\\ui_in"], "width": 8, "offset": 0, "init_only": false},
-    {"path": ["\\_witness_", "\\anyinit_procdff_91"], "width": 2, "offset": 0, "init_only": true},
-    {"path": ["\\_witness_", "\\anyinit_procdff_92"], "width": 2, "offset": 0, "init_only": true},
-    {"path": ["\\_witness_", "\\anyinit_procdff_93"], "width": 2, "offset": 0, "init_only": true},
-    {"path": ["\\_witness_", "\\anyinit_procdff_94"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_108"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_109"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_110"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_111"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_112"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_113"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_114"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_115"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_116"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_117"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_118"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_119"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_120"], "width": 2, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_121"], "width": 8, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_122"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\_witness_", "\\anyinit_procdff_123"], "width": 1, "offset": 0, "init_only": true},
     {"path": ["\\dut", "\\cnt"], "width": 8, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\cnt_p1"], "width": 8, "offset": 0, "init_only": true},
     {"path": ["\\dut", "\\code_reg"], "width": 8, "offset": 0, "init_only": true},
     {"path": ["\\dut", "\\dac_code"], "width": 8, "offset": 0, "init_only": true},
-    {"path": ["\\dut", "\\presc"], "width": 8, "offset": 0, "init_only": true}
+    {"path": ["\\dut", "\\presc"], "width": 8, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\presc_tc"], "width": 1, "offset": 0, "init_only": true},
+    {"path": ["\\dut", "\\rst_q"], "width": 1, "offset": 0, "init_only": true}
   ],
   "steps": [
-    {"bits": "00000000111111110000000000000000000000000000000000000"},
-    {"bits": "00000000000000"}
+    {"bits": "0000000000000000000000000000000000000000000000000000000000000000000000000000000000000"}
   ]
 }

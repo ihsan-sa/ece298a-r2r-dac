@@ -10,12 +10,14 @@ class Model:
         self.cnt = 0
         self.presc = 0
         self.dac = 0
+        self.rst_q = 0  # rst_n is registered once inside the block
 
     def sources(self, ui):
         return {0: ui, 1: self.cnt, 2: SINE[self.cnt], 3: self.code}
 
     def edge(self, rst_n, ui, mode, slow):
-        if not rst_n:
+        rst_eff, self.rst_q = self.rst_q, rst_n
+        if not rst_eff:
             self.code = self.cnt = self.presc = self.dac = 0
             return self.dac
         self.dac = self.sources(ui)[mode]

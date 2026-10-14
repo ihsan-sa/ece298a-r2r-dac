@@ -28,7 +28,7 @@
     "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/tt_um_r2r_dac_digital.v"
   ],
   "DIE_AREA": "0 0 346.64 325.36",
-  "FP_DEF_TEMPLATE": "/tmp/cf-bus/engine/reference/tt/tt-support-tools/tech/gf180mcuD/def/analog/tt_analog_1x2.def",
+  "FP_DEF_TEMPLATE": "/home/ihsan/.claude/skills/chip-flow/engine/reference/tt/tt-support-tools/tech/gf180mcuD/def/analog/tt_analog_1x2.def",
   "VDD_PIN": "VPWR",
   "GND_PIN": "VGND",
   "RT_MAX_LAYER": "Metal4",
@@ -63,6 +63,8 @@
       "pdk_dir::libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib"
     ]
   },
+  "CTS_ROOT_BUFFER": "gf180mcu_fd_sc_mcu7t5v0__clkbuf_8",
+  "RUN_POST_GRT_DESIGN_REPAIR": true,
   "MACROS": {
     "r2r_dac_analog": {
       "gds": [
@@ -80,7 +82,7 @@
       "instances": {
         "u_analog": {
           "location": [
-            69.44,
+            68.32,
             94.08
           ],
           "orientation": "N"
@@ -91,9 +93,10 @@
   "PDN_MACRO_CONNECTIONS": [
     "u_analog VPWR VGND vdd vss"
   ],
-  "PDN_CFG": "/tmp/cf-bus/engine/lib/macro_pdn.tcl",
+  "PDN_CFG": "/home/ihsan/.claude/skills/chip-flow/engine/lib/macro_pdn.tcl",
   "MAGIC_EXT_USE_GDS": true,
   "EXTRA_SPICE_MODELS": [
     "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.spice"
-  ]
+  ],
+  "RSZ_DONT_TOUCH_RX": "^ua\\[\\d+\\]$"
 }

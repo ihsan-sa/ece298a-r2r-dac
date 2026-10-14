@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<report-database>
+ <description>pin_label_purposes_overlapping_drawing.rb.drc, input=/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/precheck_run/design/tt_um_r2r_dac_digital.gds, topcell=</description>
+ <original-file/>
+ <generator>drc: script='tech-files/pin_label_purposes_overlapping_drawing.rb.drc'</generator>
+ <top-cell>tt_um_r2r_dac_digital</top-cell>
+ <tags>
+ </tags>
+ <categories>
+ </categories>
+ <cells>
+  <cell>
+   <name>tt_um_r2r_dac_digital</name>
+   <variant/>
+   <layout-name/>
+   <references>
+   </references>
+  </cell>
+ </cells>
+ <items>
+ </items>
+</report-database>

@@ -1,0 +1,120 @@
+{
+ "id": 1,
+ "created": "2026-10-13T03:57:10",
+ "gate": "bench_strength",
+ "phase": "P4",
+ "workspace": "blocks/r2r_dac/analog",
+ "fixer": "testbench",
+ "role_prompt": "skills/ade/agents/bench-writer.md",
+ "allowed_scripts": [
+  "engine/scripts/gate.py",
+  "engine/scripts/state.py"
+ ],
+ "guidance": [
+  "Read the remediation reference(s) listed in `remediations` FIRST: what the finding means, known false-positive classes, the cheapest-first fix ladder, and the traps this project already hit. They are keyed to your cluster's kinds.",
+  "Edit tb/ (and the reference model it scores against) only; a mutate survivor names the mutant class the test must now kill."
+ ],
+ "remediations": [
+  "/home/ihsan/.claude/skills/chip-flow/skills/ade/reference/remediations/survivor_size_doubled.md"
+ ],
+ "cluster": {
+  "file": null,
+  "module": null,
+  "kinds": [
+   "survivor_size_doubled"
+  ],
+  "checks": [
+   "netlistlib"
+  ],
+  "severity": "error",
+  "count": 4,
+  "violations": [
+   {
+    "check": "bench_strength",
+    "severity": "error",
+    "file": null,
+    "module": null,
+    "line": null,
+    "kind": "survivor_size_doubled",
+    "refs": [
+     "xrb0a"
+    ],
+    "msg": "mutant xrb0a_size_doubled_r_width (xrb0a: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+    "source": "netlistlib",
+    "items": [
+     {
+      "msg": "mutant xrb0a_size_doubled_r_width (xrb0a: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+      "file": null,
+      "line": null
+     }
+    ]
+   },
+   {
+    "check": "bench_strength",
+    "severity": "error",
+    "file": null,
+    "module": null,
+    "line": null,
+    "kind": "survivor_size_doubled",
+    "refs": [
+     "xrb0b"
+    ],
+    "msg": "mutant xrb0b_size_doubled_r_width (xrb0b: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+    "source": "netlistlib",
+    "items": [
+     {
+      "msg": "mutant xrb0b_size_doubled_r_width (xrb0b: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+      "file": null,
+      "line": null
+     }
+    ]
+   },
+   {
+    "check": "bench_strength",
+    "severity": "error",
+    "file": null,
+    "module": null,
+    "line": null,
+    "kind": "survivor_size_doubled",
+    "refs": [
+     "xrta"
+    ],
+    "msg": "mutant xrta_size_doubled_r_width (xrta: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+    "source": "netlistlib",
+    "items": [
+     {
+      "msg": "mutant xrta_size_doubled_r_width (xrta: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+      "file": null,
+      "line": null
+     }
+    ]
+   },
+   {
+    "check": "bench_strength",
+    "severity": "error",
+    "file": null,
+    "module": null,
+    "line": null,
+    "kind": "survivor_size_doubled",
+    "refs": [
+     "xrtb"
+    ],
+    "msg": "mutant xrtb_size_doubled_r_width (xrtb: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+    "source": "netlistlib",
+    "items": [
+     {
+      "msg": "mutant xrtb_size_doubled_r_width (xrtb: r_width doubled) survived every bench's bounds - the bench cannot tell this design apart from a faulty one",
+      "file": null,
+      "line": null
+     }
+    ]
+   }
+  ]
+ },
+ "info_context": [],
+ "artifacts": {
+  "workspace": "blocks/r2r_dac/analog",
+  "spec": "blocks/r2r_dac/analog/spec/spec.yaml"
+ },
+ "scope": "fix ONLY the findings in `cluster`; `info_context` (same gate, below its failing severity) is background only, never its own fix target; do not touch unrelated files; re-run the failed gate when done"
+}

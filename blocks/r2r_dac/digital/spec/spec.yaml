@@ -1,7 +1,7 @@
 top: r2r_dac_digital
 requirements:
   - id: REQ-RESET
-    text: while rst_n is low, on every clk edge dac_code becomes 0 and the counter and prescaler restart from 0
+    text: rst_n is registered once; on every clk edge after one that sampled rst_n low, dac_code becomes 0 and the counter and prescaler restart from 0
     check: both
     property: REQ_RESET
   - id: REQ-CAPTURE

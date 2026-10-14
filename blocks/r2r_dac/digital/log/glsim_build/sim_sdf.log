@@ -1,0 +1,104 @@
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/lib/x86_64-linux-gnu/libpython3.12.so.1.0'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:233  in gpi_load_users                  Running entry func 'initialize' from loaded library '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/cocotb/simulator.cpython-312-x86_64-linux-gnu.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:114  in initialize                      Using Python 3.12.12 interpreter at /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/bin/python3.12
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1791879608
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Icarus Verilog version 14.0 (devel)
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_reset_clears (1/8)
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:1329: Unable to match ModPath S -> Z in r2r_dac_digital.dut._355_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:1330: Unable to match ModPath S -> Z in r2r_dac_digital.dut._355_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:1396: Unable to match ModPath S -> Z in r2r_dac_digital.dut._360_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:1397: Unable to match ModPath S -> Z in r2r_dac_digital.dut._360_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:1416: Unable to match ModPath S -> Z in r2r_dac_digital.dut._361_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:1417: Unable to match ModPath S -> Z in r2r_dac_digital.dut._361_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:2694: Unable to match ModPath S -> Z in r2r_dac_digital.dut._424_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:2695: Unable to match ModPath S -> Z in r2r_dac_digital.dut._424_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:3094: Unable to match ModPath S -> Z in r2r_dac_digital.dut._441_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:3095: Unable to match ModPath S -> Z in r2r_dac_digital.dut._441_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:3615: Unable to match ModPath S -> Z in r2r_dac_digital.dut._462_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:3616: Unable to match ModPath S -> Z in r2r_dac_digital.dut._462_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5572: Unable to match ModPath A1 -> Z in r2r_dac_digital.dut._568_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5573: Unable to match ModPath A1 -> Z in r2r_dac_digital.dut._568_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5574: Unable to match ModPath A2 -> Z in r2r_dac_digital.dut._568_
+SDF ERROR: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5575: Unable to match ModPath A2 -> Z in r2r_dac_digital.dut._568_
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5799: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5817: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5835: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5853: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5871: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5889: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5907: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5925: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5943: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5961: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5979: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:5997: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6015: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6033: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6051: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6069: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6087: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6105: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6123: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6141: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6159: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6177: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6195: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6213: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6231: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6249: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6267: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6285: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6303: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6321: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6339: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6357: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6375: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6393: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6411: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6429: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6447: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6465: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan   230.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_reset_clears passed
+   230.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_register_capture (2/8)
+   460.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_register_capture passed
+   460.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_registered_output (3/8)
+   570.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_registered_output passed
+   570.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_hold_keeps_captured_code (4/8)
+   960.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_hold_keeps_captured_code passed
+   960.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_ramp_all_codes_and_wrap (5/8)
+  7030.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_ramp_all_codes_and_wrap passed
+  7030.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_slow_prescale (6/8)
+ 22600.01ns INFO     cocotb.regression                  test_r2r_dac_digital.test_slow_prescale passed
+ 22600.01ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_sine_table_all_entries (7/8)
+ 27950.01ns INFO     cocotb.regression                  test_r2r_dac_digital.test_sine_table_all_entries passed
+ 27950.01ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_random_mode_switching_against_model (8/8)
+ 88020.01ns INFO     cocotb.regression                  test_r2r_dac_digital.test_random_mode_switching_against_model passed
+ 88020.01ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_r2r_dac_digital.test_reset_clears                          PASS         230.00           0.08       2967.15  **
+                                                        ** test_r2r_dac_digital.test_register_capture                      PASS         230.00           0.00      84380.72  **
+                                                        ** test_r2r_dac_digital.test_registered_output                     PASS         110.00           0.00      87303.94  **
+                                                        ** test_r2r_dac_digital.test_hold_keeps_captured_code              PASS         390.00           0.00     107839.37  **
+                                                        ** test_r2r_dac_digital.test_ramp_all_codes_and_wrap               PASS        6070.00           0.04     143754.25  **
+                                                        ** test_r2r_dac_digital.test_slow_prescale                         PASS       15570.00           0.03     517837.58  **
+                                                        ** test_r2r_dac_digital.test_sine_table_all_entries                PASS        5350.00           0.04     136823.92  **
+                                                        ** test_r2r_dac_digital.test_random_mode_switching_against_model   PASS       60070.00           0.29     204421.11  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=8 PASS=8 FAIL=0 SKIP=0                                               88020.01           0.49     178325.78  **
+                                                        ***********************************************************************************************************************
+/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6483: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6501: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6519: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6537: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6555: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6573: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6591: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6609: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6627: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6645: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6663: TIMINGCHECK not supported.
+SDF WARNING: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/glsim_build/sdf_icarus.sdf:6681: TIMINGCHECK not supported.

@@ -24,5 +24,196 @@ No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module wi
 [ORD-0032] Invalid thread number specification: None.
 No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
 [ORD-0032] Invalid thread number specification: None.
-[PDN-0178] Remaining channel (3.3600, 78.1000) - (59.3600, 106.1400) on Metal1 for nets: VPWR, VGND
-[PDN-0178] Remaining channel (3.3600, 113.3800) - (59.3600, 141.4200) on Metal1 for nets: VPWR, VGND
+Bterm VPWR is declared as a 'POWER' pin. It will be ignored.
+Bterm VGND is declared as a 'GROUND' pin. It will be ignored.
+[ODB-0186] macro gf180mcu_fd_io__asig_5p0 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__dvss references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill5 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_ef_io__bi_t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__bi_24t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__in_c references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__brk2 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fillnc references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__brk5 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill1 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__bi_t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill10 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__dvdd references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__cor references unknown site GF_COR_Site
+[ODB-0186] macro gf180mcu_fd_io__in_s references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__asig_5p0 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__dvss references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill5 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_ef_io__bi_t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__bi_24t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__in_c references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__brk2 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fillnc references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__brk5 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill1 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__bi_t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill10 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__dvdd references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__cor references unknown site GF_COR_Site
+[ODB-0186] macro gf180mcu_fd_io__in_s references unknown site GF_IO_Site
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ff_n40C_3v60. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+[RSZ-0020] found 2 floating nets.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ff_n40C_3v60. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ff_n40C_3v60. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ff_n40C_3v60. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ss_125C_3v00 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ss_125C_2v97.lib.gz line 17, library gf180mcu_fd_io__ss_125C_2v97 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__tt_025C_3v30.lib.gz line 17, library gf180mcu_fd_io__tt_025C_3v30 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/lib/gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60.lib line 17, library gf180mcu_fd_sc_mcu7t5v0__ff_n40C_3v60 already exists.
+[STA-1140] /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lib/gf180mcu_fd_io__ff_n40C_3v63.lib.gz line 17, library gf180mcu_fd_io__ff_n40C_3v63 already exists.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via1
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via1
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via2
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via2
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via3
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via3
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via4
+[DRT-0349] LEF58_ENCLOSURE with no CUTCLASS is not supported. Skipping for layer Via4
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+Threshold for Threshold-surpassing long wires is not set. The checker will be skipped.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[ORD-0032] Invalid thread number specification: None.
+[ORD-0032] Invalid thread number specification: None.
+[ORD-0032] Invalid thread number specification: None.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner nom_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner min_ff_n40C_3v60. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_tt_025C_3v30. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ss_125C_3v00. The module will be black-boxed.
+No libs found for macro r2r_dac_analog at corner max_ff_n40C_3v60. The module will be black-boxed.
+'VSRC_LOC_FILES' was not given a value, which may make the results of IR drop analysis inaccurate. If you are not integrating a top-level chip for manufacture, you may ignore this warning, otherwise, see the documentation for 'VSRC_LOC_FILES'.
+No libs found for macro r2r_dac_analog at corner nom_tt_025C_3v30. The module will be black-boxed.
+[ORD-0032] Invalid thread number specification: None.
+[ODB-0186] macro gf180mcu_fd_io__asig_5p0 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__dvss references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill5 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_ef_io__bi_t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__bi_24t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__in_c references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__brk2 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fillnc references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__brk5 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill1 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__bi_t references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__fill10 references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__dvdd references unknown site GF_IO_Site
+[ODB-0186] macro gf180mcu_fd_io__cor references unknown site GF_COR_Site
+[ODB-0186] macro gf180mcu_fd_io__in_s references unknown site GF_IO_Site
+Cell 'tt_um_r2r_dac_digital' has (8) inout pin(s) without antenna gate information not antenna diffusion information. They might be disconnected.
+Cell 'tt_um_r2r_dac_digital' has (6) input pin(s) without antenna gate information. They might not be connected to a gate.
+Max Slew violations found in the following corners:
+* max_ss_125C_3v00
+* min_ss_125C_3v00
+* nom_ss_125C_3v00
+klayout__drc_error__count not reported. KLayout.DRC may have been skipped.

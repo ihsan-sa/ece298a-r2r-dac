@@ -46,7 +46,7 @@
 .lib '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.spice' typical
 .lib '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.tech/ngspice/sm141064.spice' res_typical
 .include '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_sc_mcu7t5v0/spice/gf180mcu_fd_sc_mcu7t5v0.spice'
-.include '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/analog/log/bench_strength/xrb6a_connection_removed__r2r_dac.cir'
+.include '/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/analog/log/bench_strength/xrb6a_connection_removed__r2r_dac_analog.cir'
 .param ru_w=2e-06 ru_l=0.00015 rb_l=0.00014836
 
 * tight tolerances: INL is read to 0.01 LSB (0.13 mV); the default

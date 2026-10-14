@@ -34,20 +34,20 @@ Module r2r_dac_digital_formal directly or indirectly contains formal properties 
 
         +----------Local Count, excluding submodules.
         | 
-       29 wires
-      142 wire bits
-       14 public wires
-       64 public wire bits
+       35 wires
+      169 wire bits
+       17 public wires
+       74 public wire bits
         8 ports
        30 port bits
-       22 cells
+       28 cells
         2   $add
-        4   $anyinit
+        7   $anyinit
         1   $assume
         3   $eq
         1   $logic_not
         1   $mem_v2
-        6   $mux
+        9   $mux
         2   $not
         1   $or
         1   $pmux
@@ -56,19 +56,22 @@ Module r2r_dac_digital_formal directly or indirectly contains formal properties 
 
         +----------Local Count, excluding submodules.
         | 
-       28 wires
-       53 wire bits
-       17 public wires
-       42 public wire bits
+       58 wires
+       93 wire bits
+       32 public wires
+       67 public wire bits
         8 ports
        30 port bits
-       20 cells
-        4   $anyinit
+       53 cells
+       16   $anyinit
         1   $assume
-        2   $cover
-        3   $eq
-        4   $ff
-        4   $logic_and
+        5   $cover
+        7   $eq
+        9   $ff
+        7   $logic_and
+        2   $logic_not
+        2   $logic_or
+        2   $mux
         1   $not
         1   $reduce_bool
         1 submodules
@@ -78,31 +81,32 @@ Module r2r_dac_digital_formal directly or indirectly contains formal properties 
 
         +----------Count including submodules.
         | 
-       42 r2r_dac_digital_formal
-       22 r2r_dac_digital
+       81 r2r_dac_digital_formal
+       28 r2r_dac_digital
 
         +----------Count including submodules.
         | 
-       57 wires
-      195 wire bits
-       31 public wires
-      106 public wire bits
+       93 wires
+      262 wire bits
+       49 public wires
+      141 public wire bits
        16 ports
        60 port bits
         - memories
         - memory bits
         - processes
-       42 cells
+       81 cells
         2   $add
-        8   $anyinit
+       23   $anyinit
         2   $assume
-        2   $cover
-        6   $eq
-        4   $ff
-        4   $logic_and
-        1   $logic_not
+        5   $cover
+       10   $eq
+        9   $ff
+        7   $logic_and
+        3   $logic_not
+        2   $logic_or
         1   $mem_v2
-        6   $mux
+       11   $mux
         3   $not
         1   $or
         1   $pmux
@@ -118,6 +122,6 @@ Module r2r_dac_digital_formal directly or indirectly contains formal properties 
 Creating SMT-LIBv2 representation of module r2r_dac_digital.
 Creating SMT-LIBv2 representation of module r2r_dac_digital_formal.
 
-End of script. Logfile hash: d62b3da4f5, time: 0.05s, user: 0.02s, system: 0.01s, MEM: 28.30 MB peak
+End of script. Logfile hash: 0532937f87, time: 0.01s, user: 0.01s, system: 0.01s, MEM: 27.56 MB peak
 Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
-Time spent: 59% 2x write_smt2 (0 sec), 19% 2x read_rtlil (0 sec), ...
+Time spent: 76% 2x write_smt2 (0 sec), 14% 2x read_rtlil (0 sec), ...
