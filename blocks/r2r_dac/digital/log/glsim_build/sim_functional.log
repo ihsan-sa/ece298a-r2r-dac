@@ -1,0 +1,38 @@
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:242  in gpi_load_users                  Loaded entry library: '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/lib/x86_64-linux-gnu/libpython3.12.so.1.0'
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:233  in gpi_load_users                  Running entry func 'initialize' from loaded library '/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/cocotb/simulator.cpython-312-x86_64-linux-gnu.so'
+     -.--ns INFO     pygpi                              ..ib/pygpi/embed.cpp:114  in initialize                      Using Python 3.12.12 interpreter at /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/bin/python3.12
+     -.--ns INFO     gpi                                ../gpi/GpiCommon.cpp:74   in gpi_print_registered_impl       GPI: VPI support registered
+     0.00ns INFO     cocotb.initialize                  Seeding Python random module with 1791879607
+     0.00ns INFO     cocotb.initialize                  Initialized cocotb v2.1.0 from /home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/usr/local/lib/python3.12/dist-packages/cocotb
+     0.00ns INFO     cocotb.initialize                  Running on Icarus Verilog version 14.0 (devel)
+     0.00ns INFO     cocotb.regression                  Running tests
+     0.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_reset_clears (1/8)
+   230.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_reset_clears passed
+   230.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_register_capture (2/8)
+   460.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_register_capture passed
+   460.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_registered_output (3/8)
+   570.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_registered_output passed
+   570.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_hold_keeps_captured_code (4/8)
+   960.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_hold_keeps_captured_code passed
+   960.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_ramp_all_codes_and_wrap (5/8)
+  7030.00ns INFO     cocotb.regression                  test_r2r_dac_digital.test_ramp_all_codes_and_wrap passed
+  7030.00ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_slow_prescale (6/8)
+ 22600.01ns INFO     cocotb.regression                  test_r2r_dac_digital.test_slow_prescale passed
+ 22600.01ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_sine_table_all_entries (7/8)
+ 27950.01ns INFO     cocotb.regression                  test_r2r_dac_digital.test_sine_table_all_entries passed
+ 27950.01ns INFO     cocotb.regression                  running test_r2r_dac_digital.test_random_mode_switching_against_model (8/8)
+ 88020.01ns INFO     cocotb.regression                  test_r2r_dac_digital.test_random_mode_switching_against_model passed
+ 88020.01ns INFO     cocotb.regression                  ***********************************************************************************************************************
+                                                        ** TEST                                                           STATUS  SIM TIME (ns)  REAL TIME (s)  RATIO (ns/s) **
+                                                        ***********************************************************************************************************************
+                                                        ** test_r2r_dac_digital.test_reset_clears                          PASS         230.00           0.00     232775.38  **
+                                                        ** test_r2r_dac_digital.test_register_capture                      PASS         230.00           0.00     256177.50  **
+                                                        ** test_r2r_dac_digital.test_registered_output                     PASS         110.00           0.00     226839.20  **
+                                                        ** test_r2r_dac_digital.test_hold_keeps_captured_code              PASS         390.00           0.00     379035.27  **
+                                                        ** test_r2r_dac_digital.test_ramp_all_codes_and_wrap               PASS        6070.00           0.01     616325.94  **
+                                                        ** test_r2r_dac_digital.test_slow_prescale                         PASS       15570.00           0.01    1315366.07  **
+                                                        ** test_r2r_dac_digital.test_sine_table_all_entries                PASS        5350.00           0.01     681102.48  **
+                                                        ** test_r2r_dac_digital.test_random_mode_switching_against_model   PASS       60070.00           0.11     532929.33  **
+                                                        ***********************************************************************************************************************
+                                                        ** TESTS=8 PASS=8 FAIL=0 SKIP=0                                               88020.01           0.15     592401.34  **
+                                                        ***********************************************************************************************************************

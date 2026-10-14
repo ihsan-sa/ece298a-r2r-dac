@@ -1,0 +1,19 @@
+gds maskhints yes
+gds read /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/harden/runs/run/final/gds/tt_um_r2r_dac_digital.gds
+load tt_um_r2r_dac_digital
+select top cell
+expand
+drc euclidean on
+drc style drc(full)
+drc check
+set drc_result [drc listall why]
+set count 0
+foreach {errtype coordlist} $drc_result {
+  foreach coord $coordlist { incr count }
+}
+set fout [open /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/log/drc_work/.magic_drc.rpt w]
+puts $fout "\[INFO\]: COUNT: $count"
+close $fout
+puts stdout "\[INFO\]: COUNT: $count"
+flush stdout
+quit -noprompt

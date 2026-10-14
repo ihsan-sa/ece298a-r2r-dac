@@ -1,0 +1,2 @@
+gate harden: PASS (0 failing / 0 total)
+gate harden: recorded STALE - harden_config changed while the gate ran; re-run it against the current files

@@ -37,7 +37,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final {
     CData/*7:0*/ r2r_dac_digital__DOT__presc;
     CData/*7:0*/ r2r_dac_digital__DOT__sine_val;
     CData/*0:0*/ r2r_dac_digital__DOT__unused_ena;
+    CData/*0:0*/ r2r_dac_digital__DOT__presc_tc;
+    CData/*7:0*/ r2r_dac_digital__DOT__cnt_p1;
     CData/*0:0*/ r2r_dac_digital__DOT__step;
+    CData/*0:0*/ r2r_dac_digital__DOT__rst_q;
     CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__clk;
     CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__rst_n;
     CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__ena;
@@ -51,7 +54,10 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final {
     CData/*7:0*/ r2r_dac_digital__DOT____Vtogcov__presc;
     CData/*7:0*/ r2r_dac_digital__DOT____Vtogcov__sine_val;
     CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__unused_ena;
+    CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__presc_tc;
+    CData/*7:0*/ r2r_dac_digital__DOT____Vtogcov__cnt_p1;
     CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__step;
+    CData/*0:0*/ r2r_dac_digital__DOT____Vtogcov__rst_q;
     CData/*0:0*/ __Vtrigprevexpr___TOP__r2r_dac_digital__DOT__clk__0;
     VlUnpacked<QData/*63:0*/, 1> __VstlTriggered;
     VlUnpacked<QData/*63:0*/, 1> __VicoTriggered;
@@ -61,7 +67,7 @@ class alignas(VL_CACHE_LINE_BYTES) Vtop___024root final {
     // INTERNAL VARIABLES
     Vtop__Syms* vlSymsp;
     const char* vlNamep;
-    uint32_t __Vcoverage[402]{};
+    uint32_t __Vcoverage[423]{};
 
     // CONSTRUCTORS
     Vtop___024root(Vtop__Syms* symsp, const char* namep);

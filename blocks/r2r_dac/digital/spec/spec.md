@@ -35,9 +35,11 @@ of three sources chosen by mode pins:
 - The code register captures `ui_in[7:0]` on every clk while mode == 00
   and holds while mode == 11 (and while in ramp/sine, so switching
   register -> ramp -> hold keeps the last captured code).
-- `rst_n` is a synchronous, active-low reset: while low, on every clk the
-  code register is 0, the counter is 0 and the slow prescaler is 0, so
-  `dac_code` is 0 (ladder at zero scale).
+- `rst_n` is a synchronous, active-low reset, registered once inside the
+  block (one flop) before use, so it acts one clk later: on every clk edge
+  after one that sampled `rst_n` low, the code register is 0, the counter
+  is 0 and the slow prescaler is 0, so `dac_code` is 0 (ladder at zero
+  scale). Release is delayed by the same one clk.
 - `ena` (the Tiny Tapeout enable) is accepted and ignored, as TT designs
   normally do.
 - `dac_code` is also echoed on `uo_out[7:0]` so the code the ladder sees is
@@ -49,7 +51,7 @@ of three sources chosen by mode pins:
 | port          | dir | width | meaning |
 |---------------|-----|-------|---------|
 | clk           | in  | 1 | free-running system clock, 50 MHz (20 ns period), the `clk_sys` domain |
-| rst_n         | in  | 1 | synchronous, active-low reset |
+| rst_n         | in  | 1 | synchronous, active-low reset (registered once) |
 | ena           | in  | 1 | TT enable, ignored |
 | ui_in         | in  | 8 | code register input (captured while mode == 00) |
 | mode          | in  | 2 | source select, see table; = TT `uio_in[1:0]` |
@@ -94,7 +96,7 @@ are driven 0.
 
 ## Requirements (ids used by spec.yaml, tb/ and formal/)
 
-- REQ-RESET: while rst_n is low, on every clk dac_code (and uo_out) is 0 on that edge, and the counter/prescaler restart from 0.
+- REQ-RESET: on every clk edge after one that sampled rst_n low, dac_code (and uo_out) is 0, and the counter/prescaler restart from 0 (rst_n is registered once, so reset and release both act one clk late).
 - REQ-CAPTURE: in mode 00, dac_code takes the value ui_in had at the previous rising edge.
 - REQ-HOLD: in mode 11, dac_code equals the last code captured in mode 00 and ignores ui_in; ramp/sine do not disturb the captured code.
 - REQ-RAMP: in mode 01 with slow=0, dac_code steps +1 per clock through all 256 codes, wrapping 255 -> 0.
@@ -111,3 +113,21 @@ presc[7:0], dac_code register. Next dac_code = mux(mode: 00 -> ui_in, 01 -> cnt,
 11 -> code_reg). Sine table is a combinational case statement. uo_out = dac_code (wire).
 TT standalone pins: ui_in -> ui_in, mode -> uio_in[1:0], slow -> uio_in[2], dac_code -> uio_out[7:0]
 (uio_oe driven by the wrapper), uo_out -> uo_out[7:0], rst_n -> rst_n (active-low, no inversion).
+
+## Timing at the slow corner (accepted shortfall)
+
+The block meets 50 MHz at tt and ff but not at ss / 125 C / 3.0 V. After
+the last allowed fix (rst_n registered inside the block), the worst setup
+slack there is -0.87 ns with max parasitics (-0.55 ns nominal, -0.29 ns
+min). Hold is met at every corner. At tt the setup slack is +7.4 ns and at
+ff +11.0 ns.
+
+The worst path starts at `slow` (uio_in[2]) and ends at an internal flop.
+Tiny Tapeout constrains inputs to arrive 20% of the period after the clock,
+so that path needs a period of about 21.1 ns: the block meets roughly
+47 MHz at ss / 125 C. That figure comes from the reported path, not from
+a rerun of timing at 21.1 ns.
+
+The owner accepted this on 2026-10-13. At 50 MHz the front end should
+be correct at typical and fast silicon, and may miss setup on a hot,
+slow die at low supply. Clock it at 47 MHz or below if that case matters.

@@ -1,6 +1,7 @@
 [options]
 mode prove
 depth 12
+multiclock off
 
 [engines]
 abc pdr

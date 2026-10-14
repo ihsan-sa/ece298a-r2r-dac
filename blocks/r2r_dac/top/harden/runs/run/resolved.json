@@ -119,7 +119,7 @@
             "instances": {
                 "u_analog": {
                     "location": [
-                        69.44,
+                        68.32,
                         94.08
                     ],
                     "orientation": "N",
@@ -170,21 +170,21 @@
         ]
     },
     "PAD_LEFS": [
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_s.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__cor.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_c.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__brk5.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill5.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__brk2.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_t.lef",
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__asig_5p0.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_24t.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill10.lef",
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvss.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvdd.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill5.lef",
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_ef_io__bi_t.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_24t.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_c.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__brk2.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fillnc.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__brk5.lef",
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill1.lef",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fillnc.lef"
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__bi_t.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__fill10.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__dvdd.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__cor.lef",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/lef/gf180mcu_fd_io__in_s.lef"
     ],
     "PAD_GDS": [
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/gds/gf180mcu_fd_io.gds",
@@ -195,8 +195,8 @@
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/verilog/gf180mcu_ef_io__blackbox_pp.v"
     ],
     "PAD_SPICE_MODELS": [
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_fd_io.spice",
-        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_ef_io.spice"
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_ef_io.spice",
+        "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/spice/gf180mcu_fd_io.spice"
     ],
     "PAD_CDLS": [
         "/home/ihsan/.cc/toolchains/iic-osic-tools-2026.09/foss/pdks/gf180mcuD/libs.ref/gf180mcu_fd_io/cdl/gf180mcu_fd_io.cdl"
@@ -241,7 +241,7 @@
     "PAD_ROTATION_CORNER": "R0",
     "RUN_TAP_ENDCAP_INSERTION": true,
     "RUN_POST_GPL_DESIGN_REPAIR": true,
-    "RUN_POST_GRT_DESIGN_REPAIR": false,
+    "RUN_POST_GRT_DESIGN_REPAIR": true,
     "RUN_CTS": true,
     "RUN_POST_CTS_RESIZER_TIMING": true,
     "RUN_POST_GRT_RESIZER_TIMING": false,
@@ -455,7 +455,7 @@
     "PDN_CORE_VERTICAL_LAYER": null,
     "PDN_EXTEND_TO": "core_ring",
     "PDN_ENABLE_PINS": true,
-    "PDN_CFG": "/tmp/cf-bus/engine/lib/macro_pdn.tcl",
+    "PDN_CFG": "/home/ihsan/.claude/skills/chip-flow/engine/lib/macro_pdn.tcl",
     "ROUTING_OBSTRUCTIONS": null,
     "RT_CLOCK_MIN_LAYER": null,
     "RT_CLOCK_MAX_LAYER": null,
@@ -472,7 +472,7 @@
     "PL_MAX_DISPLACEMENT_X": 500,
     "PL_MAX_DISPLACEMENT_Y": 100,
     "DPL_CELL_PADDING": 0,
-    "RSZ_DONT_TOUCH_RX": "$^",
+    "RSZ_DONT_TOUCH_RX": "^ua\\[\\d+\\]$",
     "RSZ_DONT_TOUCH_LIST": null,
     "RSZ_CORNERS": null,
     "PL_TARGET_DENSITY_PCT": 60,
@@ -486,7 +486,7 @@
     "PL_GENERATE_GIF_PAUSE": 100000,
     "IO_PIN_PLACEMENT_MODE": "matching",
     "IO_PIN_ORDER_CFG": null,
-    "FP_DEF_TEMPLATE": "/tmp/cf-bus/engine/reference/tt/tt-support-tools/tech/gf180mcuD/def/analog/tt_analog_1x2.def",
+    "FP_DEF_TEMPLATE": "/home/ihsan/.claude/skills/chip-flow/engine/reference/tt/tt-support-tools/tech/gf180mcuD/def/analog/tt_analog_1x2.def",
     "IO_PIN_H_LAYER": "Metal3",
     "IO_PIN_V_LAYER": "Metal2",
     "IO_PIN_V_EXTENSION": 0,
@@ -535,7 +535,7 @@
     "CTS_DISABLE_POST_PROCESSING": false,
     "CTS_DISTANCE_BETWEEN_BUFFERS": 0,
     "CTS_CORNERS": null,
-    "CTS_ROOT_BUFFER": "gf180mcu_fd_sc_mcu7t5v0__clkbuf_16",
+    "CTS_ROOT_BUFFER": "gf180mcu_fd_sc_mcu7t5v0__clkbuf_8",
     "CTS_CLK_BUFFERS": [
         "gf180mcu_fd_sc_mcu7t5v0__clkbuf_2",
         "gf180mcu_fd_sc_mcu7t5v0__clkbuf_4",

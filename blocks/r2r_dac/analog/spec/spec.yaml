@@ -184,3 +184,8 @@ post_layout_bounds:
   glitch_energy_down_skew_p200p: {max: 0.5e-9}
   glitch_energy_down_skew_m200p: {max: 0.5e-9}
   glitch_peak_skew_max: {max: 0.2}
+
+# ngspice time limit per gate (engine 84ea5df, breakage 34). The pex bench
+# runs the 5.5k-line magic RC extraction and needs ~5.6 min, past pex_sim's
+# 120 s default. A run past this limit is still a failure.
+sim_timeout_s: {pex_sim: 600}

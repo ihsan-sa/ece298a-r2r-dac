@@ -15,20 +15,23 @@ module r2r_dac_digital_formal (
 `ifdef FORMAL
   reg past_valid = 0;
   reg past_valid2 = 0;
+  reg past_valid3 = 0;
   always @(posedge clk) begin
     past_valid <= 1;
     past_valid2 <= past_valid;
+    past_valid3 <= past_valid2;
   end
 
-  // REQ-RESET: a low rst_n forces dac_code to 0 on that edge.
+  // REQ-RESET: rst_n is registered once, so a low rst_n sampled on one edge
+  // forces dac_code to 0 on the next.
   always @(posedge clk)
-    if (past_valid)
-      REQ_RESET: assert ($past(rst_n) || dac_code == 8'd0);
+    if (past_valid2)
+      REQ_RESET: assert ($past(rst_n, 2) || dac_code == 8'd0);
 
   // REQ-HOLD: two consecutive hold-mode edges out of reset keep dac_code.
   always @(posedge clk)
-    if (past_valid2)
-      REQ_HOLD: assert (!($past(rst_n) && $past(rst_n, 2) && $past(mode) == 2'b11
+    if (past_valid3)
+      REQ_HOLD: assert (!($past(rst_n, 2) && $past(rst_n, 3) && $past(mode) == 2'b11
                           && $past(mode, 2) == 2'b11) || dac_code == $past(dac_code));
 
   // REQ-ECHO: uo_out always equals dac_code.
@@ -37,7 +40,7 @@ module r2r_dac_digital_formal (
 
   always @(posedge clk) begin
     COVER_FULL: cover (dac_code == 8'hFF);
-    COVER_HOLD: cover (past_valid2 && $past(mode) == 2'b11 && $past(mode, 2) == 2'b11 && $past(rst_n) && dac_code != 8'd0);
+    COVER_HOLD: cover (past_valid2 && $past(mode) == 2'b11 && $past(mode, 2) == 2'b11 && $past(rst_n, 2) && dac_code != 8'd0);
   end
 `endif
 endmodule

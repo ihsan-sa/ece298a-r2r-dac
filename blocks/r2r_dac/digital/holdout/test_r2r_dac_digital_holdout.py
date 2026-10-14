@@ -27,9 +27,10 @@ async def test_one_clock_reset_clears_prescaler(dut):
         await FallingEdge(dut.clk)
     assert int(dut.dac_code.value) == SINE[0]
     dut.rst_n.value = 0
+    await FallingEdge(dut.clk)  # rst_n is registered: the reset acts on the next edge
+    dut.rst_n.value = 1
     await FallingEdge(dut.clk)
     assert int(dut.dac_code.value) == 0
-    dut.rst_n.value = 1
     seq = []
     for _ in range(260):
         await FallingEdge(dut.clk)
@@ -50,6 +51,7 @@ async def test_hold_after_excursion_from_ff(dut):
     for _ in range(2):
         await FallingEdge(dut.clk)
     dut.rst_n.value = 1
+    await FallingEdge(dut.clk)  # rst_n is registered: release acts one clk late
     dut.ui_in.value = 0xFF
     await FallingEdge(dut.clk)
     dut.mode.value = 2

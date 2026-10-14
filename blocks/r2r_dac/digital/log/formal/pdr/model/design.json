@@ -24,10 +24,10 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$65_CMP0",
+                  "name": "$procmux$71_CMP0",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:292.18-292.18|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:292.7-297.14"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:311.18-311.18|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:311.7-316.14"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -58,9 +58,9 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$87",
+                  "name": "$procdff$101",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.3-325.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -68,9 +68,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$88",
+                  "name": "$procdff$102",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.3-325.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -78,9 +78,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$89",
+                  "name": "$procdff$103",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.3-325.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -88,13 +88,43 @@
                   }
                 },
                 {
-                  "name": "$procdff$90",
+                  "name": "$procdff$104",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:285.3-304.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.3-325.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
                     "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procdff$105",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.3-325.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$106",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.3-325.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procdff$107",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:299.3-299.40"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
                   }
                 }
             ]
@@ -115,9 +145,9 @@
             ],
             "cells": [
                 {
-                  "name": "$not$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:283$49",
+                  "name": "$not$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$54",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:283.15-283.20"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293.15-293.20"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -148,9 +178,9 @@
             ],
             "cells": [
                 {
-                  "name": "$or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:283$51",
+                  "name": "$or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$55",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:283.15-283.39"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293.15-293.31"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -183,9 +213,9 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:283$50",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:310$59",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:283.24-283.38"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:310.20-310.34"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -196,10 +226,10 @@
                   }
                 },
                 {
-                  "name": "$procmux$63_CMP0",
+                  "name": "$procmux$69_CMP0",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:294.32-294.32|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:292.7-297.14"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:313.32-313.32|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:311.7-316.14"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -210,10 +240,10 @@
                   }
                 },
                 {
-                  "name": "$procmux$64_CMP0",
+                  "name": "$procmux$70_CMP0",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293.34-293.34|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:292.7-297.14"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:312.34-312.34|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:311.7-316.14"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -251,58 +281,87 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$67",
+                  "name": "$procmux$73",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.9-286.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.5-303.8"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.9-302.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.5-324.8"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000001000"
                   }
                 },
                 {
-                  "name": "$procmux$70",
+                  "name": "$procmux$76",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.9-286.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.5-303.8"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.9-302.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.5-324.8"
                   },
                   "parameters": {
-                    "WIDTH": "00000000000000000000000000001000"
+                    "WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
-                  "name": "$procmux$72",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.11-301.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:301.7-302.27"
-                  },
-                  "parameters": {
-                    "WIDTH": "00000000000000000000000000001000"
-                  }
-                },
-                {
-                  "name": "$procmux$75",
+                  "name": "$procmux$79",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.9-286.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.5-303.8"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.9-302.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.5-324.8"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000001000"
                   }
                 },
                 {
-                  "name": "$procmux$77",
+                  "name": "$procmux$81",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:298.11-298.24|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:298.7-299.27"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:320.11-320.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:320.7-323.10"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000001000"
                   }
                 },
                 {
-                  "name": "$procmux$80",
+                  "name": "$procmux$84",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.9-286.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:286.5-303.8"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.9-302.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.5-324.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$86",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:320.11-320.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:320.7-323.10"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$89",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.9-302.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.5-324.8"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$91",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:317.11-317.24|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:317.7-318.27"
+                  },
+                  "parameters": {
+                    "WIDTH": "00000000000000000000000000001000"
+                  }
+                },
+                {
+                  "name": "$procmux$94",
+                  "attributes": {
+                    "full_case": "00000000000000000000000000000001",
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.9-302.15|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.5-324.8"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000001000"
@@ -366,7 +425,7 @@
             ],
             "cells": [
                 {
-                  "name": "$auto$proc_rom.cc:155:do_switch$58",
+                  "name": "$auto$proc_rom.cc:155:do_switch$64",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
                     "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:22.5-280.12"
@@ -374,7 +433,7 @@
                   "parameters": {
                     "ABITS": "00000000000000000000000000001000",
                     "INIT": "01111100011110010111011001110011011100000110110101101010011001110110010001100001010111010101101001011000010101010101001001001111010011000100100101000110010000110100000100111110001110110011100100110110001101000011000100101111001011000010101000101000001001010010001100100001000111110001110100011011000110010001011100010101000101000001001000010001000011110000111000001100000010110000101000001001000001110000011000000101000001010000010000000011000000100000001000000001000000010000000100000000000000000000000000000000000000000000000000000000000000010000000100000001000000100000001000000011000001000000010100000101000001100000011100001001000010100000101100001100000011100000111100010001000100100001010000010101000101110001100100011011000111010001111100100001001000110010010100101000001010100010110000101111001100010011010000110110001110010011101100111110010000010100001101000110010010010100110001001111010100100101010101011000010110100101110101100001011001000110011101101010011011010111000001110011011101100111100101111100100000001000001110000110100010011000110010001111100100101001010110011000100110111001111010100010101001011010011110101010101011011011000010110011101101101011100110111100101111101100000111000100110001101100100111001011110011101101000011010011110101011101011111011010110111001101111011100000111000101110010011100110111010001110101011101011111011011110111011110000111100011111001111110100111101011111011011111000111110011111101011111010111110111111110011111101111111011111111011111110111111101111111111111111111111111111111111111111111111111111111111111110111111101111111011111101111111011111110011111011111110101111101011111001111110001111011011110101111101001111001111110001111100001110111011101101111010111110101011101000111001101110010011100010111000001101111011011100110110101101011111010101110100111101000011001110110010111100100111000110110001001100000110111110101111001011100110110110101100111011000010101101101010101010011110100101101000101001111010011011100110001001010110010010100011111000110010001001100001101000001110000000",
-                    "MEMID": "$auto$proc_rom.cc:155:do_switch$58",
+                    "MEMID": "$auto$proc_rom.cc:155:do_switch$64",
                     "OFFSET": "00000000000000000000000000000000",
                     "RD_ARST_VALUE": "xxxxxxxx",
                     "RD_CE_OVER_SRST": "0",
@@ -423,10 +482,10 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$62",
+                  "name": "$procmux$68",
                   "attributes": {
                     "full_case": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:294.32-294.32|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:292.7-297.14"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:313.32-313.32|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:311.7-316.14"
                   },
                   "parameters": {
                     "S_WIDTH": "00000000000000000000000000000011",
@@ -456,9 +515,9 @@
             ],
             "cells": [
                 {
-                  "name": "$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:300$55",
+                  "name": "$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:319$61",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:300.16-300.28"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:319.16-319.28"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -469,9 +528,9 @@
                   }
                 },
                 {
-                  "name": "$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302$56",
+                  "name": "$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:322$62",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302.16-302.26"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:322.19-322.32"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -486,7 +545,7 @@
         ],
         "attributes": {
             "hdlname": "r2r_dac_digital",
-            "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:4.1-307.10"
+            "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:4.1-328.10"
         }
       },
       {
@@ -570,9 +629,9 @@
             ],
             "cells": [
                 {
-                  "name": "$procdff$100",
+                  "name": "$procdff$108",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:41.3-44.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -580,9 +639,129 @@
                   }
                 },
                 {
-                  "name": "$procdff$101",
+                  "name": "$procdff$109",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:41.3-44.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$110",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:41.3-44.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$111",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:41.3-44.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$112",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:41.3-44.6"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$113",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$114",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$115",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$116",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$117",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000001"
+                  }
+                },
+                {
+                  "name": "$procdff$118",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$119",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$120",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
+                  },
+                  "parameters": {
+                    "CLK_POLARITY": "1",
+                    "WIDTH": "00000000000000000000000000000010"
+                  }
+                },
+                {
+                  "name": "$procdff$121",
+                  "attributes": {
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.3-35.87"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -590,9 +769,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$102",
+                  "name": "$procdff$122",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:24.3-26.60"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:27.3-29.63"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -600,9 +779,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$103",
+                  "name": "$procdff$123",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:18.3-21.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:27.3-29.63"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -610,9 +789,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$104",
+                  "name": "$procdff$124",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:18.3-21.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:19.3-23.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -620,39 +799,9 @@
                   }
                 },
                 {
-                  "name": "$procdff$91",
+                  "name": "$procdff$125",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38.3-41.6"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000010"
-                  }
-                },
-                {
-                  "name": "$procdff$92",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38.3-41.6"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000010"
-                  }
-                },
-                {
-                  "name": "$procdff$93",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38.3-41.6"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000010"
-                  }
-                },
-                {
-                  "name": "$procdff$94",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:38.3-41.6"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:19.3-23.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
@@ -660,53 +809,13 @@
                   }
                 },
                 {
-                  "name": "$procdff$95",
+                  "name": "$procdff$126",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:19.3-23.6"
                   },
                   "parameters": {
                     "CLK_POLARITY": "1",
                     "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$procdff$96",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$procdff$97",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000001"
-                  }
-                },
-                {
-                  "name": "$procdff$98",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000010"
-                  }
-                },
-                {
-                  "name": "$procdff$99",
-                  "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.3-32.87"
-                  },
-                  "parameters": {
-                    "CLK_POLARITY": "1",
-                    "WIDTH": "00000000000000000000000000000010"
                   }
                 }
             ]
@@ -737,18 +846,18 @@
             ],
             "cells": [
                 {
-                  "name": "$procmux$83",
+                  "name": "$procmux$97",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:30.9-30.20|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:30.5-32.87"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:33.9-33.20|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:33.5-35.87"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
                   }
                 },
                 {
-                  "name": "$procmux$85",
+                  "name": "$procmux$99",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:25.9-25.19|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:25.5-26.60"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:28.9-28.20|/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:28.5-29.63"
                   },
                   "parameters": {
                     "WIDTH": "00000000000000000000000000000001"
@@ -772,9 +881,9 @@
             ],
             "cells": [
                 {
-                  "name": "$ne$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$44",
+                  "name": "$ne$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$48",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.106-40.122"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.109-43.125"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -805,9 +914,9 @@
             ],
             "cells": [
                 {
-                  "name": "$logic_or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26$14",
+                  "name": "$logic_or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$15",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26.26-26.58"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.26-29.61"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -818,9 +927,9 @@
                   }
                 },
                 {
-                  "name": "$logic_or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$30",
+                  "name": "$logic_or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34$33",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.25-32.85"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.25-35.85"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -861,7 +970,7 @@
                   "name": "COVER_FULL",
                   "attributes": {
                     "keep": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.5-39.42"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:42.5-42.42"
                   },
                   "parameters": {
                     "ARGS_WIDTH": "00000000000000000000000000000000",
@@ -877,7 +986,7 @@
                   "name": "COVER_HOLD",
                   "attributes": {
                     "keep": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.5-40.123"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.5-43.126"
                   },
                   "parameters": {
                     "ARGS_WIDTH": "00000000000000000000000000000000",
@@ -893,7 +1002,7 @@
                   "name": "REQ_ECHO",
                   "attributes": {
                     "keep": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:36.5-36.42"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.5-39.42"
                   },
                   "parameters": {
                     "ARGS_WIDTH": "00000000000000000000000000000000",
@@ -909,7 +1018,7 @@
                   "name": "REQ_HOLD",
                   "attributes": {
                     "keep": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.7-32.86"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.7-35.86"
                   },
                   "parameters": {
                     "ARGS_WIDTH": "00000000000000000000000000000000",
@@ -925,7 +1034,7 @@
                   "name": "REQ_RESET",
                   "attributes": {
                     "keep": "00000000000000000000000000000001",
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26.7-26.59"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.7-29.62"
                   },
                   "parameters": {
                     "ARGS_WIDTH": "00000000000000000000000000000000",
@@ -960,9 +1069,9 @@
             ],
             "cells": [
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$23",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34$26",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.27-31.58"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.27-34.61"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -973,9 +1082,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$25",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34$28",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.27-31.82"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.27-34.85"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -986,9 +1095,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$27",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34$30",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.27-32.53"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.27-35.53"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -999,9 +1108,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$40",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$44",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.24-40.59"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.24-43.59"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1012,9 +1121,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$42",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$46",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.24-40.86"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.24-43.86"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1025,9 +1134,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$43",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$47",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.24-40.102"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.24-43.105"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1038,9 +1147,9 @@
                   }
                 },
                 {
-                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$45",
+                  "name": "$logic_and$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$49",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.24-40.122"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.24-43.125"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1073,9 +1182,9 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$24",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34$27",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.62-31.82"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.65-34.85"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1086,9 +1195,9 @@
                   }
                 },
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32$26",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:35$29",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.30-32.53"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:35.30-35.53"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1099,9 +1208,9 @@
                   }
                 },
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32$29",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:35$32",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:32.58-32.85"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:35.58-35.85"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1112,9 +1221,9 @@
                   }
                 },
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:36$32",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39$35",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:36.23-36.41"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.23-39.41"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1125,9 +1234,9 @@
                   }
                 },
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39$38",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:42$42",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:39.24-39.41"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:42.24-42.41"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1138,9 +1247,9 @@
                   }
                 },
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$39",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$43",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.39-40.59"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.39-43.59"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1151,9 +1260,9 @@
                   }
                 },
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40$41",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43$45",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:40.63-40.86"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:43.63-43.86"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1181,9 +1290,9 @@
             ],
             "cells": [
                 {
-                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26$13",
+                  "name": "$eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29$14",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:26.42-26.58"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:29.45-29.61"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1192,9 +1301,9 @@
                   }
                 },
                 {
-                  "name": "$logic_not$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31$28",
+                  "name": "$logic_not$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34$31",
                   "attributes": {
-                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:31.25-32.54"
+                    "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:34.25-35.54"
                   },
                   "parameters": {
                     "A_SIGNED": "00000000000000000000000000000000",
@@ -1209,7 +1318,7 @@
             "keep": "00000000000000000000000000000001",
             "hdlname": "r2r_dac_digital_formal",
             "top": "00000000000000000000000000000001",
-            "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:2.1-43.10"
+            "src": "/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv:2.1-46.10"
         }
       }
   ]

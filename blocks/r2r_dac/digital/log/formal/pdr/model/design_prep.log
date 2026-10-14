@@ -33,8 +33,8 @@ Removed 12 unused cells and 12 unused wires.
 8. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \r2r_dac_digital..
 Finding unused cells or wires in module \r2r_dac_digital_formal..
-Removed 18 unused cells and 18 unused wires.
-<suppressed ~20 debug messages>
+Removed 19 unused cells and 19 unused wires.
+<suppressed ~21 debug messages>
 
 9. Executing CHECK pass (checking for obvious problems).
 Checking module r2r_dac_digital...
@@ -51,10 +51,10 @@ Optimizing module r2r_dac_digital_formal.
 
 11.2. Executing OPT_MERGE pass (detect identical cells).
 Finding identical cells in module `\r2r_dac_digital'.
-Computing hashes of 20 cells of `\r2r_dac_digital'.
+Computing hashes of 26 cells of `\r2r_dac_digital'.
 Finding duplicate cells in `\r2r_dac_digital'.
 Finding identical cells in module `\r2r_dac_digital_formal'.
-Computing hashes of 31 cells of `\r2r_dac_digital_formal'.
+Computing hashes of 35 cells of `\r2r_dac_digital_formal'.
 Finding duplicate cells in `\r2r_dac_digital_formal'.
 Removed a total of 0 cells.
 
@@ -69,12 +69,12 @@ Finding unused cells or wires in module \r2r_dac_digital_formal..
 12. Executing OPT_CLEAN pass (remove unused cells and wires).
 Finding unused cells or wires in module \r2r_dac_digital..
 Finding unused cells or wires in module \r2r_dac_digital_formal..
-Removed 0 unused cells and 8 unused wires.
+Removed 0 unused cells and 11 unused wires.
 <suppressed ~1 debug messages>
 
 13. Executing RTLIL backend.
 Output filename: ../model/design_prep.il
 
-End of script. Logfile hash: c6f50df4a8, time: 0.12s, user: 0.03s, system: 0.01s, MEM: 29.04 MB peak
+End of script. Logfile hash: 39a876b8e2, time: 0.01s, user: 0.01s, system: 0.01s, MEM: 27.83 MB peak
 Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
-Time spent: 43% 4x opt_clean (0 sec), 7% 1x setundef (0 sec), ...
+Time spent: 41% 4x opt_clean (0 sec), 9% 2x read_rtlil (0 sec), ...

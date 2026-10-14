@@ -1,0 +1,823 @@
+
+ /----------------------------------------------------------------------------\
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |  Copyright (C) 2012 - 2026  Claire Xenia Wolf <claire@yosyshq.com>         |
+ |  Distributed under an ISC-like license, type "license" to see terms        |
+ \----------------------------------------------------------------------------/
+ Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+
+-- Executing script file `equiv.ys' --
+
+1. Executing RTLIL frontend.
+Input filename: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/mutate/database/design.il
+
+2. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `r2r_dac_digital'. Setting top module to r2r_dac_digital.
+
+2.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+
+2.2. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+Removed 0 unused modules.
+
+3. Executing FLATTEN pass (flatten design).
+Renaming module r2r_dac_digital to ref.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+4.1. Analyzing design hierarchy..
+Top module:  \ref
+
+4.2. Analyzing design hierarchy..
+Top module:  \ref
+Removed 0 unused modules.
+
+5. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$12 in module \ref:
+  created 256 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+6. Executing JSON backend.
+
+7. Executing RTLIL backend.
+Output filename: ref.il
+
+8. Executing ASYNC2SYNC pass.
+
+9. Executing RTLIL frontend.
+Input filename: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/log/mutate/database/design.il
+
+10. Executing HIERARCHY pass (managing design hierarchy).
+Attribute `top' found on module `r2r_dac_digital'. Setting top module to r2r_dac_digital.
+
+10.1. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+
+10.2. Analyzing design hierarchy..
+Top module:  \r2r_dac_digital
+Removed 0 unused modules.
+
+11. Executing MUTATE pass.
+Add input constant 0 at r2r_dac_digital.$add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:322$10.B[2].
+
+12. Executing FLATTEN pass (flatten design).
+Renaming module r2r_dac_digital to uut.
+
+13. Executing HIERARCHY pass (managing design hierarchy).
+
+13.1. Analyzing design hierarchy..
+Top module:  \uut
+
+13.2. Analyzing design hierarchy..
+Top module:  \uut
+Removed 0 unused modules.
+
+14. Executing MEMORY_MAP pass (converting memories to logic and flip-flops).
+Mapping memory $auto$proc_rom.cc:155:do_switch$12 in module \uut:
+  created 256 $dff cells and 0 static cells of width 8.
+  read interface: 0 $dff and 255 $mux cells.
+  write interface: 0 write mux blocks.
+
+15. Executing JSON backend.
+
+16. Executing RTLIL backend.
+Output filename: uut.il
+
+17. Executing ASYNC2SYNC pass.
+
+18. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: clk_gold (\clk_gold), clk_gate (\clk_gate) -> clk
+Presumably equivalent wires: cnt_gold (\cnt_gold), cnt_gate (\cnt_gate) -> cnt
+Presumably equivalent wires: cnt_p1_gold (\cnt_p1_gold), cnt_p1_gate (\cnt_p1_gate) -> cnt_p1
+Presumably equivalent wires: code_reg_gold (\code_reg_gold), code_reg_gate (\code_reg_gate) -> code_reg
+Presumably equivalent wires: dac_code_gold (\dac_code_gold), dac_code_gate (\dac_code_gate) -> dac_code
+Presumably equivalent wires: ena_gold (\ena_gold), ena_gate (\ena_gate) -> ena
+Presumably equivalent wires: mode_gold (\mode_gold), mode_gate (\mode_gate) -> mode
+Presumably equivalent wires: presc_gold (\presc_gold), presc_gate (\presc_gate) -> presc
+Presumably equivalent wires: presc_tc_gold (\presc_tc_gold), presc_tc_gate (\presc_tc_gate) -> presc_tc
+Presumably equivalent wires: rst_n_gold (\rst_n_gold), rst_n_gate (\rst_n_gate) -> rst_n
+Presumably equivalent wires: rst_q_gold (\rst_q_gold), rst_q_gate (\rst_q_gate) -> rst_q
+Presumably equivalent wires: sine_val_gold ($auto$proc_rom.cc:154:do_switch$11_gold), sine_val_gate ($auto$proc_rom.cc:154:do_switch$11_gate) -> sine_val
+Presumably equivalent wires: slow_gold (\slow_gold), slow_gate (\slow_gate) -> slow
+Presumably equivalent wires: step_gold ($or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$3_Y_gold), step_gate ($or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$3_Y_gate) -> step
+Presumably equivalent wires: ui_in_gold (\ui_in_gold), ui_in_gate (\ui_in_gate) -> ui_in
+Presumably equivalent wires: unused_ena_gold (\ena_gold), unused_ena_gate (\ena_gate) -> unused_ena
+Presumably equivalent wires: uo_out_gold (\dac_code_gold), uo_out_gate (\dac_code_gate) -> uo_out
+
+19. Executing EQUIV_MAKE pass (creating equiv checking module).
+Presumably equivalent wires: clk_gold (\clk_gold), clk_gate (\clk_gate) -> clk
+Presumably equivalent wires: cnt_gold (\cnt_gold), cnt_gate (\cnt_gate) -> cnt
+Presumably equivalent wires: cnt_p1_gold (\cnt_p1_gold), cnt_p1_gate (\cnt_p1_gate) -> cnt_p1
+Presumably equivalent wires: code_reg_gold (\code_reg_gold), code_reg_gate (\code_reg_gate) -> code_reg
+Presumably equivalent wires: dac_code_gold (\dac_code_gold), dac_code_gate (\dac_code_gate) -> dac_code
+Presumably equivalent wires: ena_gold (\ena_gold), ena_gate (\ena_gate) -> ena
+Presumably equivalent wires: mode_gold (\mode_gold), mode_gate (\mode_gate) -> mode
+Presumably equivalent wires: presc_gold (\presc_gold), presc_gate (\presc_gate) -> presc
+Presumably equivalent wires: presc_tc_gold (\presc_tc_gold), presc_tc_gate (\presc_tc_gate) -> presc_tc
+Presumably equivalent wires: rst_n_gold (\rst_n_gold), rst_n_gate (\rst_n_gate) -> rst_n
+Presumably equivalent wires: rst_q_gold (\rst_q_gold), rst_q_gate (\rst_q_gate) -> rst_q
+Presumably equivalent wires: sine_val_gold ($auto$proc_rom.cc:154:do_switch$11_gold), sine_val_gate ($auto$proc_rom.cc:154:do_switch$11_gate) -> sine_val
+Presumably equivalent wires: slow_gold (\slow_gold), slow_gate (\slow_gate) -> slow
+Presumably equivalent wires: step_gold ($or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$3_Y_gold), step_gate ($or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$3_Y_gate) -> step
+Presumably equivalent wires: ui_in_gold (\ui_in_gold), ui_in_gate (\ui_in_gate) -> ui_in
+Presumably equivalent wires: unused_ena_gold (\ena_gold), unused_ena_gate (\ena_gate) -> unused_ena
+Presumably equivalent wires: uo_out_gold (\dac_code_gold), uo_out_gate (\dac_code_gate) -> uo_out
+Changing input A of cell $add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:322$10_gate ($add): \cnt_p1_gate -> \cnt_p1
+Changing input A of cell $eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:310$7_gate ($eq): \presc_gate -> \presc
+Changing input A of cell $logic_not$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302$6_gate ($logic_not): \rst_q_gate -> \rst_q
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][0][0]$817_gate ($mux): \cnt_gate [7] -> \cnt [7]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][1][0]$820_gate ($mux): \cnt_gate [6] -> \cnt [6]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][1][1]$823_gate ($mux): \cnt_gate [6] -> \cnt [6]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][0]$826_gate ($mux): \cnt_gate [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][1]$829_gate ($mux): \cnt_gate [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][2]$832_gate ($mux): \cnt_gate [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][3]$835_gate ($mux): \cnt_gate [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][0]$838_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][1]$841_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][2]$844_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][3]$847_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][4]$850_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][5]$853_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][6]$856_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][7]$859_gate ($mux): \cnt_gate [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][0]$862_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][10]$892_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][11]$895_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][12]$898_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][13]$901_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][14]$904_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][15]$907_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][1]$865_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][2]$868_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][3]$871_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][4]$874_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][5]$877_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][6]$880_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][7]$883_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][8]$886_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][9]$889_gate ($mux): \cnt_gate [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][0]$910_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][10]$940_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][11]$943_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][12]$946_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][13]$949_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][14]$952_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][15]$955_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][16]$958_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][17]$961_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][18]$964_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][19]$967_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][1]$913_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][20]$970_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][21]$973_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][22]$976_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][23]$979_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][24]$982_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][25]$985_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][26]$988_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][27]$991_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][28]$994_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][29]$997_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][2]$916_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][30]$1000_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][31]$1003_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][3]$919_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][4]$922_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][5]$925_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][6]$928_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][7]$931_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][8]$934_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][9]$937_gate ($mux): \cnt_gate [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][0]$1006_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][10]$1036_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][11]$1039_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][12]$1042_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][13]$1045_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][14]$1048_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][15]$1051_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][16]$1054_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][17]$1057_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][18]$1060_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][19]$1063_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][1]$1009_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][20]$1066_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][21]$1069_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][22]$1072_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][23]$1075_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][24]$1078_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][25]$1081_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][26]$1084_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][27]$1087_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][28]$1090_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][29]$1093_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][2]$1012_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][30]$1096_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][31]$1099_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][32]$1102_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][33]$1105_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][34]$1108_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][35]$1111_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][36]$1114_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][37]$1117_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][38]$1120_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][39]$1123_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][3]$1015_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][40]$1126_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][41]$1129_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][42]$1132_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][43]$1135_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][44]$1138_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][45]$1141_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][46]$1144_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][47]$1147_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][48]$1150_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][49]$1153_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][4]$1018_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][50]$1156_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][51]$1159_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][52]$1162_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][53]$1165_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][54]$1168_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][55]$1171_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][56]$1174_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][57]$1177_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][58]$1180_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][59]$1183_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][5]$1021_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][60]$1186_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][61]$1189_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][62]$1192_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][63]$1195_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][6]$1024_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][7]$1027_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][8]$1030_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][9]$1033_gate ($mux): \cnt_gate [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][0]$1198_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][100]$1498_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][101]$1501_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][102]$1504_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][103]$1507_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][104]$1510_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][105]$1513_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][106]$1516_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][107]$1519_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][108]$1522_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][109]$1525_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][10]$1228_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][110]$1528_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][111]$1531_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][112]$1534_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][113]$1537_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][114]$1540_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][115]$1543_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][116]$1546_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][117]$1549_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][118]$1552_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][119]$1555_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][11]$1231_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][120]$1558_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][121]$1561_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][122]$1564_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][123]$1567_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][124]$1570_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][125]$1573_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][126]$1576_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][127]$1579_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][12]$1234_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][13]$1237_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][14]$1240_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][15]$1243_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][16]$1246_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][17]$1249_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][18]$1252_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][19]$1255_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][1]$1201_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][20]$1258_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][21]$1261_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][22]$1264_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][23]$1267_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][24]$1270_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][25]$1273_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][26]$1276_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][27]$1279_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][28]$1282_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][29]$1285_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][2]$1204_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][30]$1288_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][31]$1291_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][32]$1294_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][33]$1297_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][34]$1300_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][35]$1303_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][36]$1306_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][37]$1309_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][38]$1312_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][39]$1315_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][3]$1207_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][40]$1318_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][41]$1321_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][42]$1324_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][43]$1327_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][44]$1330_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][45]$1333_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][46]$1336_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][47]$1339_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][48]$1342_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][49]$1345_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][4]$1210_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][50]$1348_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][51]$1351_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][52]$1354_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][53]$1357_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][54]$1360_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][55]$1363_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][56]$1366_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][57]$1369_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][58]$1372_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][59]$1375_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][5]$1213_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][60]$1378_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][61]$1381_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][62]$1384_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][63]$1387_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][64]$1390_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][65]$1393_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][66]$1396_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][67]$1399_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][68]$1402_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][69]$1405_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][6]$1216_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][70]$1408_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][71]$1411_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][72]$1414_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][73]$1417_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][74]$1420_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][75]$1423_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][76]$1426_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][77]$1429_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][78]$1432_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][79]$1435_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][7]$1219_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][80]$1438_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][81]$1441_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][82]$1444_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][83]$1447_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][84]$1450_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][85]$1453_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][86]$1456_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][87]$1459_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][88]$1462_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][89]$1465_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][8]$1222_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][90]$1468_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][91]$1471_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][92]$1474_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][93]$1477_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][94]$1480_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][95]$1483_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][96]$1486_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][97]$1489_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][98]$1492_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][99]$1495_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][9]$1225_gate ($mux): \cnt_gate [0] -> \cnt [0]
+Changing input B of cell $or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$3_gate ($or): \presc_tc_gate -> \presc_tc
+Changing input A of cell $procmux$16_gate ($pmux): \code_reg_gate -> \code_reg
+Changing input B of cell $procmux$16_gate ($pmux): { \ui_in_gate \cnt_gate $auto$proc_rom.cc:154:do_switch$11_gate } -> { \ui_in_gate \cnt $auto$proc_rom.cc:154:do_switch$11_gate }
+Changing input S of cell $procmux$21_gate ($mux): \rst_q_gate -> \rst_q
+Changing input S of cell $procmux$24_gate ($mux): \rst_q_gate -> \rst_q
+Changing input S of cell $procmux$27_gate ($mux): \rst_q_gate -> \rst_q
+Changing input A of cell $procmux$29_gate ($mux): \cnt_p1_gate -> \cnt_p1
+Changing input S of cell $procmux$32_gate ($mux): \rst_q_gate -> \rst_q
+Changing input A of cell $procmux$34_gate ($mux): \cnt_gate -> \cnt
+Changing input B of cell $procmux$34_gate ($mux): \cnt_p1_gate -> \cnt_p1
+Changing input S of cell $procmux$37_gate ($mux): \rst_q_gate -> \rst_q
+Changing input A of cell $procmux$39_gate ($mux): \code_reg_gate -> \code_reg
+Changing input S of cell $procmux$42_gate ($mux): \rst_q_gate -> \rst_q
+Changing input A of cell $add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:319$9_gate ($add): \presc_gate -> \presc
+Changing input A of cell $add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:322$10_gold ($add): \cnt_p1_gold -> \cnt_p1
+Changing input A of cell $eq$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:310$7_gold ($eq): \presc_gold -> \presc
+Changing input A of cell $logic_not$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:302$6_gold ($logic_not): \rst_q_gold -> \rst_q
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][0][0]$52_gold ($mux): \cnt_gold [7] -> \cnt [7]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][1][0]$55_gold ($mux): \cnt_gold [6] -> \cnt [6]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][1][1]$58_gold ($mux): \cnt_gold [6] -> \cnt [6]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][0]$61_gold ($mux): \cnt_gold [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][1]$64_gold ($mux): \cnt_gold [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][2]$67_gold ($mux): \cnt_gold [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][2][3]$70_gold ($mux): \cnt_gold [5] -> \cnt [5]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][0]$73_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][1]$76_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][2]$79_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][3]$82_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][4]$85_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][5]$88_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][6]$91_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][3][7]$94_gold ($mux): \cnt_gold [4] -> \cnt [4]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][0]$97_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][10]$127_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][11]$130_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][12]$133_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][13]$136_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][14]$139_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][15]$142_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][1]$100_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][2]$103_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][3]$106_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][4]$109_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][5]$112_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][6]$115_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][7]$118_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][8]$121_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][4][9]$124_gold ($mux): \cnt_gold [3] -> \cnt [3]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][0]$145_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][10]$175_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][11]$178_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][12]$181_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][13]$184_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][14]$187_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][15]$190_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][16]$193_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][17]$196_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][18]$199_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][19]$202_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][1]$148_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][20]$205_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][21]$208_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][22]$211_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][23]$214_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][24]$217_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][25]$220_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][26]$223_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][27]$226_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][28]$229_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][29]$232_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][2]$151_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][30]$235_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][31]$238_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][3]$154_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][4]$157_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][5]$160_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][6]$163_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][7]$166_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][8]$169_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][5][9]$172_gold ($mux): \cnt_gold [2] -> \cnt [2]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][0]$241_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][10]$271_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][11]$274_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][12]$277_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][13]$280_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][14]$283_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][15]$286_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][16]$289_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][17]$292_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][18]$295_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][19]$298_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][1]$244_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][20]$301_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][21]$304_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][22]$307_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][23]$310_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][24]$313_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][25]$316_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][26]$319_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][27]$322_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][28]$325_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][29]$328_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][2]$247_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][30]$331_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][31]$334_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][32]$337_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][33]$340_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][34]$343_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][35]$346_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][36]$349_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][37]$352_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][38]$355_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][39]$358_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][3]$250_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][40]$361_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][41]$364_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][42]$367_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][43]$370_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][44]$373_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][45]$376_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][46]$379_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][47]$382_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][48]$385_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][49]$388_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][4]$253_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][50]$391_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][51]$394_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][52]$397_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][53]$400_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][54]$403_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][55]$406_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][56]$409_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][57]$412_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][58]$415_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][59]$418_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][5]$256_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][60]$421_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][61]$424_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][62]$427_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][63]$430_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][6]$259_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][7]$262_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][8]$265_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][6][9]$268_gold ($mux): \cnt_gold [1] -> \cnt [1]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][0]$433_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][100]$733_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][101]$736_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][102]$739_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][103]$742_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][104]$745_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][105]$748_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][106]$751_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][107]$754_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][108]$757_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][109]$760_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][10]$463_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][110]$763_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][111]$766_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][112]$769_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][113]$772_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][114]$775_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][115]$778_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][116]$781_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][117]$784_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][118]$787_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][119]$790_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][11]$466_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][120]$793_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][121]$796_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][122]$799_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][123]$802_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][124]$805_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][125]$808_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][126]$811_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][127]$814_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][12]$469_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][13]$472_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][14]$475_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][15]$478_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][16]$481_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][17]$484_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][18]$487_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][19]$490_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][1]$436_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][20]$493_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][21]$496_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][22]$499_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][23]$502_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][24]$505_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][25]$508_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][26]$511_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][27]$514_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][28]$517_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][29]$520_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][2]$439_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][30]$523_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][31]$526_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][32]$529_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][33]$532_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][34]$535_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][35]$538_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][36]$541_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][37]$544_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][38]$547_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][39]$550_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][3]$442_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][40]$553_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][41]$556_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][42]$559_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][43]$562_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][44]$565_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][45]$568_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][46]$571_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][47]$574_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][48]$577_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][49]$580_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][4]$445_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][50]$583_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][51]$586_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][52]$589_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][53]$592_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][54]$595_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][55]$598_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][56]$601_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][57]$604_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][58]$607_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][59]$610_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][5]$448_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][60]$613_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][61]$616_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][62]$619_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][63]$622_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][64]$625_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][65]$628_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][66]$631_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][67]$634_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][68]$637_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][69]$640_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][6]$451_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][70]$643_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][71]$646_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][72]$649_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][73]$652_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][74]$655_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][75]$658_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][76]$661_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][77]$664_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][78]$667_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][79]$670_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][7]$454_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][80]$673_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][81]$676_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][82]$679_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][83]$682_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][84]$685_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][85]$688_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][86]$691_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][87]$694_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][88]$697_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][89]$700_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][8]$457_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][90]$703_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][91]$706_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][92]$709_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][93]$712_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][94]$715_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][95]$718_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][96]$721_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][97]$724_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][98]$727_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][99]$730_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input S of cell $memory$auto$proc_rom.cc:155:do_switch$12$rdmux[0][7][9]$460_gold ($mux): \cnt_gold [0] -> \cnt [0]
+Changing input B of cell $or$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:293$3_gold ($or): \presc_tc_gold -> \presc_tc
+Changing input A of cell $procmux$16_gold ($pmux): \code_reg_gold -> \code_reg
+Changing input B of cell $procmux$16_gold ($pmux): { \ui_in_gold \cnt_gold $auto$proc_rom.cc:154:do_switch$11_gold } -> { \ui_in_gold \cnt $auto$proc_rom.cc:154:do_switch$11_gold }
+Changing input S of cell $procmux$21_gold ($mux): \rst_q_gold -> \rst_q
+Changing input S of cell $procmux$24_gold ($mux): \rst_q_gold -> \rst_q
+Changing input S of cell $procmux$27_gold ($mux): \rst_q_gold -> \rst_q
+Changing input A of cell $procmux$29_gold ($mux): \cnt_p1_gold -> \cnt_p1
+Changing input S of cell $procmux$32_gold ($mux): \rst_q_gold -> \rst_q
+Changing input A of cell $procmux$34_gold ($mux): \cnt_gold -> \cnt
+Changing input B of cell $procmux$34_gold ($mux): \cnt_p1_gold -> \cnt_p1
+Changing input S of cell $procmux$37_gold ($mux): \rst_q_gold -> \rst_q
+Changing input A of cell $procmux$39_gold ($mux): \code_reg_gold -> \code_reg
+Changing input S of cell $procmux$42_gold ($mux): \rst_q_gold -> \rst_q
+Changing input A of cell $add$/home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v:319$9_gold ($add): \presc_gold -> \presc
+
+20. Executing SAT pass (solving SAT problems in the circuit).
+Using SAT solver `minisat`.
+
+Setting up time step 1:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Final init constraint equation: { \rst_q_gold \cnt_p1_gold \presc_tc_gold \presc_gold \cnt_gold \code_reg_gold \dac_code_gold \rst_q_gate \cnt_p1_gate \presc_tc_gate \presc_gate \cnt_gate \code_reg_gate \dac_code_gate } = 84'000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 2:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 3:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 4:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 5:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 6:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 7:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Setting up time step 8:
+Final constraint equation: { } = { }
+Imported 586 cells to SAT database.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1613 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1610 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1607 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1604 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1601 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1598 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1595 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1592 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1589 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1586 when 1'1.
+Import proof for assert: $auto$rtlil.cc:3307:Eqx$1583 when 1'1.
+
+Solving problem with 195254 variables and 516016 clauses..
+SAT proof finished - no model found: SUCCESS!
+
+                  /$$$$$$      /$$$$$$$$     /$$$$$$$    
+                 /$$__  $$    | $$_____/    | $$__  $$   
+                | $$  \ $$    | $$          | $$  \ $$   
+                | $$  | $$    | $$$$$       | $$  | $$   
+                | $$  | $$    | $$__/       | $$  | $$   
+                | $$/$$ $$    | $$          | $$  | $$   
+                |  $$$$$$/ /$$| $$$$$$$$ /$$| $$$$$$$//$$
+                 \____ $$$|__/|________/|__/|_______/|__/
+                       \__/                              
+
+21. Executing EQUIV_INDUCT pass.
+Found 60 unproven $equiv cells in module equiv:
+  Proving existence of base case for step 1. (63859 clauses over 24254 variables)
+  Proving induction step 1. (128557 clauses over 48760 variables)
+  Proof for induction step holds. Entire workset of 60 cells proven!
+Proved 60 previously unproven $equiv cells.
+
+22. Executing EQUIV_STATUS pass.
+Found 60 $equiv cells in equiv:
+  Of those cells 60 are proven and 0 are unproven.
+  Equivalence successfully proven!
+
+End of script. Logfile hash: ed62a07384, time: 1.22s, user: 1.11s, system: 0.08s, MEM: 185.30 MB peak
+Yosys 0.69 (git sha1 9f75ca1f9, Release, GNU /usr/bin/c++ 13.3.0)
+Time spent: 83% 1x sat (0 sec), 15% 1x equiv_induct (0 sec), ...

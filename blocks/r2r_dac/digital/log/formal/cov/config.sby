@@ -1,6 +1,7 @@
 [options]
 mode cover
 depth 12
+multiclock off
 
 [engines]
 smtbmc yices
@@ -9,6 +10,7 @@ smtbmc yices
 read -formal -D FORMAL /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv
 read -formal -D FORMAL /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v
 prep -top r2r_dac_digital_formal
+chformal -assert2cover
 
 [files]
 /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/formal/r2r_dac_digital_formal.sv

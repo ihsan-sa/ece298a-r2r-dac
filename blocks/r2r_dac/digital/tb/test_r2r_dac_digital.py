@@ -25,6 +25,7 @@ async def setup(dut, mode=0, slow=0, ui=0, cycles=3):
     for _ in range(cycles):
         await FallingEdge(dut.clk)
     dut.rst_n.value = 1
+    await FallingEdge(dut.clk)  # rst_n is registered: release acts one clk late
 
 
 def val(sig):
@@ -38,6 +39,7 @@ async def test_reset_clears(dut):
     await FallingEdge(dut.clk)
     assert val(dut.dac_code) == 0xA5
     dut.rst_n.value = 0
+    await FallingEdge(dut.clk)  # registered reset: takes effect one clk later
     await FallingEdge(dut.clk)
     assert val(dut.dac_code) == 0
     assert val(dut.uo_out) == 0
@@ -45,6 +47,7 @@ async def test_reset_clears(dut):
     assert val(dut.dac_code) == 0
     dut.rst_n.value = 1
     dut.mode.value = 1
+    await FallingEdge(dut.clk)  # release also acts one clk later
     await FallingEdge(dut.clk)
     assert val(dut.dac_code) == 0, "counter must restart from 0 after reset"
     await FallingEdge(dut.clk)
@@ -161,6 +164,7 @@ async def test_random_mode_switching_against_model(dut):
     m = Model()
     for _ in range(3):
         m.edge(0, 0, 0, 0)
+    m.edge(1, 0, 0, 0)  # setup's extra edge after release
     prev_src = None
     for cyc in range(3000):
         mode = rng.randrange(4) if rng.random() < 0.3 else int(dut.mode.value)
@@ -173,11 +177,12 @@ async def test_random_mode_switching_against_model(dut):
         dut.rst_n.value = rst_n
         dut.ena.value = rng.randrange(2)
         old_src = m.sources(ui)
+        in_reset = not m.rst_q
         want = m.edge(rst_n, ui, mode, slow)
         await FallingEdge(dut.clk)
         got = val(dut.dac_code)
         assert val(dut.uo_out) == got, "uo_out must echo dac_code"
         assert got == want, f"cycle {cyc}: mode {mode} got {got} want {want}"
-        if rst_n and prev_src is not None:
+        if not in_reset and prev_src is not None:
             assert got in (old_src[mode], old_src[prev_src])
         prev_src = mode
