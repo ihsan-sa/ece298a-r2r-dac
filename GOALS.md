@@ -11,9 +11,9 @@ Filed by runs. Each says what done looks like as something a run can check, and 
 - **Serves:** the repository's purpose as the intro above states it (a DAC on one Tiny Tapeout analog tile); GOALS.md has no `## Standing goals` section to name.
 - **What:** The tile is hardened by the design flow under `blocks/r2r_dac/top`, but the repository has none of the files the Tiny Tapeout analog template expects at its root (`info.yaml`, `src/`, `docs/info.md`, `gds/`, `lef/`, the gds and docs workflows). Add them from the released tile, importing the template rather than forking it, so GitHub builds and checks the same tile the flow signed off.
 - **Done when:** `git cat-file -e origin/main:info.yaml` succeeds and `bash tests/check.sh` and `python3 tests/check_tt_project.py` both pass on main. The second is a standalone check, not yet a step of `tests/check.sh` (wiring it into the CI script is the owner's call); it skips until a root `info.yaml` exists, and from then on it requires `docs/info.md`, a `src/*.v` declaring `tt_um_r2r_dac_digital`, `lef/tt_um_r2r_dac_digital.lef`, and `gds/tt_um_r2r_dac_digital.gds` byte for byte equal to the signed-off `blocks/r2r_dac/top/harden/runs/run/final/gds/tt_um_r2r_dac_digital.gds`, with `top_module`, `tiles` and `analog_pins` matching `blocks/r2r_dac/top/harden/info.yaml`. The template's own gds and docs workflows passing on main is the rest of done, and a run can't see that; the owner confirms it.
-- **Blocked on:** the GDS and LEF are binaries a run can't copy (it has only Edit/Write and `git add -A`/`git commit`), and all the root files have to land together once `info.yaml` exists. So the owner, or a run allowed `cp`, makes the commit that adds them; a run can draft `info.yaml`, `docs/info.md` and `src/project.v` for it under another name first.
+- **Blocked on:** the GDS and LEF are binaries a run can't copy (it has only Edit/Write and `git add -A`/`git commit`), and all the root files have to land together once `info.yaml` exists. So the owner, or a run allowed `cp`, makes the commit that adds them. `info.yaml` and `docs/info.md` are drafted under `tt_project/`, and `tt_project/README.md` lists the moves and copies that land the project in one commit (the `src/` files are copies of the hardened top, its RTL and the analog stub, so they aren't drafted).
 - **Status:** open
-- **Pull requests:** the one for [issue #12](https://github.com/ihsan-sa/ece298a-r2r-dac/issues/12) adds the check
+- **Pull requests:** [#13](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/13) adds the check; the one for [issue #15](https://github.com/ihsan-sa/ece298a-r2r-dac/issues/15) stages the root files
 
 ## Later
 
@@ -45,3 +45,4 @@ What has landed, from the git history (a line per PR), and the proposed goals th
 - [#7](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/7) Bring main up to track/r2r-dac and record the owner's three sign-offs
 - [#9](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/9) Record owner's H2 sign-offs for tile, analog and digital
 - [#11](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/11) Add the R-2R DAC design document and make its goal checkable
+- [#13](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/13) Close sync and release goals; add Tiny Tapeout project check
