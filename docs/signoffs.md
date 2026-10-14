@@ -2,7 +2,7 @@
 
 The owner's answers to the design flow's human checkpoints, recorded as given. Each H2 was presented by the flow on `track/r2r-dac` with a challenge code and the digest of what it covered, and both are copied here from that branch's `state.json` files.
 
-This file sits outside `blocks/r2r_dac` so that the sync of `track/r2r-dac` onto main (see GOALS.md) still compares that tree exactly. The flow's own `state.json` files on `track/r2r-dac` still show these checkpoints as `presented`; whoever syncs the branch should mark them approved there with the answers below, the way `H1-fd2294` was recorded in `analog/state.json`.
+Since [#7](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/7) brought that branch onto main, the flow's own `state.json` files (`blocks/r2r_dac/state.json`, `analog/state.json`, `digital/state.json`) also record these checkpoints with the answer below.
 
 ## H2: release sign-offs
 
