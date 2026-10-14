@@ -1,6 +1,6 @@
 # R-2R DAC design document
 
-An 8-bit R-2R DAC on one Tiny Tapeout analog tile in GF180MCU at 3.3 V, for ECE 298A at the University of Waterloo. This document describes the design as released on `track/r2r-dac` (round 3, signed off in [`signoffs.md`](signoffs.md)). Main's `blocks/r2r_dac` still holds the round-2 tree until that branch is synced (see GOALS.md), so the paths below are paths on `track/r2r-dac`. Every number here comes from a recorded gate report there:
+An 8-bit R-2R DAC on one Tiny Tapeout analog tile in GF180MCU at 3.3 V, for ECE 298A at the University of Waterloo. This document describes the design as released (round 3, signed off in [`signoffs.md`](signoffs.md)), which main's `blocks/r2r_dac` has carried since [#7](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/7). Every number here comes from a recorded gate report there:
 
 - DC, step and glitch results over the corners: `blocks/r2r_dac/analog/reports/recorded/gate-sim_pvt.json` (recorded 2026-10-13T06:12)
 - post-layout results: `blocks/r2r_dac/analog/reports/recorded/gate-pex_sim.json`
@@ -144,7 +144,7 @@ The released RTL drove the real ladder (ideal drivers, nominal 27 kÎ©, the 100 Î
 | co-simulation | pass, above |
 | release, all three blocks | pass, signed off by the owner (H2-1452e6, H2-4da295, H2-a7bfe1) |
 
-The tile's signed-off GDS is `blocks/r2r_dac/top/harden/runs/run/final/gds/tt_um_r2r_dac_digital.gds` on `track/r2r-dac`.
+The tile's signed-off GDS is `blocks/r2r_dac/top/harden/runs/run/final/gds/tt_um_r2r_dac_digital.gds`.
 
 ## Known limits
 
