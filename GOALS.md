@@ -2,6 +2,15 @@
 
 This repository is an R-2R DAC for ECE 298A (Integrated Circuit Design and Tapeout) at the University of Waterloo: an 8-bit R-2R ladder of GF180 poly resistors switched by standard-cell drivers at 3.3 V, on one Tiny Tapeout analog tile, with a small digital front end that holds a code register, a ramp mode and a 256-entry sine-table mode. Its analog half lives in `blocks/r2r_dac/analog`, its digital half in `blocks/r2r_dac/digital`, and the hardened tile in `blocks/r2r_dac/top`. `bash tests/check.sh` is the fast check every pull request has to pass. This is coursework, so runs never submit anything to a course system.
 
+## Commands a run may use
+
+Besides `bash tests/check.sh` and git, a run here may run the chip flow's own scripts. Type each one as its own command, with no `cd`, `&&`, pipe, redirect or variable in front, starting with exactly the words shown, because the engine allows these and nothing else:
+
+- `/opt/chip-flow/bin/eda python /opt/chip-flow/engine/scripts/state.py resume` says where a workspace stands.
+- `/opt/chip-flow/bin/eda python /opt/chip-flow/engine/scripts/design_doc.py --workspace blocks/r2r_dac` builds the design document.
+
+`CHIP_FLOW_HOME` and `EDA_TOOLCHAIN` are already set for the run, and one command may run for up to 45 minutes. A run never records a sign-off. Recording one (`state.py human`) is a person's step, taken from the owner's own words in the thread.
+
 ## Proposed goals
 
 Filed by runs. Each says what done looks like as something a run can check, and keeps its status (open, done, failed, dropped) with the pull requests that moved it. At most three are open at once.
