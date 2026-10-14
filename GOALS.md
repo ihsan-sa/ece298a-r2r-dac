@@ -17,11 +17,12 @@ Filed by runs. Each says what done looks like as something a run can check, and 
 
 ### Release the R-2R DAC and write its design document
 
-- **Status:** open, sign-offs recorded, design document next
+- **Status:** open
 - **What:** Every check on the DAC passes, including hardening, DRC, LVS and the Tiny Tapeout precheck. Its release waits on three sign-offs from the owner, one each for the whole tile, its analog half and its digital half, and the design document comes only after them. They have been asked for, and his answers arrive as asks. A run records each answer as he gave it and never records a sign-off he hasn't given. Once all three are in, the run records them in this repository and writes the design document: what the DAC does, how the ladder and its drivers were sized, the DNL, INL, settling and glitch results over the corners with the worst corner named, and how the tile was verified.
 - **Sign-offs:** all three approved in one ask on 2026-10-14 (issue #8: "approve H2-1452e6 H2-4da295 H2-a7bfe1"), recorded with their digests in `docs/signoffs.md`. The flow's `state.json` files on `track/r2r-dac` still show them as `presented`.
-- **Done when:** the three sign-offs are recorded in this repository, and its design document is on main.
-- **Pull requests:** the one for [issue #8](https://github.com/ihsan-sa/ece298a-r2r-dac/issues/8) records the sign-offs
+- **Design document:** written in `docs/design.md` (issue #10), from the recorded gate reports on `track/r2r-dac`, since main's `blocks/r2r_dac` is still the round-2 tree. Once it is on main the check below passes, and the next run closes this goal and moves the Later goal up.
+- **Done when:** the three sign-offs are recorded in this repository, and its design document is on main: `git cat-file -e origin/main:docs/signoffs.md` and `git cat-file -e origin/main:docs/design.md` both succeed.
+- **Pull requests:** [#9](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/9) records the sign-offs; the one for [issue #10](https://github.com/ihsan-sa/ece298a-r2r-dac/issues/10) adds the design document
 
 ## Later
 
@@ -38,3 +39,6 @@ Goals waiting for an open slot. When a proposed goal closes, the run that closed
 What has landed, from the git history (a line per PR).
 
 - [#1](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/1) R-2R DAC: second shakedown round on the analog tile
+- [#2](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/2) Add a check workflow and GOALS.md for the dispatch engine
+- [#4](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/4) GOALS: record main-sync scratch list, check command, blocker
+- [#9](https://github.com/ihsan-sa/ece298a-r2r-dac/pull/9) Record owner's H2 sign-offs for tile, analog and digital
