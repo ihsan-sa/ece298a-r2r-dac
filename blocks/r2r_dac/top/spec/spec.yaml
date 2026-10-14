@@ -1,8 +1,8 @@
 top: r2r_dac_digital
 requirements:
 - id: REQ-RESET
-  text: while rst_n is low, on every clk edge dac_code becomes 0 and the counter and
-    prescaler restart from 0
+  text: rst_n is registered once; on every clk edge after one that sampled rst_n low,
+    dac_code becomes 0 and the counter and prescaler restart from 0
   check: both
   property: REQ_RESET
 - id: REQ-CAPTURE
@@ -95,8 +95,8 @@ macros:
     vh: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.v
     spice: /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/top/macros/r2r_dac_analog.spice
   location:
-  - 69.44
+  - 68.32
   - 94.08
   size_um:
-  - 207.82
+  - 210.52
   - 139.56

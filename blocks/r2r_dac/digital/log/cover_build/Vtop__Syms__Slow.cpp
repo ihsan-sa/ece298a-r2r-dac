@@ -26,12 +26,15 @@ extern const VlVarTableEntry Vtop___024root__VpiVarTable0[] = {
 extern const VlVarTableEntry Vtop___024root__VpiVarTable1[] = {
     {"clk", offsetof(Vtop___024root, r2r_dac_digital__DOT__clk), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW|VLVF_CONTINUOUSLY|VLVF_NET), 0, 0, {0, 0, 0, 0, 0, 0}},
     {"cnt", offsetof(Vtop___024root, r2r_dac_digital__DOT__cnt), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 1, {7, 0, 0, 0, 0, 0}},
+    {"cnt_p1", offsetof(Vtop___024root, r2r_dac_digital__DOT__cnt_p1), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 1, {7, 0, 0, 0, 0, 0}},
     {"code_reg", offsetof(Vtop___024root, r2r_dac_digital__DOT__code_reg), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 1, {7, 0, 0, 0, 0, 0}},
     {"dac_code", offsetof(Vtop___024root, r2r_dac_digital__DOT__dac_code), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 1, {7, 0, 0, 0, 0, 0}},
     {"ena", offsetof(Vtop___024root, r2r_dac_digital__DOT__ena), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW|VLVF_CONTINUOUSLY|VLVF_NET), 0, 0, {0, 0, 0, 0, 0, 0}},
     {"mode", offsetof(Vtop___024root, r2r_dac_digital__DOT__mode), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW|VLVF_CONTINUOUSLY|VLVF_NET), 0, 1, {1, 0, 0, 0, 0, 0}},
     {"presc", offsetof(Vtop___024root, r2r_dac_digital__DOT__presc), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 1, {7, 0, 0, 0, 0, 0}},
+    {"presc_tc", offsetof(Vtop___024root, r2r_dac_digital__DOT__presc_tc), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 0, {0, 0, 0, 0, 0, 0}},
     {"rst_n", offsetof(Vtop___024root, r2r_dac_digital__DOT__rst_n), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW|VLVF_CONTINUOUSLY|VLVF_NET), 0, 0, {0, 0, 0, 0, 0, 0}},
+    {"rst_q", offsetof(Vtop___024root, r2r_dac_digital__DOT__rst_q), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 0, {0, 0, 0, 0, 0, 0}},
     {"sine_val", offsetof(Vtop___024root, r2r_dac_digital__DOT__sine_val), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW), 0, 1, {7, 0, 0, 0, 0, 0}},
     {"slow", offsetof(Vtop___024root, r2r_dac_digital__DOT__slow), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW|VLVF_CONTINUOUSLY|VLVF_NET), 0, 0, {0, 0, 0, 0, 0, 0}},
     {"step", offsetof(Vtop___024root, r2r_dac_digital__DOT__step), VLVT_UINT8, (VLVD_NODIR|VLVF_PUB_RW|VLVF_CONTINUOUSLY|VLVF_NET), 0, 0, {0, 0, 0, 0, 0, 0}},
@@ -71,7 +74,7 @@ Vtop__Syms::Vtop__Syms(VerilatedContext* contextp, const char* namep, Vtop* mode
     // Setup export functions - final: 1
     // Setup public variables
     __Vscopep_TOP->varsInsertFromTable(Vtop___024root__VpiVarTable0, 8, &(TOP));
-    __Vscopep_r2r_dac_digital->varsInsertFromTable(Vtop___024root__VpiVarTable1, 14, &(TOP));
+    __Vscopep_r2r_dac_digital->varsInsertFromTable(Vtop___024root__VpiVarTable1, 17, &(TOP));
 }
 
 Vtop__Syms::~Vtop__Syms() {

@@ -1,0 +1,59 @@
+{
+ "id": 2,
+ "created": "2026-10-13T04:47:33",
+ "gate": "top_harden",
+ "phase": "P3",
+ "workspace": ".",
+ "fixer": "harden",
+ "role_prompt": "skills/msde/agents/fixer.md",
+ "allowed_scripts": [
+  "engine/scripts/jobs.py",
+  "engine/scripts/state.py"
+ ],
+ "guidance": [
+  "Read the remediation reference(s) listed in `remediations` FIRST: what the finding means, known false-positive classes, the cheapest-first fix ladder, and the traps this project already hit. They are keyed to your cluster's kinds.",
+  "harden/timing/drc/lvs/glsim/precheck findings on the hardened design: set LibreLane keys in harden/config.override.json (never harden/config.json, which harden regenerates) or fix the RTL, then re-run the harden job (jobs.py start --gate harden) - it can take a while, so re-check with jobs.py status rather than blocking."
+ ],
+ "remediations": [
+  "/home/ihsan/.claude/skills/chip-flow/skills/msde/reference/remediations/flow_step_failed.md"
+ ],
+ "cluster": {
+  "file": null,
+  "module": "r2r_dac_digital",
+  "kinds": [
+   "flow_step_failed"
+  ],
+  "checks": [
+   "librelane"
+  ],
+  "severity": "error",
+  "count": 1,
+  "violations": [
+   {
+    "check": "harden",
+    "severity": "error",
+    "file": null,
+    "module": "r2r_dac_digital",
+    "line": null,
+    "kind": "flow_step_failed",
+    "refs": [],
+    "msg": "librelane exited 2: 8 Routing DRC errors found. - deferred\n14 Magic DRC errors found. - deferred\n67 LVS errors found. - deferred\n",
+    "source": "librelane",
+    "items": [
+     {
+      "msg": "librelane exited 2: 8 Routing DRC errors found. - deferred\n14 Magic DRC errors found. - deferred\n67 LVS errors found. - deferred\n",
+      "file": null,
+      "line": null
+     }
+    ],
+    "resumed": false,
+    "wall_s": 1261.53
+   }
+  ]
+ },
+ "info_context": [],
+ "artifacts": {
+  "workspace": "."
+ },
+ "scope": "fix ONLY the findings in `cluster`; `info_context` (same gate, below its failing severity) is background only, never its own fix target; do not touch unrelated files; re-run the failed gate when done"
+}

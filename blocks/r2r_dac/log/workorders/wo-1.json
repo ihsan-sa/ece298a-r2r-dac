@@ -1,0 +1,74 @@
+{
+ "id": 1,
+ "created": "2026-10-13T04:23:28",
+ "gate": "top_harden",
+ "phase": "P3",
+ "workspace": ".",
+ "fixer": "review",
+ "role_prompt": "skills/msde/agents/fixer.md",
+ "allowed_scripts": [
+  "engine/scripts/state.py"
+ ],
+ "guidance": [
+  "Read the remediation reference(s) listed in `remediations` FIRST: what the finding means, known false-positive classes, the cheapest-first fix ladder, and the traps this project already hit. They are keyed to your cluster's kinds.",
+  "No script owns this finding kind - triage: either identify the right domain and say so, or escalate to a human with a one-paragraph explanation."
+ ],
+ "remediations": [
+  "/home/ihsan/.claude/skills/chip-flow/skills/msde/reference/remediations/macro_power_unreachable.md"
+ ],
+ "cluster": {
+  "file": null,
+  "module": "r2r_dac_analog",
+  "kinds": [
+   "macro_power_unreachable"
+  ],
+  "checks": [
+   "check_top_harden"
+  ],
+  "severity": "error",
+  "count": 2,
+  "violations": [
+   {
+    "check": "top_harden",
+    "severity": "error",
+    "file": null,
+    "module": "r2r_dac_analog",
+    "line": null,
+    "kind": "macro_power_unreachable",
+    "refs": [],
+    "msg": "the analog macro r2r_dac_analog's supply pin vdd has no Metal3 shape, and the tile's power stripes (Metal4) join a macro only on Metal3; draw vdd as a Metal3 strap across the cell's width, as corpus/msde/dac_tile's generator does",
+    "source": "check_top_harden",
+    "items": [
+     {
+      "msg": "the analog macro r2r_dac_analog's supply pin vdd has no Metal3 shape, and the tile's power stripes (Metal4) join a macro only on Metal3; draw vdd as a Metal3 strap across the cell's width, as corpus/msde/dac_tile's generator does",
+      "file": null,
+      "line": null
+     }
+    ]
+   },
+   {
+    "check": "top_harden",
+    "severity": "error",
+    "file": null,
+    "module": "r2r_dac_analog",
+    "line": null,
+    "kind": "macro_power_unreachable",
+    "refs": [],
+    "msg": "the analog macro r2r_dac_analog's supply pin vss has no Metal3 shape, and the tile's power stripes (Metal4) join a macro only on Metal3; draw vss as a Metal3 strap across the cell's width, as corpus/msde/dac_tile's generator does",
+    "source": "check_top_harden",
+    "items": [
+     {
+      "msg": "the analog macro r2r_dac_analog's supply pin vss has no Metal3 shape, and the tile's power stripes (Metal4) join a macro only on Metal3; draw vss as a Metal3 strap across the cell's width, as corpus/msde/dac_tile's generator does",
+      "file": null,
+      "line": null
+     }
+    ]
+   }
+  ]
+ },
+ "info_context": [],
+ "artifacts": {
+  "workspace": "."
+ },
+ "scope": "fix ONLY the findings in `cluster`; `info_context` (same gate, below its failing severity) is background only, never its own fix target; do not touch unrelated files; re-run the failed gate when done"
+}

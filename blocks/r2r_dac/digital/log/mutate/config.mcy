@@ -3,7 +3,7 @@ size 24
 seed 1
 
 [script]
-read_verilog -sv /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v
+read_verilog -sv -nosynthesis /home/ihsan/.cc/worktrees/ece298a/r2r-dac/blocks/r2r_dac/digital/rtl/r2r_dac_digital.v
 hierarchy -top r2r_dac_digital
 proc
 

@@ -280,15 +280,34 @@ module r2r_dac_digital (
     endcase
   end
 
-  wire step = ~slow | (presc == 8'hFF);
+  // presc_tc is a registered copy of (presc == 8'hFF): it is loaded with
+  // (presc == 8'hFE), i.e. the condition one cycle early, and presc always
+  // increments by one (wrapping), so presc_tc == (presc == 8'hFF) holds on
+  // every cycle. Reset clears both (presc = 0 -> tc = 0). This takes the
+  // 8-bit compare off the step -> cnt -> sine path (timing at ss_125C).
+  // cnt_p1 likewise holds cnt + 1 at all times (reset 1 with cnt 0, and both
+  // advance together on step), so the incrementer is off that path too.
+  reg       presc_tc;
+  reg [7:0] cnt_p1;
+
+  wire step = ~slow | presc_tc;
+
+  // rst_n is registered once before use (synchronised reset): the pad's
+  // input delay then sees only one flop, not the sine/mux logic, which is
+  // what kept ss_125C short of setup. Reset takes effect one edge later.
+  reg rst_q;
+  always @(posedge clk) rst_q <= rst_n;
 
   always @(posedge clk) begin
-    if (!rst_n) begin
+    if (!rst_q) begin
       code_reg <= 8'd0;
       cnt      <= 8'd0;
       presc    <= 8'd0;
+      presc_tc <= 1'b0;
+      cnt_p1   <= 8'd1;
       dac_code <= 8'd0;
     end else begin
+      presc_tc <= (presc == 8'hFE);
       case (mode)
         2'b00: dac_code <= ui_in;
         2'b01: dac_code <= cnt;
@@ -298,8 +317,10 @@ module r2r_dac_digital (
       if (mode == 2'b00)
         code_reg <= ui_in;
       presc <= presc + 8'd1;
-      if (step)
-        cnt <= cnt + 8'd1;
+      if (step) begin
+        cnt    <= cnt_p1;
+        cnt_p1 <= cnt_p1 + 8'd1;
+      end
     end
   end
 
