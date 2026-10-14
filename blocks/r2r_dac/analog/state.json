@@ -4,7 +4,7 @@
  "block": "r2r_dac_analog",
  "workspace": "blocks/r2r_dac/analog",
  "created": "2026-09-25T05:47:00",
- "updated": "2026-10-13T06:20:09",
+ "updated": "2026-10-14T11:43:22",
  "phase": "P5",
  "toolchain": null,
  "gates": {
@@ -942,11 +942,14 @@
    "note": null
   },
   "H2": {
-   "status": "presented",
+   "status": "approved",
    "challenge": "H2-4da295",
    "digest": "f3066803d4c17bf482426edf8bfed3c9abf2559aa5176880877ae1972a904a90",
    "presented": "2026-10-13T06:20:09",
-   "phase": "P5"
+   "phase": "P5",
+   "ts": "2026-10-14T11:43:22",
+   "answer": "approve H2-1452e6 H2-4da295 H2-a7bfe1",
+   "note": "The owner, top-level in #ece298a-dac-asks, slack:C0C96C5EUTT/1791992460.038239 (2026-10-14)."
   }
  },
  "artifacts": {
@@ -1866,6 +1869,13 @@
    "checkpoint": "H2",
    "challenge": "H2-4da295",
    "digest": "f3066803d4c17bf482426edf8bfed3c9abf2559aa5176880877ae1972a904a90"
+  },
+  {
+   "ts": "2026-10-14T11:43:22",
+   "event": "human",
+   "checkpoint": "H2",
+   "status": "approved",
+   "challenge": "H2-4da295"
   }
  ]
 }

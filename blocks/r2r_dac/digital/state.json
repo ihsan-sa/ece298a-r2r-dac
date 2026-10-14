@@ -4,7 +4,7 @@
  "block": "r2r_dac",
  "workspace": "blocks/r2r_dac/digital",
  "created": "2026-09-25T08:51:49",
- "updated": "2026-10-13T04:22:30",
+ "updated": "2026-10-14T11:43:22",
  "phase": "P8",
  "toolchain": null,
  "gates": {
@@ -1454,11 +1454,14 @@
    "note": null
   },
   "H2": {
-   "status": "presented",
+   "status": "approved",
    "challenge": "H2-a7bfe1",
    "digest": "9d9c15af5d74dd8f0458bff7ea36c3b444512e59017cfc10bd2399c5772b8b48",
    "presented": "2026-10-13T04:22:30",
-   "phase": "P8"
+   "phase": "P8",
+   "ts": "2026-10-14T11:43:22",
+   "answer": "approve H2-1452e6 H2-4da295 H2-a7bfe1",
+   "note": "The owner, top-level in #ece298a-dac-asks, slack:C0C96C5EUTT/1791992460.038239 (2026-10-14)."
   }
  },
  "artifacts": {
@@ -2988,6 +2991,13 @@
    "checkpoint": "H2",
    "challenge": "H2-a7bfe1",
    "digest": "9d9c15af5d74dd8f0458bff7ea36c3b444512e59017cfc10bd2399c5772b8b48"
+  },
+  {
+   "ts": "2026-10-14T11:43:22",
+   "event": "human",
+   "checkpoint": "H2",
+   "status": "approved",
+   "challenge": "H2-a7bfe1"
   }
  ]
 }
